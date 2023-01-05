@@ -1,0 +1,103 @@
+//extend
+%自動伸縮圖片設定{
+	width:100%;
+	height:auto;
+}
+%text-indent-out{
+	text-indent:120%;
+	overflow:hidden;
+	white-space:nowrap;
+}
+%text-out-point{//文字超過變點點
+	white-space:nowrap;	//文字不進行換行
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+%max-width{margin:0 auto;}
+%固定全景背景圖預設值{
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+}
+// @extend %偽元素icon-font相對定位基本設定;
+
+//mixin
+@mixin pos-abs($top: null, $left: null, $right: null, $bottom: null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+// @include pos-abs($top:0, $left:0, $right:0, $bottom:0);
+@mixin trans-X-123($property1: null, $duration1: null, $delay1: null, $timing1: null, $property2: null, $duration2: null, $delay2: null, $timing2: null, $property3: null, $duration3: null, $delay3: null, $timing3: null) {
+  transition-property: $property1, $property2, $property3;
+  transition-duration: $duration1, $duration2, $duration3;
+  transition-delay: $delay1, $delay2, $delay3;
+  transition-timing-function: $timing1, $timing2, $timing3;
+}
+// @include trans-X-123(
+// 	$property1: opacity, $duration1: .4s, $delay1: .25s, $timing1: ease,
+// 	$property2: transform, $duration2: .4s, $delay2: .25s, $timing2: ease
+// );
+// @include trans-X-123(
+// 	$property1: all, $duration1: .3s, $delay1: .1s, $timing1: ease 
+// );
+@mixin max-width($width){
+	max-width:$width;
+	@extend %max-width;
+}
+// @include max-width(1920px);
+@mixin input_placeholder_css_set{
+	&:-moz-placeholder{@content;}
+	&::-moz-placeholder{@content;}
+	&:-ms-input-placeholder{@content;}
+	&::-webkit-input-placeholder{@content;}
+}
+// @include input_placeholder_css_set{
+// 	color:#999;
+// 	font-family:"微軟正黑體", Arial, Helvetica, sans-serif;
+// }
+
+//	RWD變版breakpoint區
+//	iPhone4、5 手機版
+// @include breakpoint(max-width 320px) { }
+//	iPhone4及舊版手機(320*533)拿橫的時候
+// @include breakpoint(481px (max-width 568px) (orientation landscape)){ }
+//	iPhone5「以上」手機拿橫的時候
+// @include breakpoint(568px (max-width 736px) (orientation landscape)){ }
+//	手機版拿直的時候_portrait
+// @include breakpoint(max-width 767px (orientation portrait)) { }
+//	手機版拿橫的時候 Landscape
+// @include breakpoint(max-width 767px (orientation landscape)) { }
+//	手機版型區
+// @include breakpoint(max-width 767px) { }
+//	iPhone4以上手機拿橫，包含平板「以上」版型區
+// @include breakpoint(480px) { }
+//	iPhone5以上手機拿橫，包含平板「以上」版型區
+// @include breakpoint(568px) { }
+// android手機拿橫(640px)，包含平板「以上」版型區
+// @include breakpoint(640px) { }
+//	iPhone6以上手機拿橫，包含平板「以上」版型區
+// @include breakpoint(667px) { }
+//	平板版型區(1024*768舊螢幕時轉桌機)
+// @include breakpoint(768px (max-width 1000px)) {
+//	桌機「以上」版型區
+// @include breakpoint(1017px) { }
+//	桌機1024版型區
+// @include breakpoint(1024px) { }
+//	桌機1024「以上」版型區
+// @include breakpoint(1025px) { }
+//	1200px加17px捲軸，寬度版型區
+// @include breakpoint(1217px) { }
+//	桌機1280版型區
+// @include breakpoint(1280px) { }
+//	桌機1366版型區
+// @include breakpoint(1366px) { }
+//	桌機1440版型區
+// @include breakpoint(1440px) { }
+//	桌機1600版型區
+// @include breakpoint(1600px) { }
+//	桌機1920版型區
+// @include breakpoint(1920px) { }

@@ -1,0 +1,497 @@
+[
+  {
+    "// li class thLot_list": "後面addClass，控裡面p的漸層色",
+    "thLotClass": "gov",
+    "// p class thLot_text": "後面addClass，控裡面:after的國旗樣式",
+    "thLotGameCountry": [],
+    "// 語系": "中文",
+    "langZh":{
+      "// h3 clas thLot_title": "內文",
+      "thLotTitle": "泰国官彩",
+      "// 泰国官彩的各種玩法": "thLot_list",
+      "thLotGameType": [
+        {
+          "// 各種玩法名稱": "01 第一行、02 第二行",
+          "gameName01": "泰国官彩",
+          "// 关于各種玩法說明": "<p>內文</p>",
+          "gameAboutExplain": "<p>泰国官彩由泰国政府彩票局管理，是泰国最广为人知的彩票游戏。开奖时间为每月1号与16号。泰国官彩将于开奖前6天开放投注。</p>",
+          "// 玩法說明內文的連結": "",
+          "gameAboutLink": "http://www.glo.or.th/main.php?filename=index"
+        },{
+          "gameName01": "泰国快乐彩",
+          "gameAboutExplain": "<p>每分钟开奖，每日有1440期。</p>"
+        },{
+          "gameName01": "泰国金币彩",
+          "gameAboutExplain": "<p>每3分钟开奖，每日有480期。</p>"
+        },{
+          "gameName01": "泰国幸运彩",
+          "gameAboutExplain": "<p>每5分钟开奖，每日有288期。</p>"
+        },{
+          "gameName01": "泰国闪耀彩",
+          "gameAboutExplain": "<p>每10分钟开奖，每日有144期。</p>"
+        }
+      ],
+      "// div clas game_info": "游戏说明的彈出視窗內的東西",
+      "thLotBoxTitle": "游戏说明",
+      "thLotBoxAbout": "关于 ",
+      "thLotBoxPlayTitle": "玩法说明",
+      "thLotBoxPlayText": "<p><strong>3D头 ( Top 3 )</strong></p><p>选择3个号码为一注，若与一等奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。例：投注461, 开奖为546461则中奖。</p><p><strong>3D组 ( Roll 3 )</strong></p><p>选择3个号码为一注，若与一等奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：2019-12-16 一等奖奖号为516461，投注461、416、641、614、146、164皆为中奖。</p><p><strong>2D头 ( Top 2 )</strong></p><p>选择2个号码为一注，若与一等奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 ( Bottom 2 )</strong></p><p>选择2个号码为一注，若与四等奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 ( Running Up )</strong></p><p>选择1个号码为一注，若一等奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：2019-12-16 一等奖奖号为516461，投注1、4、6皆为中奖。</p><p><strong>1D尾 ( Running Down )</strong></p><p>选择1个号码为一注，若四等奖中有出现且顺序不限，即为中奖。投注范围由0至9。例：若四等奖之奖号为46，投注4、6皆为中奖。</p>"
+    },
+    "// 語系": "英文",
+    "langEn":{
+      "thLotTitle": "Government Lotto",
+      "thLotGameType": [
+        {
+          "gameName01": "Thai Gov. Lottery",
+          "gameAboutExplain": "<p>The Thai lottery is managed by The Government Lottery Office, a state enterprise managed by the Ministry of Finance. The drawings take place on the 1st and 16th of each month. Thai Gov. Lottery will open betting 6 days before the draw.</p>",
+          "gameAboutLink": "http://www.glo.or.th/main.php?filename=index"
+        },{
+          "gameName01": "Thai Happy Lottery",
+          "gameAboutExplain": "<p>Draw time: 24/7</p><p>Frequency: 1 minute per draw, 1440 draws per day.</p>"
+        },{
+          "gameName01": "Thai Money Lottery",
+          "gameAboutExplain": "<p>Draw time: 24/7</p><p>Frequency: 3 minutes per draw, 480 draws per day.</p>"
+        },{
+          "gameName01": "Thai Lucky Lottery",
+          "gameAboutExplain": "<p>Draw time: 24/7</p><p>Frequency: 5 minutes per draw, 288 draws per day.</p>"
+        },{
+          "gameName01": "Thai Shiny Lottery",
+          "gameAboutExplain": "<p>Draw time: 24/7</p><p>Frequency: 10 minutes per draw, 144 draws per day.</p>"
+        }
+      ],
+      "thLotBoxTitle": "Rules",
+      "thLotBoxAbout": "About ",
+      "thLotBoxPlayTitle": "List of Bet Types",
+      "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the last three digits of the 1st Prize result in the exact order. Ex:Member chose: 461 . If result is [546461] member wins.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the last three digits of the 1st Prize result in no particular order. Ex: If result is [516461], member chose 461, 416, 146, 164, 614 and 641 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the 1st Prize result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the the 4th Prize result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the last three digits of the 1st Prize result in no particular order. Ex: If result is [516461], member chose 1, 4 and 6 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the 4th Prize result in no particular order. Ex: If the 4th prize is [46], member chose 4 and 6 wins.</p>"
+    },
+    "// 語系": "泰文",
+    "langTh":{
+      "thLotTitle": "แทงหวย",
+      "thLotGameType": [
+        {
+          "gameName01": "หวยรัฐบาล",
+          "gameAboutExplain": "<p>หวยรัฐบาล หวยไทย หรือ การเล่นหวยใต้ดินที่หลายคนรู้จักกันดี เป็นการการเสี่ยงโชคด้วยการทายผลตัวเลข โดยอาศัยอ้างอิงเลขการออกผลรางวัลของสลากกินแบ่งรัฐบาล ซึ่งในหนึ่งเดือนจะสามารถแทงได้ 2 งวด ตามผลรางวัลจะออกทุกๆวันที่ 1 และวันที่ 16 ของทุกเดือน ผลการออกรางวัลในงวดนั้นๆจะเป็นตัวชี้วัดการออกเลข วิธีการเล่นหวยรัฐบาล หรือซื้อหวยใต้ดิน เล่นหวย แทงหวยออนไลน์ ที่เป็นที่นิยมของลูกค้ามีดังต่อไปนี้</p>",
+          "gameAboutLink": "http://www.glo.or.th/main.php?filename=index",
+          "// 泰語的關於標題": "泰語獨有(無需與gameName做字串組合)",
+          "thLotBoxAboutTitle": "กติกาการเล่น หวยรัฐบาล"
+        },{
+          "gameName01": "ลอตเตอรี่หรรษา",
+          "gameAboutExplain": "<p>วันละ 1440 รอบ ออกผลรางวัลทุก 1 นาที</p>",
+          "thLotBoxAboutTitle": "ลอตเตอรี่หรรษา"
+        },{
+          "gameName01": "ลอตเตอรี่พารวย",
+          "gameAboutExplain": "<p>วันละ 480 รอบ ออกผลรางวัลทุก 3 นาที</p>",
+          "thLotBoxAboutTitle": "ลอตเตอรี่พารวย"
+        },{
+          "gameName01": "ลอตเตอรี่นำโชค",
+          "gameAboutExplain": "<p>วันละ 288 รอบ ออกผลรางวัลทุก 5 นาที</p>",
+          "thLotBoxAboutTitle": "ลอตเตอรี่นำโชค"
+        },{
+          "gameName01": "ลอตเตอรี่แวววับ",
+          "gameAboutExplain": "<p>วันละ 144 รอบ ออกผลรางวัลทุก 10 นาที</p>",
+          "thLotBoxAboutTitle": "ลอตเตอรี่แวววับ"
+        }
+      ],
+      "thLotBoxTitle": "คู่มือเกม",
+      "thLotBoxPlayTitle": "วิธีการแทงหวยแบบ เลขบน",
+      "thLotBoxPlayText": "<p><strong>สามตัวบน</strong></p><p>การแทงหวยรัฐบาลแบบ 3 ตัวบน คือ การแทงตัวเลข 3 ตัวท้ายของรางวัลที่ 1 ของสลากกินแบ่งรัฐบาลในแต่ละงวด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>สามตัวโต้ด</strong></p><p>วิธีการแทงหวยแบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวท้ายของรางวัลที่ 1 ของสลากกินแบ่งรัฐบาลในแต่ละงวด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นรางวัลที่ 1 ประจำงวดวันที่ 16 ธันวาคม 2562 เลขที่ออก 516461 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 6 แบบคือ 461 , 416 , 641 , 614 , 146 และ 164</p><p><strong>สองตัวบน</strong></p><p>หวยรัฐบาล รูปแบบการเล่นหวยแบบ 2 ตัวบน คือ การแทงตัวเลข 2 ตัวท้ายของรางวัลที่ 1 ของสลากกินแบ่งรัฐบาลในแต่ละงวด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>สองตัวล่าง</strong></p><p>การเล่นหวย 2 ตัวล่าง คือการแทงเลขให้ตรงกับผลรางวัลเลขท้าย 2 ตัวของสลากกินแบ่งรัฐบาล ตัวเลขที่สามารถแทงก็คือ 00-99 ซึ่งมีการออกผลรางวัลอยู่ 1 รางวัล</p><p><strong>วิ่งบน</strong></p><p>วิธีการเล่นหวยแบบ วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวท้ายของรางวัลที่ 1 ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น ถ้ารางวัลที่ 1 ประจำงวดวันที่ 16 ธันวาคม 2562 เลขที่ออก 516461 ในการแทงหวยวิ่งบนให้ถูกสามารถแทงได้ 3 แบบคือ วิ่งบน 4 , วิ่งบน 6 และ วิ่งบน 1</p><p><strong>การแทงหวย วิ่งล่าง</strong></p><p>วิธีการเล่นหวยแบบ วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับผลรางวัลเลขท้าย 2 ตัว ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น ผลรางวัลสลากกินแบ่งรัฐบาลเลขท้าย 2 ตัว คือ 46 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 4 และ วิ่งบน 6</p>"
+    }
+  },
+  {
+    "thLotClass": "yeekee",
+    "thLotGameCountry": [],
+    "langZh":{
+      "thLotTitle": "Yeekee",
+      "thLotGameType": [
+        {
+          "gameName01": "YeeKee",
+          "gameAboutExplain": "<p>YeeKee 游戏的开奖号码是与其他玩家输入的五位数字一起组合而成的，在截止时间之前，每个玩家都可以输入五位数字，将所有玩家输入的数字加总并扣除第16组数字，即为开奖结果之依据。</p><p><b>公式：数字总和 - 第16组数字 = 开奖结果之依据</b></p><p>开奖结果取百位十位个位为头3结果，万位与千位为2尾结果，范例：所有玩家总输入数字为 2543565，第16组数字为 34529</p><p>2543565 - 34529 = 2509036</p><p>头奖 ( Top three ) = 036</p><p>二星 ( Bottom two ) = 09</p>",
+          "gamePeriodTitle": "YeeKee 期数",
+          "gamePeriodText": "<p>YeeKee 每天88期，每期15分钟，每天第一期由泰国时间早上 06:00 开始。每期投注时间结束后还有两分钟可以输入五位数字奖号。例：10:00 投注时间结束，可输入五位数字至 10:02。若所有玩家加总输入的五位数字不满 20 组，则该期空开退还本金。</p>"
+        }
+      ],
+      "thLotBoxTitle": "游戏说明",
+      "thLotBoxAbout": "关于 ",
+      "thLotBoxPlayTitle": "玩法说明",
+      "thLotBoxPlayText": "<p><strong>3D头 ( Top 3 )</strong></p><p>选择3个号码为一注，若与头奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。</p><p><strong>3D组 ( Roll 3 )</strong></p><p>选择3个号码为一注，若与头奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：头奖奖号为036，投注036、063、306、360、603、630皆为中奖。</p><p><strong>2D头 ( Top 2 )</strong></p><p>选择2个号码为一注，若与头奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 ( Bottom 2 )</strong></p><p>选择2个号码为一注，若与二星奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 ( Running Up )</strong></p><p>选择1个号码为一注，若头奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：头奖奖号为036，投注0、3、6皆为中奖。</p><p><strong>1D尾 ( Running Down )</strong></p><p>选择1个号码为一注，若二星中有出现且顺序不限，即为中奖。投注范围由0至9。例：若二星之奖号为09，投注0、9皆为中奖。</p>"
+    },
+    "langEn":{
+      "thLotTitle": "YeeKee Lotto",
+      "thLotGameType": [
+        {
+          "gameName01": "YeeKee",
+          "gameAboutExplain": "<p>The lottery number of YeeKee combines with the five digits which entered by the other players. Before the time is up, each player can enter five digits and the sum of all numbers that entered by all players will deduct the 16th set of numbers, which is a draw result of this round.</p><p><b>Formula: Sum of numbers - 16th set of numbers = YeeKee's draw result</b></p><p>The draw result takes Top 3 from last three digits and Bottom 2 from 4th and 5th digits. There are two more minutes to enter the five digits after the end betting time of each round. For example: the sum of numbers is 543565, the 16th set of the numbers is 34529</p><p>2543565 - 34529 = 2509036</p><p>Top three  = 036</p><p>Bottom two = 09</p>",
+          "gamePeriodTitle": "YeeKee's daily period",
+          "gamePeriodText": "<p>Yeekee has 15 minutes per draw, 88 Draws per day. The first draw starts from 6 am Thailand time everyday. After the end betting time of that round, there are two more minutes to enter the five digits. For example: The end betting time of this round is 10:00, you still can enter five digits until 10:02. If the set number of this round is less then 20 sets, the money that you place the bet will be refund.</p>"
+        }
+      ],
+      "thLotBoxTitle": "Rules",
+      "thLotBoxAbout": "YeeKee's draw result",
+      "thLotBoxPlayTitle": "List of Bet Types",
+      "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the Top Three result in the exact order.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [036], member chose 036, 063, 306, 360, 603 and 630 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the Top Three result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the Bottom Two result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [036], member chose 0, 3 and 6 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Bottom Two result in no particular order. Ex: If the Bottom Two result is [09], member chose 0 and 9 wins.</p>"
+    },
+    "langTh":{
+      "thLotTitle": "จับยี่กี",
+      "thLotGameType": [
+        {
+          "gameName01": "YeeKee",
+          "// 泰語的關於標題": "泰語獨有(無需與gameName做字串組合)",
+          "thLotBoxAboutTitle": "การออกรางวัลหวยยี่กี",
+          "gameAboutExplain": "<p>ชุดจะไปรวมกันกับชุดตัวเลขที่ผู้เล่นหวยจับยี่กีคนอื่นๆส่งเข้ามา กลายเป็นผลรวมชุดตัวเลข จากนั้นเมื่อหมดเวลาแทง ระบบจะนำชุดตัวเลขลำดับที่ 16 ที่ส่งเข้ามาล่าสุดมาลบกับผลรวมชุดตัวเลข สูตรการคำนวนผลการออกรางวัลจะเป็นดังนี้</p><p><b>“ผลรวมชุดตัวเลข – ชุดตัวเลขลำดับที่ 16 = ผลการออกรางวัล”</b></p><p>โดย เลข 3 ตัว จะอ้างอิงจากหลักหน่วยถึงหลักร้อย เลข 2 ตัว จะอ้างอิงจากหลักพันและหลักหมื่น หากนึกภาพไม่ออกสามารถศึกษาได้จากภาพตัวอย่างด้านล่างนี้</p>",
+          "gamePeriodTitle": "จับยี่กีแต่ละรอบ",
+          "gamePeriodText": "<p>เปิดรับแทงวันละ 88 รอบ ออกผลรางวัลทุกๆ 15 นาที รอบแรกเริ่มเวลา 06:00 น. เวลาในการแทงหวยยี่กี่ในแต่ล่ะรอบนั้น ระบบจะปิดรับแทงก่อนหมดเวลา 2 นาที เช่น ปิดรอบเวลา 10.02 น. ลูกค้าต้องกดยืนยันการซื้อหรือลบโพยก่อน 10.00 น. แต่ยังสามารถยิงเลขได้จนถึงเวลา 10.02 น.</p>"
+        }
+      ],
+      "thLotBoxTitle": "คู่มือเกม",
+      "thLotBoxAbout": "การออกรางวัลหวยยี่กี",
+      "thLotBoxPlayText": "<p><strong>สามตัวบน</strong></p><p>การแทงหวยยี่กี 3 ตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยยี่กีในแต่ละงวด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>สามตัวโต้ด</strong></p><p>วิธีการแทงหวยยี่กี แบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยยี่กีในแต่ละงวด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นเลขที่ออก 036 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 6 แบบคือ 036 , 063 , 306 , 360 , 603 และ 630</p><p><strong>สองตัวบน</strong></p><p>การแทงหวยยี่กี 2 ตัวบน คือ การแทงตัวเลข 2 ตัวบนของหวยยี่กีในแต่ละงวด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>สองตัวล่าง</strong></p><p>การแทงหวยยี่กี 2 ตัวล่าง คือ การแทงตัวเลข 2 ตัวล่างของหวยยี่กีในแต่ละงวด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>แทงหวย วิ่งบน</strong></p><p>การแทงหวยยี่กี วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวบน ตัวเลขที่สามารถแทงก็คือ 0-9 เช่นเลข 3 ตัวบนที่ออก 036 ในการแทงหวยยี่กีวิ่งบนให้ถูกสามารถแทงได้ 3 แบบคือ วิ่งบน 0 , วิ่งบน 3 และ วิ่งบน 6</p><p><strong>แทงหวย วิ่งล่าง</strong></p><p>การแทงหวยยี่กี วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 2 ตัวล่าง ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น เลข 2 ตัวล่างที่ออก 09 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 0 และ วิ่งบน 9</p>"
+    }
+  },
+  {
+    "thLotClass": "stock",
+    "// p class thLot_text": "後面addClass，控裡面:after的國旗樣式(TH-泰國、JP-日本、HK-香港、CN-中國)",
+    "thLotGameCountry": [
+      "TH",
+      "TH",
+      "JP",
+      "JP",
+      "HK",
+      "HK",
+      "CN",
+      "CN"
+    ],
+    "langZh":{
+      "thLotTitle": "股票彩",
+      "thLotGameType": [
+        {
+          "gameName01": "泰国SET综合指数",
+          "gameName02": "午盘",
+          "gameAboutExplain": "<p>泰国SET综合指数 (SET Index) 由泰国证券交易所上市股票、以市值加权计算出的指数。另外，泰国证券交易所也编纂了 SET-50 指数，涵括泰国证券交易所前50大市值的股票。</p>",
+          "gameTimeText": "<p>SET、SET-50 于泰国工作日时间开盘 (周一至周五，例假日除外)，分为早盘与午盘。</p><p>- 早盘收盘时间为泰国时间 12:30 (中国时间 13:30)</p><p>- 午盘收盘时间为泰国时间 16:30 (中国时间 17:30)</p><p>开奖结果将以官网为主</p>",
+          "gameTimeLink": "https://www.set.or.th/en/",
+          "gameAwardNumberText": "<p>泰国SET综合指数的奖号取得方式如下：</p><p>头奖 (Top three) = SET50 指数末一码 + SET 指数末两码</p><p>二星 (Bottom two) = SET 涨跌小数点后两码</p>",
+          "gameAwardNumberImg": "THAISET_EN.11fed146.png",
+          "thLotBoxPlayText": "<p><strong>3D头 (Top 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。</p><p><strong>3D组 (Roll 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：头奖奖号为748，投注478、487、748、784、847、874皆为中奖。</p><p><strong>2D头 (Top 2)</strong></p><p>选择2个号码为一注，若与头奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 (Bottom 2)</strong></p><p>选择2个号码为一注，若与二星奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 (Running Up)</strong></p><p>选择1个号码为一注，若头奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：头奖奖号为748，投注4、7、8皆为中奖。</p><p><strong>1D尾 (Running Down)</strong></p><p>选择1个号码为一注，若二星中有出现且顺序不限，即为中奖。投注范围由0至9。例：若二星之奖号为71，投注1、7皆为中奖。</p>"
+        },{
+          "gameName01": "泰国SET综合指数",
+          "gameName02": "晚盘",
+          "gameAboutExplain": "<p>泰国SET综合指数 (SET Index) 由泰国证券交易所上市股票、以市值加权计算出的指数。另外，泰国证券交易所也编纂了 SET-50 指数，涵括泰国证券交易所前50大市值的股票。</p>",
+          "gameTimeText": "<p>SET、SET-50 于泰国工作日时间开盘 (周一至周五，例假日除外)，分为早盘与午盘。</p><p>- 早盘收盘时间为泰国时间 12:30 (中国时间 13:30)</p><p>- 午盘收盘时间为泰国时间 16:30 (中国时间 17:30)</p><p>开奖结果将以官网为主</p>",
+          "gameTimeLink": "https://www.set.or.th/en/",
+          "gameAwardNumberText": "<p>泰国SET综合指数的奖号取得方式如下：</p><p>头奖 (Top three) = SET50 指数末一码 + SET 指数末两码</p><p>二星 (Bottom two) = SET 涨跌小数点后两码</p>",
+          "gameAwardNumberImg": "THAISET_EN.11fed146.png",
+          "thLotBoxPlayText": "<p><strong>3D头 (Top 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。</p><p><strong>3D组 (Roll 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：头奖奖号为748，投注478、487、748、784、847、874皆为中奖。</p><p><strong>2D头 (Top 2)</strong></p><p>选择2个号码为一注，若与头奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 (Bottom 2)</strong></p><p>选择2个号码为一注，若与二星奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 (Running Up)</strong></p><p>选择1个号码为一注，若头奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：头奖奖号为748，投注4、7、8皆为中奖。</p><p><strong>1D尾 (Running Down)</strong></p><p>选择1个号码为一注，若二星中有出现且顺序不限，即为中奖。投注范围由0至9。例：若二星之奖号为71，投注1、7皆为中奖。</p>"
+        },{
+          "gameName01": "日经225指数",
+          "gameName02": "早盘",
+          "gameAboutExplain": "<p>日经平均指数又名日经225 (Nikkei 225)，是由日本经济新闻社推出的东京证券交易所的225品种的股价指数。</p>",
+          "gameTimeText": "<p>日经225指数于日本工作日时间开盘 (周一至周五，例假日除外)，分为早盘与午盘。</p><p>- 早盘收盘时间为日本时间 11:30 (中国时间 10:30)</p><p>- 午盘收盘时间为日本时间 15:00 (中国时间 14:00)</p><p>开奖结果将以官网为主</p>",
+          "gameTimeLink": "https://indexes.nikkei.co.jp/en/nkave/",
+          "gameAwardNumberText": "<p>日经225指数的奖号取得方式如下：</p><p>头奖 (Top three) = 指数末三码 (小数点前一码＋小数点后两码)</p><p>二星 (Bottom two) = 指数涨跌小数点后两码</p>",
+          "gameAwardNumberImg": "JPNIK_EN.86ff9439.png",
+          "thLotBoxPlayText": "<p><strong>3D头 (Top 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。</p><p><strong>3D组 (Roll 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：头奖奖号为577，投注577、757、775皆为中奖。</p><p><strong>2D头 (Top 2)</strong></p><p>选择2个号码为一注，若与头奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 (Bottom 2)</strong></p><p>选择2个号码为一注，若与二星奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 (Running Up)</strong></p><p>选择1个号码为一注，若头奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：头奖奖号为577，投注5、7皆为中奖。</p><p><strong>1D尾 (Running Down)</strong></p><p>选择1个号码为一注，若二星中有出现且顺序不限，即为中奖。投注范围由0至9。例：若二星之奖号为47，投注4、7皆为中奖。</p>"
+        },{
+          "gameName01": "日经225指数",
+          "gameName02": "午盘",
+          "gameAboutExplain": "<p>日经平均指数又名日经225 (Nikkei 225)，是由日本经济新闻社推出的东京证券交易所的225品种的股价指数。</p>",
+          "gameTimeText": "<p>日经225指数于日本工作日时间开盘 (周一至周五，例假日除外)，分为早盘与午盘。</p><p>- 早盘收盘时间为日本时间 11:30 (中国时间 10:30)</p><p>- 午盘收盘时间为日本时间 15:00 (中国时间 14:00)</p><p>开奖结果将以官网为主</p>",
+          "gameTimeLink": "https://indexes.nikkei.co.jp/en/nkave/",
+          "gameAwardNumberText": "<p>日经225指数的奖号取得方式如下：</p><p>头奖 (Top three) = 指数末三码 (小数点前一码＋小数点后两码)</p><p>二星 (Bottom two) = 指数涨跌小数点后两码</p>",
+          "gameAwardNumberImg": "JPNIK_EN.86ff9439.png",
+          "thLotBoxPlayText": "<p><strong>3D头 (Top 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。</p><p><strong>3D组 (Roll 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：头奖奖号为577，投注577、757、775皆为中奖。</p><p><strong>2D头 (Top 2)</strong></p><p>选择2个号码为一注，若与头奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 (Bottom 2)</strong></p><p>选择2个号码为一注，若与二星奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 (Running Up)</strong></p><p>选择1个号码为一注，若头奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：头奖奖号为577，投注5、7皆为中奖。</p><p><strong>1D尾 (Running Down)</strong></p><p>选择1个号码为一注，若二星中有出现且顺序不限，即为中奖。投注范围由0至9。例：若二星之奖号为47，投注4、7皆为中奖。</p>"
+        },{
+          "gameName01": "香港恒生指数",
+          "gameName02": "早盘",
+          "gameAboutExplain": "<p>恒生指数 (Hang Seng Index) 是以反映香港股市行情的重要指标，指数由五十只恒指成份股的市值计算出来的，代表了香港交易所所有上市公司的十二个月平均市值涵盖率的63%。</p>",
+          "gameTimeText": "<p>香港恒生指数于香港工作日时间开盘 (周一至周五，例假日除外)，分为早盘与午盘。</p><p>- 早盘收盘时间为香港时间 12:00</p><p>- 午盘收盘时间为香港时间 16:00</p><p>开奖结果将以官网为主</p>",
+          "gameTimeLink": "https://www.hsi.com.hk/eng/",
+          "gameAwardNumberText": "<p>香港恒生指数的奖号取得方式如下：</p><p>头奖 (Top three) = 指数末三码 (小数点前一码＋小数点后两码)</p><p>二星 (Bottom two) = 指数涨跌小数点后两码</p>",
+          "gameAwardNumberImg": "HKHSI_EN.bfa86f32.png",
+          "thLotBoxPlayText": "<p><strong>3D头 (Top 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。</p><p><strong>3D组 (Roll 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：头奖奖号为033，投注033、303、330皆为中奖。</p><p><strong>2D头 (Top 2)</strong></p><p>选择2个号码为一注，若与头奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 (Bottom 2)</strong></p><p>选择2个号码为一注，若与二星奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 (Running Up)</strong></p><p>选择1个号码为一注，若头奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：头奖奖号为033，投注0、3皆为中奖。</p><p><strong>1D尾 (Running Down)</strong></p><p>选择1个号码为一注，若二星中有出现且顺序不限，即为中奖。投注范围由0至9。例：若二星之奖号为96，投注6、9皆为中奖。</p>"
+        },{
+          "gameName01": "香港恒生指数",
+          "gameName02": "午盘",
+          "gameAboutExplain": "<p>恒生指数 (Hang Seng Index) 是以反映香港股市行情的重要指标，指数由五十只恒指成份股的市值计算出来的，代表了香港交易所所有上市公司的十二个月平均市值涵盖率的63%。</p>",
+          "gameTimeText": "<p>香港恒生指数于香港工作日时间开盘 (周一至周五，例假日除外)，分为早盘与午盘。</p><p>- 早盘收盘时间为香港时间 12:00</p><p>- 午盘收盘时间为香港时间 16:00</p><p>开奖结果将以官网为主</p>",
+          "gameTimeLink": "https://www.hsi.com.hk/eng/",
+          "gameAwardNumberText": "<p>香港恒生指数的奖号取得方式如下：</p><p>头奖 (Top three) = 指数末三码 (小数点前一码＋小数点后两码)</p><p>二星 (Bottom two) = 指数涨跌小数点后两码</p>",
+          "gameAwardNumberImg": "HKHSI_EN.bfa86f32.png",
+          "thLotBoxPlayText": "<p><strong>3D头 (Top 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。</p><p><strong>3D组 (Roll 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：头奖奖号为033，投注033、303、330皆为中奖。</p><p><strong>2D头 (Top 2)</strong></p><p>选择2个号码为一注，若与头奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 (Bottom 2)</strong></p><p>选择2个号码为一注，若与二星奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 (Running Up)</strong></p><p>选择1个号码为一注，若头奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：头奖奖号为033，投注0、3皆为中奖。</p><p><strong>1D尾 (Running Down)</strong></p><p>选择1个号码为一注，若二星中有出现且顺序不限，即为中奖。投注范围由0至9。例：若二星之奖号为96，投注6、9皆为中奖。</p>"
+        },{
+          "gameName01": "深证成指",
+          "gameName02": "早盘",
+          "gameAboutExplain": "<p>深证成份指数 (SZSE COMPONENT INDEX) 是深圳证券交易所的主要股指。它是按一定标准选出500家有代表性的上市公司作为成份股，用成份股的自由流通股数作为权数，采用派氏加权法编制而成的股价指标。</p>",
+          "gameTimeText": "<p>深证成指于中国工作日时间开盘 (周一至周五，例假日除外)，分为早盘与午盘。</p><p>- 早盘收盘时间为中国时间 11:30</p><p>- 午盘收盘时间为中国时间 15:00</p><p>开奖结果将以官网为主</p>",
+          "gameTimeLink": "http://www.szse.cn/English/",
+          "gameAwardNumberText": "<p>深证成指的奖号取得方式如下：</p><p>头奖 (Top three) = 指数末三码 (小数点前一码＋小数点后两码)</p><p>二星 (Bottom two) = 指数涨跌小数点后两码</p>",
+          "gameAwardNumberImg": "SZSECI_EN.23845f78.png",
+          "thLotBoxPlayText": "<p><strong>3D头 (Top 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。</p><p><strong>3D组 (Roll 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：头奖奖号为305，投注035、053、305、350、503、530皆为中奖。</p><p><strong>2D头 (Top 2)</strong></p><p>选择2个号码为一注，若与头奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 (Bottom 2)</strong></p><p>选择2个号码为一注，若与二星奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 (Running Up)</strong></p><p>选择1个号码为一注，若头奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：头奖奖号为305，投注0、3、5皆为中奖。</p><p><strong>1D尾 (Running Down)</strong></p><p>选择1个号码为一注，若二星中有出现且顺序不限，即为中奖。投注范围由0至9。例：若二星之奖号为50，投注0、5皆为中奖。</p>"
+        },{
+          "gameName01": "深证成指",
+          "gameName02": "午盘",
+          "gameAboutExplain": "<p>深证成份指数 (SZSE COMPONENT INDEX) 是深圳证券交易所的主要股指。它是按一定标准选出500家有代表性的上市公司作为成份股，用成份股的自由流通股数作为权数，采用派氏加权法编制而成的股价指标。</p>",
+          "gameTimeText": "<p>深证成指于中国工作日时间开盘 (周一至周五，例假日除外)，分为早盘与午盘。</p><p>- 早盘收盘时间为中国时间 11:30</p><p>- 午盘收盘时间为中国时间 15:00</p><p>开奖结果将以官网为主</p>",
+          "gameTimeLink": "http://www.szse.cn/English/",
+          "gameAwardNumberText": "<p>深证成指的奖号取得方式如下：</p><p>头奖 (Top three) = 指数末三码 (小数点前一码＋小数点后两码)</p><p>二星 (Bottom two) = 指数涨跌小数点后两码</p>",
+          "gameAwardNumberImg": "SZSECI_EN.23845f78.png",
+          "thLotBoxPlayText": "<p><strong>3D头 (Top 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码及顺序皆相同，即为中奖。投注范围由000至999。</p><p><strong>3D组 (Roll 3)</strong></p><p>选择3个号码为一注，若与头奖后三位之号码相同但顺序不限，即为中奖。投注范围由000至999。例：头奖奖号为305，投注035、053、305、350、503、530皆为中奖。</p><p><strong>2D头 (Top 2)</strong></p><p>选择2个号码为一注，若与头奖后二位之号码及顺序皆相同，即为中奖。投注范围由00至99。</p><p><strong>2D尾 (Bottom 2)</strong></p><p>选择2个号码为一注，若与二星奖号码相同且顺序一样，即为中奖。投注范围由00至99。</p><p><strong>1D头 (Running Up)</strong></p><p>选择1个号码为一注，若头奖后三位中有出现且顺序不限，即为中奖。投注范围由0至9。例：头奖奖号为305，投注0、3、5皆为中奖。</p><p><strong>1D尾 (Running Down)</strong></p><p>选择1个号码为一注，若二星中有出现且顺序不限，即为中奖。投注范围由0至9。例：若二星之奖号为50，投注0、5皆为中奖。</p>"
+        }
+      ],
+      "thLotBoxTitle": "游戏说明",
+      "thLotBoxAbout": "关于 ",
+      "gameTimeTitle": "开关盘时间",
+      "gameAwardNumberTitle": "如何查看奖号",
+      "thLotBoxPlayTitle": "玩法说明"
+    },
+    "langEn":{
+      "thLotTitle": "Stock Lotto",
+      "thLotGameType": [
+        {
+          "gameName01": "Thai stock market",
+          "gameName02": "Noon",
+          "gameAboutExplain": "<p>The SET Index is a Thai composite stock market index which is calculated from the prices of all common stocks on the main board of the Stock Exchange of Thailand (SET).</p><p>The SET50 and SET100 Indices are the primary stock indices of Thailand. The constituents of both lists are companies listed on the Stock Exchange of Thailand (SET) in Bangkok.</p>",
+          "gameTimeText": "<p>Trading from Mon to Fri, the Exchange has two trading sessions:</p><p>Noon Trading Session closed at 12:30 (Local Time).</p><p>Evening Trading Session closed at 16:30 pm (Local Time).</p><p>Results will be based on the official website:</p>",
+          "gameTimeLink": "https://www.set.or.th/en/",
+          "gameAwardNumberText": "<p>The Top Three is taken from the last number of SET50 Index and the last 2 numbers of SET Index, the Bottom Two is taken the last 2 numbers of change value of SET Index.</p>",
+          "gameAwardNumberImg": "THAISET_EN.11fed146.png",
+          "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the Top Three result in the exact order.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [748], member chose 478, 487, 748, 784, 847 and 874 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the Top Three result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the Bottom Two result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [748], member chose 4, 7 and 8 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Bottom Two result in no particular order. Ex: If the Bottom Two result is [71], member chose 1 and 7 wins.</p>"
+        },{
+          "gameName01": "Thai stock market",
+          "gameName02": "Evening",
+          "gameAboutExplain": "<p>The SET Index is a Thai composite stock market index which is calculated from the prices of all common stocks on the main board of the Stock Exchange of Thailand (SET).</p><p>The SET50 and SET100 Indices are the primary stock indices of Thailand. The constituents of both lists are companies listed on the Stock Exchange of Thailand (SET) in Bangkok.</p>",
+          "gameTimeText": "<p>Trading from Mon to Fri, the Exchange has two trading sessions:</p><p>Noon Trading Session closed at 12:30 (Local Time).</p><p>Evening Trading Session closed at 16:30 pm (Local Time).</p><p>Results will be based on the official website:</p>",
+          "gameTimeLink": "https://www.set.or.th/en/",
+          "gameAwardNumberText": "<p>The Top Three is taken from the last number of SET50 Index and the last 2 numbers of SET Index, the Bottom Two is taken the last 2 numbers of change value of SET Index.</p>",
+          "gameAwardNumberImg": "THAISET_EN.11fed146.png",
+          "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the Top Three result in the exact order.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [748], member chose 478, 487, 748, 784, 847 and 874 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the Top Three result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the Bottom Two result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [748], member chose 4, 7 and 8 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Bottom Two result in no particular order. Ex: If the Bottom Two result is [71], member chose 1 and 7 wins.</p>"
+        },{
+          "gameName01": "Nikkei 225",
+          "gameName02": "Morning",
+          "gameAboutExplain": "<p>Average is a stock market index for the Tokyo Stock Exchange (TSE). It has been calculated daily by the Nihon Keizai Shinbun (The Nikkei) newspaper since 1950. It is a price-weighted index, operating in the Japanese Yen (JP¥), and its components are reviewed once a year. The Nikkei measures the performance of 225 large, publicly owned companies in Japan from a wide array of industry sectors.</p>",
+          "gameTimeText": "<p>Trading from Mon to Fri, the Exchange has two trading sessions:</p><p>Morning Trading Session closed at 11:30 (Local Time).</p><p>Afternoon Trading Session closed at 15:00 (Local Time).</p><p>Results will be based on the official website:</p>",
+          "gameTimeLink": "https://indexes.nikkei.co.jp/en/nkave/",
+          "gameAwardNumberText": "<p>The Top Three is taken from the last 3 numbers of the daily lunch break and closing price of Nikkei 225 Index, the Bottom Two is taken the last 2 numbers of change value of Nikkei 225 Index.</p>",
+          "gameAwardNumberImg": "JPNIK_EN.86ff9439.png",
+          "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the Top Three result in the exact order.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [577], member chose 577, 757 and 775 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the Top Three result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the Bottom Two result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [577], member chose 5 and 7 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Bottom Two result in no particular order. Ex: If the Bottom Two result is [47], member chose 4 and 7 wins.</p>"
+        },{
+          "gameName01": "Nikkei 225",
+          "gameName02": "Noon",
+          "gameAboutExplain": "<p>Average is a stock market index for the Tokyo Stock Exchange (TSE). It has been calculated daily by the Nihon Keizai Shinbun (The Nikkei) newspaper since 1950. It is a price-weighted index, operating in the Japanese Yen (JP¥), and its components are reviewed once a year. The Nikkei measures the performance of 225 large, publicly owned companies in Japan from a wide array of industry sectors.</p>",
+          "gameTimeText": "<p>Trading from Mon to Fri, the Exchange has two trading sessions:</p><p>Morning Trading Session closed at 11:30 (Local Time).</p><p>Afternoon Trading Session closed at 15:00 (Local Time).</p><p>Results will be based on the official website:</p>",
+          "gameTimeLink": "https://indexes.nikkei.co.jp/en/nkave/",
+          "gameAwardNumberText": "<p>The Top Three is taken from the last 3 numbers of the daily lunch break and closing price of Nikkei 225 Index, the Bottom Two is taken the last 2 numbers of change value of Nikkei 225 Index.</p>",
+          "gameAwardNumberImg": "JPNIK_EN.86ff9439.png",
+          "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the Top Three result in the exact order.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [577], member chose 577, 757 and 775 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the Top Three result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the Bottom Two result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [577], member chose 5 and 7 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Bottom Two result in no particular order. Ex: If the Bottom Two result is [47], member chose 4 and 7 wins.</p>"
+        },{
+          "gameName01": "Hang Seng Index",
+          "gameName02": "Morning",
+          "gameAboutExplain": "<p>The Hang Seng Index (abbreviated: HSI, Chinese: 恒生指數) is a freefloat-adjusted market-capitalization-weighted stock-market index in Hong Kong. It is used to record and monitor daily changes of the largest companies of the Hong Kong stock market and is the main indicator of the overall market performance in Hong Kong.</p>",
+          "gameTimeText": "<p>Trading from Mon to Fri, the Exchange has two trading sessions:</p><p>Morning Trading Session closed at 12:00 (Local Time).</p><p>Afternoon Trading Session closed at 16:00 (Local Time).</p><p>Results will be based on the official website:</p>",
+          "gameTimeLink": "https://www.hsi.com.hk/eng/",
+          "gameAwardNumberText": "<p>The Top Three is taken from the last 3 numbers of the daily lunch break and closing price of Hang Seng Index, the Bottom Two is taken the last 2 numbers of change value of Hang Seng Index.</p>",
+          "gameAwardNumberImg": "HKHSI_EN.bfa86f32.png",
+          "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the Top Three result in the exact order.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [033], member chose 033, 303 and 330 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the Top Three result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the Bottom Two result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [033], member chose 0 and 3 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Bottom Two result in no particular order. Ex: If the Bottom Two result is [96], member chose 6 and 9 wins.</p>"
+        },{
+          "gameName01": "Hang Seng Index",
+          "gameName02": "Noon",
+          "gameAboutExplain": "<p>The Hang Seng Index (abbreviated: HSI, Chinese: 恒生指數) is a freefloat-adjusted market-capitalization-weighted stock-market index in Hong Kong. It is used to record and monitor daily changes of the largest companies of the Hong Kong stock market and is the main indicator of the overall market performance in Hong Kong.</p>",
+          "gameTimeText": "<p>Trading from Mon to Fri, the Exchange has two trading sessions:</p><p>Morning Trading Session closed at 12:00 (Local Time).</p><p>Afternoon Trading Session closed at 16:00 (Local Time).</p><p>Results will be based on the official website:</p>",
+          "gameTimeLink": "https://www.hsi.com.hk/eng/",
+          "gameAwardNumberText": "<p>The Top Three is taken from the last 3 numbers of the daily lunch break and closing price of Hang Seng Index, the Bottom Two is taken the last 2 numbers of change value of Hang Seng Index.</p>",
+          "gameAwardNumberImg": "HKHSI_EN.bfa86f32.png",
+          "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the Top Three result in the exact order.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [033], member chose 033, 303 and 330 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the Top Three result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the Bottom Two result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [033], member chose 0 and 3 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Bottom Two result in no particular order. Ex: If the Bottom Two result is [96], member chose 6 and 9 wins.</p>"
+        },{
+          "gameName01": "Szse Component Index",
+          "gameName02": "Morning",
+          "gameAboutExplain": "<p>The SZSE Component Index is an index of 500 stocks that are traded at the Shenzhen Stock Exchange (SZSE). It is the main stock market index of SZSE.,</p>",
+          "gameTimeText": "<p>Trading from Mon to Fri, the Exchange has two trading sessions:</p><p>Morning Trading Session closed at 11:30 (Local Time).</p><p>Afternoon Trading Session closed at 15:00 (Local Time).</p><p>Results will be based on the official website:</p>",
+          "gameTimeLink": "http://www.szse.cn/English/",
+          "gameAwardNumberText": "<p>The Top Three is taken from the last 3 numbers of the daily lunch break and closing price of Hang Seng Index, the Bottom Two is taken the last 2 numbers of change value of Hang Seng Index.</p>",
+          "gameAwardNumberImg": "SZSECI_EN.23845f78.png",
+          "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the Top Three result in the exact order.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [305], member chose 035, 053, 305, 350, 503 and 530 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the Top Three result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the Bottom Two result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [305], member chose 0, 3 and 5 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Bottom Two result in no particular order. Ex: If the Bottom Two result is [50], member chose 0 and 5 wins.</p>"
+        },{
+          "gameName01": "Szse Component Index",
+          "gameName02": "Noon",
+          "gameAboutExplain": "<p>The SZSE Component Index is an index of 500 stocks that are traded at the Shenzhen Stock Exchange (SZSE). It is the main stock market index of SZSE.,</p>",
+          "gameTimeText": "<p>Trading from Mon to Fri, the Exchange has two trading sessions:</p><p>Morning Trading Session closed at 11:30 (Local Time).</p><p>Afternoon Trading Session closed at 15:00 (Local Time).</p><p>Results will be based on the official website:</p>",
+          "gameTimeLink": "http://www.szse.cn/English/",
+          "gameAwardNumberText": "<p>The Top Three is taken from the last 3 numbers of the daily lunch break and closing price of Hang Seng Index, the Bottom Two is taken the last 2 numbers of change value of Hang Seng Index.</p>",
+          "gameAwardNumberImg": "SZSECI_EN.23845f78.png",
+          "thLotBoxPlayText": "<p><strong>Top 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers selected must match the Top Three result in the exact order.</p><p><strong>Roll 3</strong></p><p>Member select 1 or more combinations from 000 to 999. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [305], member chose 035, 053, 305, 350, 503 and 530 wins.</p><p><strong>Top 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers selected must match the last two digits of the Top Three result in the exact order.</p><p><strong>Bottom 2</strong></p><p>Member select 1 or more combinations from 00 to 99. To win, the numbers must match the Bottom Two result in the exact order.</p><p><strong>Running Up</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Top Three result in no particular order. Ex: If the Top Three is [305], member chose 0, 3 and 5 wins.</p><p><strong>Running Down</strong></p><p>Member select 1 or more combinations from 0 to 9. To win, the numbers must match the Bottom Two result in no particular order. Ex: If the Bottom Two result is [50], member chose 0 and 5 wins.</p>"
+        }
+      ],
+      "thLotBoxTitle": "Rules",
+      "thLotBoxAbout": "About ",
+      "gameTimeTitle": "Trading Hours",
+      "gameAwardNumberTitle": "Result Numbers",
+      "thLotBoxPlayTitle": "List of Bet Types"
+    },
+    "langTh":{
+      "thLotTitle": "หวยหุ้นต่างประเทศ",
+      "thLotGameType": [
+        {
+          "gameName01": "หุ้นไทยเที่ยง",
+          "// 泰語的關於標題": "泰語獨有(無需與gameName做字串組合)",
+          "thLotBoxAboutTitle": "ดัชนีราคาหุ้นตลาดหลักทรัพยัแห่งประเทศไทย",
+          "gameAboutExplain": "<p>ดัชนีราคาหุ้นตลาดหลักทรัพยัแห่งประเทศไทย (SET Index) เป็นดัชนีสะท้อนความเคลื่อนไหวของราคาหลักทรัพย์ทั้งหมด โดยคำนวณจากหุ้นสามัญจดทะเบียนทุกตัวในตลาดหลักทรัพย์แห่งประเทศไทย ส่วน SET50 จะคำนวณมาจากการอ้างอิง หุ้น 50 อันดับแรก ที่จดทะเบียนอยู่ในตลาดหุ้น และผ่านการคัดเลือกตามเงื่อนไขของ ตลาดหลักทรัพย์แห่งประเทศไทย</p>",
+          "gameTimeText": "<p>หวยหุ้นไทยออกรางวัลทุกวันทำการของตลาดหหลักทรัพย์ไทย (จันทร์-ศุกร์ ยกเว้นวันหยุดนักขัตฤกษ์) และออกรางวัลตามรอบการปิดตลาด (ตามเวลาประเทศไทย)</p><p>- รอบเช้า ออกเวลา เวลาไทย 12.30 (เวลาจีน 13:30)</p><p>- รอบบ่าย ออกเวลา เวลาไทย 16.30 (เวลาจีน 17:00)</p><p>โดยผลรางวัลจะประกาศจากเว็บ</p>",
+          "gameTimeLink": "https://www.set.or.th/en/",
+          "gameAwardNumberTitle": "วิธีตรวจหวยหุ้นไทย",
+          "gameAwardNumberText": "<p>- เลขสามตัว จะใช้เลขท้ายจากSET50 + สองตัวเลขท้ายจาก SET</p><p>- เลขสองตัวล่าง   จะใช้เลขหลังจุดทศนิยมของค่า Change ในช่วงการปิดตลาดมาเป็น 2 ตัวล่าง</p>",
+          "gameAwardNumberImg": "THAISET_EN.11fed146.png",
+          "thLotBoxPlayText": "<p><strong>การแทงหวยหุ้น 3 ตัวบน</strong></p><p>การแทงหวยหุ้น 3 ตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>การแทงหวยหุ้น 3 ตัวโต๊ด</strong></p><p>วิธีการแทงหวยหุ้นแบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นเลขที่ออก 748 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 6 แบบคือ 478 , 487 , 748 , 784 , 847 และ 874</p><p><strong>การแทงหวยหุ้น 2 ตัวบน</strong></p><p>การแทงหวยหุ้น 2 ตัวบน คือ การแทงตัวเลข 2 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น 2 ตัวล่าง</strong></p><p>การแทงหวยหุ้น 2 ตัวล่าง คือ การแทงตัวเลข 2 ตัวล่างของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น วิ่งบน</strong></p><p>การแทงหวยหุ้น วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวบน ตัวเลขที่สามารถแทงก็คือ 0-9 เช่นเลข 3 ตัวบนที่ออก 461 ในการแทงหวยหุ้นวิ่งบนให้ถูกสามารถแทงได้ 3 แบบคือ วิ่งบน 4 , วิ่งบน 7 และ วิ่งบน 8</p><p><strong>การแทงหวยหุ้น วิ่งล่าง</strong></p><p>การแทงหวยหุ้น วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 2 ตัวล่าง ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น เลข 2 ตัวล่างที่ออก 71 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 1 และ วิ่งบน 7</p>"
+        },{
+          "gameName01": "หุ้นไทยเย็น",
+          "thLotBoxAboutTitle": "ดัชนีราคาหุ้นตลาดหลักทรัพยัแห่งประเทศไทย",
+          "gameAboutExplain": "<p>ดัชนีราคาหุ้นตลาดหลักทรัพยัแห่งประเทศไทย (SET Index) เป็นดัชนีสะท้อนความเคลื่อนไหวของราคาหลักทรัพย์ทั้งหมด โดยคำนวณจากหุ้นสามัญจดทะเบียนทุกตัวในตลาดหลักทรัพย์แห่งประเทศไทย ส่วน SET50 จะคำนวณมาจากการอ้างอิง หุ้น 50 อันดับแรก ที่จดทะเบียนอยู่ในตลาดหุ้น และผ่านการคัดเลือกตามเงื่อนไขของ ตลาดหลักทรัพย์แห่งประเทศไทย</p>",
+          "gameTimeText": "<p>หวยหุ้นไทยออกรางวัลทุกวันทำการของตลาดหหลักทรัพย์ไทย (จันทร์-ศุกร์ ยกเว้นวันหยุดนักขัตฤกษ์) และออกรางวัลตามรอบการปิดตลาด (ตามเวลาประเทศไทย)</p><p>- รอบเช้า ออกเวลา เวลาไทย 12.30 (เวลาจีน 13:30)</p><p>- รอบบ่าย ออกเวลา เวลาไทย 16.30 (เวลาจีน 17:00)</p><p>โดยผลรางวัลจะประกาศจากเว็บ</p>",
+          "gameTimeLink": "https://www.set.or.th/en/",
+          "gameAwardNumberTitle": "วิธีตรวจหวยหุ้นไทย",
+          "gameAwardNumberText": "<p>- เลขสามตัว จะใช้เลขท้ายจากSET50 + สองตัวเลขท้ายจาก SET</p><p>- เลขสองตัวล่าง   จะใช้เลขหลังจุดทศนิยมของค่า Change ในช่วงการปิดตลาดมาเป็น 2 ตัวล่าง</p>",
+          "gameAwardNumberImg": "THAISET_EN.11fed146.png",
+          "thLotBoxPlayText": "<p><strong>การแทงหวยหุ้น 3 ตัวบน</strong></p><p>การแทงหวยหุ้น 3 ตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>การแทงหวยหุ้น 3 ตัวโต๊ด</strong></p><p>วิธีการแทงหวยหุ้นแบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นเลขที่ออก 748 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 6 แบบคือ 478 , 487 , 748 , 784 , 847 และ 874</p><p><strong>การแทงหวยหุ้น 2 ตัวบน</strong></p><p>การแทงหวยหุ้น 2 ตัวบน คือ การแทงตัวเลข 2 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น 2 ตัวล่าง</strong></p><p>การแทงหวยหุ้น 2 ตัวล่าง คือ การแทงตัวเลข 2 ตัวล่างของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น วิ่งบน</strong></p><p>การแทงหวยหุ้น วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวบน ตัวเลขที่สามารถแทงก็คือ 0-9 เช่นเลข 3 ตัวบนที่ออก 461 ในการแทงหวยหุ้นวิ่งบนให้ถูกสามารถแทงได้ 3 แบบคือ วิ่งบน 4 , วิ่งบน 7 และ วิ่งบน 8</p><p><strong>การแทงหวยหุ้น วิ่งล่าง</strong></p><p>การแทงหวยหุ้น วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 2 ตัวล่าง ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น เลข 2 ตัวล่างที่ออก 71 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 1 และ วิ่งบน 7</p>"
+        },{
+          "gameName01": "หุ้นนิเคอิรอบเช้า",
+          "thLotBoxAboutTitle": "หวยหุ้นนิเคอิ คืออะไร ?",
+          "gameAboutExplain": "<p>หวยหุ้นนิเคอิ หรือหวยหุ้นญี่ปุ่น เป็นอีกหนึ่งหวยออนไลน์ที่คนไทยนิยมเล่นกันอย่างล้นหลาม โดยการออกรางวัลตามดัชนีการปิดตลาดหุ้นของประเทศญี่ปุ่น โดยตลาดที่ใช้ในการอ้างอิง คือ นิเคอิ225 (Nikkei225) ซึ่งเป็นการนำมูลค่า การซื้อขายหุ้นของบริษัทยักษ์ใหญ่ ของ ประเทศญี่ปุ่น รวม 225 บริษัท มาเป็นผล ชี้วัด</p>",
+          "gameTimeText": "<p>หวยหุ้นนิเคอิออกรางวัลทุกวันทำการของตลาดหุ้นญี่ปุ่น (จันทร์-ศุกร์ ยกเว้นวันหยุดนักขัตฤกษ์) และออกรางวัลตามรอบการปิดตลาด นิเคอิ225 วันละ 2 รอบ (ตามเวลาประเทศไทย)</p><p>- รอบเช้า ออกเวลา เวลาญี่ปุ่น 11.30 (เวลาไทย 9.30)</p><p>- รอบบ่าย ออกเวลา เวลาญี่ปุ่น 15.00 (เวลาไทย 13.00)</p><p>โดยผลรางวัลจะประกาศจากเว็บ</p>",
+          "gameTimeLink": "https://indexes.nikkei.co.jp/en/nkave/",
+          "gameAwardNumberTitle": "วิธีการตรวจหวยหุ้นนิเคอิ",
+          "gameAwardNumberText": "<p>วิธีการตรวจหวยหุ้นนิเคอินั้นไม่ยาก สำหรับใครที่เล่นหวยเป็นอยู่แล้วยิ่งง่ายไปใหญ่ การออกรางวัลหวยหุ้นนิเคอิ มีหลักในการออกรางวัล ดังนี้</p><p>- เลขสามตัวและสองตัวบน จะใช้เลขหลักหน่วยและเลขหลังจุดทศนิยมในมูลค่าการปิดตลาดมาออกเป็น 3 ตัวบน และ 2 ตัวบน</p><p>- เลขสองตัวล่าง จะใช้เลขหลังจุดทศนิยมของค่า Change ในช่วงการปิดตลาดมาเป็น 2 ตัวล่าง ตามรูป</p>",
+          "gameAwardNumberImg": "JPNIK_EN.86ff9439.png",
+          "thLotBoxPlayText": "<p><strong>การแทงหวยหุ้น 3 ตัวบน</strong></p><p>การแทงหวยหุ้น 3 ตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>การแทงหวยหุ้น 3 ตัวโต๊ด</strong></p><p>วิธีการแทงหวยหุ้นแบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นเลขที่ออก 577 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 3 แบบคือ 577 , 757 และ 775 </p><p><strong>การแทงหวยหุ้น 2 ตัวบน</strong></p><p>การแทงหวยหุ้น 2 ตัวบน คือ การแทงตัวเลข 2 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การสองตัวล่าง</strong></p><p>การแทงหวยหุ้น 2 ตัวล่าง คือ การแทงตัวเลข 2 ตัวล่างของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น วิ่งบน</strong></p><p>การแทงหวยหุ้น วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวบน ตัวเลขที่สามารถแทงก็คือ 0-9 เช่นเลข 3 ตัวบนที่ออก 577 ในการแทงหวยหุ้นวิ่งบนให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 5 และ วิ่งบน 7</p><p><strong>การแทงหวยหุ้น วิ่งล่าง</strong></p><p>การแทงหวยหุ้น วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 2 ตัวล่าง ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น เลข 2 ตัวล่างที่ออก 47 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 4 และ วิ่งบน 7</p>"
+        },{
+          "gameName01": "หุ้นนิเคอิรอบบ่าย",
+          "thLotBoxAboutTitle": "หวยหุ้นนิเคอิ คืออะไร ?",
+          "gameAboutExplain": "<p>หวยหุ้นนิเคอิ หรือหวยหุ้นญี่ปุ่น เป็นอีกหนึ่งหวยออนไลน์ที่คนไทยนิยมเล่นกันอย่างล้นหลาม โดยการออกรางวัลตามดัชนีการปิดตลาดหุ้นของประเทศญี่ปุ่น โดยตลาดที่ใช้ในการอ้างอิง คือ นิเคอิ225 (Nikkei225) ซึ่งเป็นการนำมูลค่า การซื้อขายหุ้นของบริษัทยักษ์ใหญ่ ของ ประเทศญี่ปุ่น รวม 225 บริษัท มาเป็นผล ชี้วัด</p>",
+          "gameTimeText": "<p>หวยหุ้นนิเคอิออกรางวัลทุกวันทำการของตลาดหุ้นญี่ปุ่น (จันทร์-ศุกร์ ยกเว้นวันหยุดนักขัตฤกษ์) และออกรางวัลตามรอบการปิดตลาด นิเคอิ225 วันละ 2 รอบ (ตามเวลาประเทศไทย)</p><p>- รอบเช้า ออกเวลา เวลาญี่ปุ่น 11.30 (เวลาไทย 9.30)</p><p>- รอบบ่าย ออกเวลา เวลาญี่ปุ่น 15.00 (เวลาไทย 13.00)</p><p>โดยผลรางวัลจะประกาศจากเว็บ</p>",
+          "gameTimeLink": "https://indexes.nikkei.co.jp/en/nkave/",
+          "gameAwardNumberTitle": "วิธีการตรวจหวยหุ้นนิเคอิ",
+          "gameAwardNumberText": "<p>วิธีการตรวจหวยหุ้นนิเคอินั้นไม่ยาก สำหรับใครที่เล่นหวยเป็นอยู่แล้วยิ่งง่ายไปใหญ่ การออกรางวัลหวยหุ้นนิเคอิ มีหลักในการออกรางวัล ดังนี้</p><p>- เลขสามตัวและสองตัวบน จะใช้เลขหลักหน่วยและเลขหลังจุดทศนิยมในมูลค่าการปิดตลาดมาออกเป็น 3 ตัวบน และ 2 ตัวบน</p><p>- เลขสองตัวล่าง จะใช้เลขหลังจุดทศนิยมของค่า Change ในช่วงการปิดตลาดมาเป็น 2 ตัวล่าง ตามรูป</p>",
+          "gameAwardNumberImg": "JPNIK_EN.86ff9439.png",
+          "thLotBoxPlayText": "<p><strong>การแทงหวยหุ้น 3 ตัวบน</strong></p><p>การแทงหวยหุ้น 3 ตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>การแทงหวยหุ้น 3 ตัวโต๊ด</strong></p><p>วิธีการแทงหวยหุ้นแบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นเลขที่ออก 577 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 3 แบบคือ 577 , 757 และ 775 </p><p><strong>การแทงหวยหุ้น 2 ตัวบน</strong></p><p>การแทงหวยหุ้น 2 ตัวบน คือ การแทงตัวเลข 2 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การสองตัวล่าง</strong></p><p>การแทงหวยหุ้น 2 ตัวล่าง คือ การแทงตัวเลข 2 ตัวล่างของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น วิ่งบน</strong></p><p>การแทงหวยหุ้น วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวบน ตัวเลขที่สามารถแทงก็คือ 0-9 เช่นเลข 3 ตัวบนที่ออก 577 ในการแทงหวยหุ้นวิ่งบนให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 5 และ วิ่งบน 7</p><p><strong>การแทงหวยหุ้น วิ่งล่าง</strong></p><p>การแทงหวยหุ้น วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 2 ตัวล่าง ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น เลข 2 ตัวล่างที่ออก 47 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 4 และ วิ่งบน 7</p>"
+        },{
+          "gameName01": "หุ้นฮั่งเส็งรอบเช้า",
+          "thLotBoxAboutTitle": "หวยหุ้นฮั่งเส็ง หรือ หวยหุ้นฮ่องกงฮั่งเส็ง คืออะไร ?",
+          "gameAboutExplain": "<p>หวยหุ้นฮั่งเส็ง หรือ หวยหุ้นฮ่องกงฮั่งเส็ง คือ การนำดัชนีการปิดตลาดหุ้น ฮั่งเส็ง (Hang Seng) ของประเทศฮ่องกงมาเป็นตัวอ้างอิง ในการออกหวยตลาดหุ้น ฮั่งเส็ง เป็นตลาดหุ้นซึ่งนำมูลค่าการซื้อขายหุ้นของบริษัทยักษ์ใหญ่ของประเทศฮ่องกงรวม 48 บริษัทฯ มาเป็นตัวชี้วัด หวยหุ้นฮั่งเส็ง มีการออกรางวัล โดยอ้างอิงจากผลดัชนีการปิด ตลาดหุ้นฮั่งเส็ง (Hang Seng Index) ซึ่งคือ ตลาดหุ้นที่ใหญ่ที่สุดในฮ่องกง</p>",
+          "gameTimeText": "<p>หวยฮั่งเส็งจะออกรางวัลตามวันราชการประเทศฮ่องกง คือ ทุกวัน จันทร์ – ศุกร์ (ยกเว้นวันหยุดนักขัตฤกษ์) และออกรางวัลวันละ 2 รอบ ดังนี้</p><p>- รอบเช้า ออกเวลา เวลาฮ่องกง 12.00 (เวลาไทย 11.00)</p><p>- รอบบ่าย ออกเวลาเวลาฮ่องกง 16.00 (เวลาไทย 15.00)</p><p>โดยผลรางวัลจะประกาศจากเว็บ</p>",
+          "gameTimeLink": "https://www.hsi.com.hk/eng/",
+          "gameAwardNumberTitle": "วิธีการตรวจหวยหุ้นฮั่งเส็ง",
+          "gameAwardNumberText": "<p>วิธีการตรวจหวยหุ้นฮั่งเส็งก็ไม่ยากเหมือนกับหวยหุ้นไทย การออกรางวัลหวยหุ้นฮั่งเส็ง มีหลักในการออกรางวัล ดังนี้</p><p>- เลขสามตัวและสองตัวบน จะใช้เลขหลักหน่วยและเลขหลังจุดทศนิยมของผลดัชนีปิดตลาดหุ้น</p><p>- เลขสองตัวล่าง   จะใช้เลขหลังจุดทศนิยมของค่า Change ในช่วงการปิดตลาดมาเป็น 2 ตัวล่าง ตามรูป</p>",
+          "gameAwardNumberImg": "HKHSI_EN.bfa86f32.png",
+          "thLotBoxPlayText": "<p><strong>การแทงหวยหุ้น 3 ตัวบน</strong></p><p>การแทงหวยหุ้น 3 ตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>การแทงหวยหุ้น 3 ตัวโต๊ด</strong></p><p>วิธีการแทงหวยหุ้นแบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นเลขที่ออก 033 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 3 แบบคือ 033 , 303 และ 330 </p><p><strong>การแทงหวยหุ้น 2 ตัวบน</strong></p><p>การแทงหวยหุ้น 2 ตัวบน คือ การแทงตัวเลข 2 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การสองตัวล่าง</strong></p><p>การแทงหวยหุ้น 2 ตัวล่าง คือ การแทงตัวเลข 2 ตัวล่างของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น วิ่งบน</strong></p><p>การแทงหวยหุ้น วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวบน ตัวเลขที่สามารถแทงก็คือ 0-9 เช่นเลข 3 ตัวบนที่ออก 033 ในการแทงหวยหุ้นวิ่งบนให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 0 และ วิ่งบน 3</p><p><strong>การแทงหวยหุ้น วิ่งล่าง</strong></p><p>การแทงหวยหุ้น วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 2 ตัวล่าง ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น เลข 2 ตัวล่างที่ออก 96 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 6 และ วิ่งบน 9</p>"
+        },{
+          "gameName01": "หุ้นฮั่งเส็งรอบบ่าย",
+          "thLotBoxAboutTitle": "หวยหุ้นฮั่งเส็ง หรือ หวยหุ้นฮ่องกงฮั่งเส็ง คืออะไร ?",
+          "gameAboutExplain": "<p>หวยหุ้นฮั่งเส็ง หรือ หวยหุ้นฮ่องกงฮั่งเส็ง คือ การนำดัชนีการปิดตลาดหุ้น ฮั่งเส็ง (Hang Seng) ของประเทศฮ่องกงมาเป็นตัวอ้างอิง ในการออกหวยตลาดหุ้น ฮั่งเส็ง เป็นตลาดหุ้นซึ่งนำมูลค่าการซื้อขายหุ้นของบริษัทยักษ์ใหญ่ของประเทศฮ่องกงรวม 48 บริษัทฯ มาเป็นตัวชี้วัด หวยหุ้นฮั่งเส็ง มีการออกรางวัล โดยอ้างอิงจากผลดัชนีการปิด ตลาดหุ้นฮั่งเส็ง (Hang Seng Index) ซึ่งคือ ตลาดหุ้นที่ใหญ่ที่สุดในฮ่องกง</p>",
+          "gameTimeText": "<p>หวยฮั่งเส็งจะออกรางวัลตามวันราชการประเทศฮ่องกง คือ ทุกวัน จันทร์ – ศุกร์ (ยกเว้นวันหยุดนักขัตฤกษ์) และออกรางวัลวันละ 2 รอบ ดังนี้</p><p>- รอบเช้า ออกเวลา เวลาฮ่องกง 12.00 (เวลาไทย 11.00)</p><p>- รอบบ่าย ออกเวลาเวลาฮ่องกง 16.00 (เวลาไทย 15.00)</p><p>โดยผลรางวัลจะประกาศจากเว็บ</p>",
+          "gameTimeLink": "https://www.hsi.com.hk/eng/",
+          "gameAwardNumberTitle": "วิธีการตรวจหวยหุ้นฮั่งเส็ง",
+          "gameAwardNumberText": "<p>วิธีการตรวจหวยหุ้นฮั่งเส็งก็ไม่ยากเหมือนกับหวยหุ้นไทย การออกรางวัลหวยหุ้นฮั่งเส็ง มีหลักในการออกรางวัล ดังนี้</p><p>- เลขสามตัวและสองตัวบน จะใช้เลขหลักหน่วยและเลขหลังจุดทศนิยมของผลดัชนีปิดตลาดหุ้น</p><p>- เลขสองตัวล่าง   จะใช้เลขหลังจุดทศนิยมของค่า Change ในช่วงการปิดตลาดมาเป็น 2 ตัวล่าง ตามรูป</p>",
+          "gameAwardNumberImg": "HKHSI_EN.bfa86f32.png",
+          "thLotBoxPlayText": "<p><strong>การแทงหวยหุ้น 3 ตัวบน</strong></p><p>การแทงหวยหุ้น 3 ตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>การแทงหวยหุ้น 3 ตัวโต๊ด</strong></p><p>วิธีการแทงหวยหุ้นแบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นเลขที่ออก 033 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 3 แบบคือ 033 , 303 และ 330 </p><p><strong>การแทงหวยหุ้น 2 ตัวบน</strong></p><p>การแทงหวยหุ้น 2 ตัวบน คือ การแทงตัวเลข 2 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การสองตัวล่าง</strong></p><p>การแทงหวยหุ้น 2 ตัวล่าง คือ การแทงตัวเลข 2 ตัวล่างของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น วิ่งบน</strong></p><p>การแทงหวยหุ้น วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวบน ตัวเลขที่สามารถแทงก็คือ 0-9 เช่นเลข 3 ตัวบนที่ออก 033 ในการแทงหวยหุ้นวิ่งบนให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 0 และ วิ่งบน 3</p><p><strong>การแทงหวยหุ้น วิ่งล่าง</strong></p><p>การแทงหวยหุ้น วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 2 ตัวล่าง ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น เลข 2 ตัวล่างที่ออก 96 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 6 และ วิ่งบน 9</p>"
+        },{
+          "gameName01": "หุ้นจีนรอบเช้า",
+          "thLotBoxAboutTitle": "หวยหุ้นจีน",
+          "gameAboutExplain": "<p>หวยหุ้นจีนเป็นอีกหวยที่คนไทยนิยมเล่นกัน เพราะหวยจีนนี้สามารถซื้อได้ทุกวัน โดยการออกรางวัลตามดัชนีการปิดตลาดหุ้นของประเทศจีน จะใช้ผลรางวัลจากจากการปิดตลาดหุ้น SZSE COMPONENT INDEX รอบเช้า และ รอบบ่าย มาเป็นผลรางวัล</p>",
+          "gameTimeText": "<p>หวยหุ้นจีนจะออกรางวัลตามวันราชการประเทศจีน คือ ทุกวัน จันทร์ – ศุกร์ (ยกเว้นวันหยุดของตลาดหุ้น) และออกรางวัลวันละ 2 รอบ ดังนี้</p><p>- รอบเช้า ออกเวลา เวลาจีน 11:30 (เวลาไทย 10:30)</p><p>- รอบบ่าย ออกเวลา เวลาจีน 15:00 (เวลาไทย 14:00)</p><p>โดยผลรางวัลจะประกาศจากเว็บ</p>",
+          "gameTimeLink": "http://www.szse.cn/English/",
+          "gameAwardNumberTitle": "วิธีการตรวจหวยหุ้นจีน",
+          "gameAwardNumberText": "<p>ในการออกผล หวยหุ้นจีน จะนำเลข หลักหน่วย และ จุดทศนิยมของ ค่า Last มาออกรางวัล 3 ตัวบน และนำจุดทศนิยมของค่า Change มาออกรางวัล 2 ตัวล่าง</p><p>- เลขสามตัวและสองตัวบน จะใช้เลขหลักหน่วยและเลขหลังจุดทศนิยมของค่า Last</p><p>- เลขสองตัวล่าง จะใช้เลขหลังจุดทศนิยมของค่า Change ในช่วงการปิดตลาดมาเป็น 2 ตัวล่าง ตามรูป</p>",
+          "gameAwardNumberImg": "SZSECI_EN.23845f78.png",
+          "thLotBoxPlayText": "<p><strong>การแทงหวยหุ้น 3 ตัวบน</strong></p><p>การแทงหวยหุ้น 3 ตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>การแทงหวยหุ้น 3 ตัวโต๊ด</strong></p><p>วิธีการแทงหวยหุ้นแบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นเลขที่ออก 305 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 6 แบบคือ 035 , 053 , 305 , 350 , 503 และ 530 </p><p><strong>การแทงหวยหุ้น 2 ตัวบน</strong></p><p>การแทงหวยหุ้น 2 ตัวบน คือ การแทงตัวเลข 2 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การสองตัวล่าง</strong></p><p>การแทงหวยหุ้น 2 ตัวล่าง คือ การแทงตัวเลข 2 ตัวล่างของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น วิ่งบน</strong></p><p>การแทงหวยหุ้น วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวบน ตัวเลขที่สามารถแทงก็คือ 0-9 เช่นเลข 3 ตัวบนที่ออก 305 ในการแทงหวยหุ้นวิ่งบนให้ถูกสามารถแทงได้ 3 แบบคือ วิ่งบน 0 , วิ่งบน 3 และ วิ่งบน 5</p><p><strong>การแทงหวยหุ้น วิ่งล่าง</strong></p><p>การแทงหวยหุ้น วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 2 ตัวล่าง ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น เลข 2 ตัวล่างที่ออก 50 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 0 และ วิ่งบน 5</p>"
+        },{
+          "gameName01": "หุ้นจีนรอบบ่าย",
+          "thLotBoxAboutTitle": "หวยหุ้นจีน",
+          "gameAboutExplain": "<p>หวยหุ้นจีนเป็นอีกหวยที่คนไทยนิยมเล่นกัน เพราะหวยจีนนี้สามารถซื้อได้ทุกวัน โดยการออกรางวัลตามดัชนีการปิดตลาดหุ้นของประเทศจีน จะใช้ผลรางวัลจากจากการปิดตลาดหุ้น SZSE COMPONENT INDEX รอบเช้า และ รอบบ่าย มาเป็นผลรางวัล</p>",
+          "gameTimeText": "<p>หวยหุ้นจีนจะออกรางวัลตามวันราชการประเทศจีน คือ ทุกวัน จันทร์ – ศุกร์ (ยกเว้นวันหยุดของตลาดหุ้น) และออกรางวัลวันละ 2 รอบ ดังนี้</p><p>- รอบเช้า ออกเวลา เวลาจีน 11:30 (เวลาไทย 10:30)</p><p>- รอบบ่าย ออกเวลา เวลาจีน 15:00 (เวลาไทย 14:00)</p><p>โดยผลรางวัลจะประกาศจากเว็บ</p>",
+          "gameTimeLink": "http://www.szse.cn/English/",
+          "gameAwardNumberTitle": "วิธีการตรวจหวยหุ้นจีน",
+          "gameAwardNumberText": "<p>ในการออกผล หวยหุ้นจีน จะนำเลข หลักหน่วย และ จุดทศนิยมของ ค่า Last มาออกรางวัล 3 ตัวบน และนำจุดทศนิยมของค่า Change มาออกรางวัล 2 ตัวล่าง</p><p>- เลขสามตัวและสองตัวบน จะใช้เลขหลักหน่วยและเลขหลังจุดทศนิยมของค่า Last</p><p>- เลขสองตัวล่าง จะใช้เลขหลังจุดทศนิยมของค่า Change ในช่วงการปิดตลาดมาเป็น 2 ตัวล่าง ตามรูป</p>",
+          "gameAwardNumberImg": "SZSECI_EN.23845f78.png",
+          "thLotBoxPlayText": "<p><strong>การแทงหวยหุ้น 3 ตัวบน</strong></p><p>การแทงหวยหุ้น 3 ตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999</p><p><strong>การแทงหวยหุ้น 3 ตัวโต๊ด</strong></p><p>วิธีการแทงหวยหุ้นแบบ 3 ตัวโต๊ด คล้ายกันกับการแทงสามตัวบน คือ การแทงตัวเลข 3 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่จะแทงก็คือ 000-999 แต่สลับตำแหน่งตัวเลขที่แทงได้ ไม่จำเป็นต้องแทงให้ถูกตามตำแหน่งที่ออก เช่นเลขที่ออก 305 ในการแทงโต๊ดให้ถูกสามารถแทงได้ 6 แบบคือ 035 , 053 , 305 , 350 , 503 และ 530 </p><p><strong>การแทงหวยหุ้น 2 ตัวบน</strong></p><p>การแทงหวยหุ้น 2 ตัวบน คือ การแทงตัวเลข 2 ตัวบนของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การสองตัวล่าง</strong></p><p>การแทงหวยหุ้น 2 ตัวล่าง คือ การแทงตัวเลข 2 ตัวล่างของหวยหุ้นในแต่ละตลาด ตัวเลขที่สามารถแทงก็คือ 00-99</p><p><strong>การแทงหวยหุ้น วิ่งบน</strong></p><p>การแทงหวยหุ้น วิ่งบน คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 3 ตัวบน ตัวเลขที่สามารถแทงก็คือ 0-9 เช่นเลข 3 ตัวบนที่ออก 305 ในการแทงหวยหุ้นวิ่งบนให้ถูกสามารถแทงได้ 3 แบบคือ วิ่งบน 0 , วิ่งบน 3 และ วิ่งบน 5</p><p><strong>การแทงหวยหุ้น วิ่งล่าง</strong></p><p>การแทงหวยหุ้น วิ่งล่าง คือ การแทงเลขตัวหนึ่งตัวใดก็ได้ให้ตรงกับ เลข 2 ตัวล่าง ตัวเลขที่สามารถแทงก็คือ 0-9 เช่น เลข 2 ตัวล่างที่ออก 50 ในการแทงหวยวิ่งล่างให้ถูกสามารถแทงได้ 2 แบบคือ วิ่งบน 0 และ วิ่งบน 5</p>"
+        }
+      ],
+      "thLotBoxTitle": "คู่มือเกม",
+      "gameTimeTitle": "ออกวันไหน กี่โมง?",
+      "gameAwardNumberTitle": "วิธีการตรวจหวยหุ้น",
+      "thLotBoxPlayTitle": "วิธีการแทงหวยหุ้น"
+    }
+  },
+  {
+    "thLotClass": "foreign",
+    "// p class thLot_text": "後面addClass，控裡面:after的國旗樣式(TH-泰國、MAS-、VN-越南)",
+    "thLotGameCountry": [
+      "TH",
+      "MAS",
+      "VN",
+      "VN"
+    ],
+    "langZh":{
+      "thLotTitle": "外国彩",
+      "thLotGameType": [
+        {
+          "gameName01": "老挝彩",
+          "gameAboutExplain": ""
+        },{
+          "gameName01": "万能 4D",
+          "gameAboutExplain": ""
+        },{
+          "gameName01": "越南河内彩",
+          "gameAboutExplain": ""
+        },{
+          "gameName01": "越南河内VIP彩",
+          "gameAboutExplain": ""
+        }
+      ],
+      "thLotBoxTitle": "游戏说明",
+      "thLotBoxAbout": "关于 ",
+      "thLotBoxPlayTitle": "玩法说明",
+      "thLotBoxPlayText": ""
+    },
+    "langEn":{
+      "thLotTitle": "foreign Lotto",
+      "thLotGameType": [
+        {
+          "gameName01": "Lao Cai",
+          "gameAboutExplain": ""
+        },{
+          "gameName01": "Universal 4D",
+          "gameAboutExplain": ""
+        },{
+          "gameName01": "Viet Nam Hanoi",
+          "gameAboutExplain": ""
+        },{
+          "gameName01": "VIP Lotto in Hanoi, Vietnam",
+          "gameAboutExplain": ""
+        }
+      ],
+      "thLotBoxTitle": "Rules",
+      "thLotBoxAbout": "About ",
+      "thLotBoxPlayTitle": "List of Bet Types",
+      "thLotBoxPlayText": ""
+    },
+    "langTh":{
+      "thLotTitle": "ล็อตโต้ต่างประเทศ",
+      "thLotGameType": [
+        {
+          "gameName01": " Lao Cai",
+          "gameAboutExplain": ""
+        },{
+          "gameName01": " Universal 4D",
+          "gameAboutExplain": ""
+        },{
+          "gameName01": "ฮานอยชอย",
+          "gameAboutExplain": ""
+        },{
+          "gameName01": "การจับสลากเวียดนามฮานอย VIP",
+          "gameAboutExplain": ""
+        }
+      ],
+      "thLotBoxTitle": "คู่มือเกม",
+      "thLotBoxAbout": "เกี่ยวกับ",
+      "thLotBoxPlayTitle": "วิธีการแทงหวยแบบ เลขบน",
+      "thLotBoxPlayText": ""
+    }
+  }
+]

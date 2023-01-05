@@ -1,0 +1,13 @@
+//	網頁設計變數
+$aeLottery-yellow:#ffb000;
+$aeLottery-pinkLightBlue:#ebebf7;
+$aeLottery-lightBlue:#7ab7f0;
+$aeLottery-blue:#253f73;
+$aeLottery-navyBlue:#25164e;
+$aeLottery-purple:#7160e5;
+$aeLottery-textPurple:#7269e6;
+$aeLottery-textGray:#7b7b7a;
+//114 105 230, 0.3 > $aeLottery-textPurple
+%blueBackgroundGradient{
+	background-image:linear-gradient(90deg, $aeLottery-navyBlue 0%, $aeLottery-blue 100%);
+}

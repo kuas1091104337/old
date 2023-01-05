@@ -1,0 +1,97 @@
+@import "../../sass/_normalize.scss";
+@import "../../sass/_extendMixinFunction.scss";
+@import "../../sass/_contact.scss";
+@import "./_variable.scss";
+@import "./_lotHead.scss";
+@import "./_contact_aeLot.scss";
+@import url('https://fonts.googleapis.com/css?family=Kanit:600');
+@import url('https://fonts.googleapis.com/css?family=Kanit:400');
+
+// common
+body {
+    color: $aeLottery-textGray;
+    line-height:1.4;
+    background-color: $aeLottery-pinkLightBlue;
+}
+header, section, footer {
+    min-width: 320px;
+    box-sizing: border-box;
+}
+.wrap {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+// home
+.cnLot{
+    padding: $lotHeadHeight+25px 0 35px;
+    > .wrap {max-width: 1260px;}
+    &_menu{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    &_list{
+        flex:0 0 33.33%;
+        box-sizing:border-box;
+        padding: 10px 5px;
+    }
+    &_img{
+        width: 100%;
+        border-radius: 50%;
+    }
+    &_text{
+        font-size: 14px;
+        line-height: 1.4;
+        text-align:center;
+        margin: 6px 0 0;
+    }
+}
+.error{
+    color:$aeLottery-textPurple;
+    font-size: 6vw;
+    line-height: 150px;
+    text-align:center;
+    height: 150px;
+    background-color:#fff;
+    padding: 100px 0 50px;
+    margin:0;
+}
+// 手機拿橫(568px)，包含平板「以上」版型區
+@media screen and (min-width: 568px) {
+    .cnLot{
+        &_list{
+            flex:0 0 25%;
+            padding: 15px 10px;
+        }
+        &_text{margin-top: 12px;}
+    }
+}
+@media screen and (min-width: 640px) {
+    .cnLot{
+        &_menu{padding: 0 10px;}
+        &_list{flex:0 0 20%;}
+    }
+}
+@media screen and (min-width: 736px) {
+    .cnLot_text{font-size: 16px;}
+}
+// ===== 平板版型區 =====
+@media screen and (min-width: 768px) {
+    .cnLot{
+        &_menu{padding: 0 10px;}
+        &_list{flex:0 0 16.667%;}
+    }
+}
+//	桌機1024版型區
+@media screen and (min-width: 1024px) {
+    .cnLot{
+        padding: 100px 0 50px;
+        &_menu{padding: 0;}
+        &_list{
+            flex:0 0 14.285%;
+            padding: 0 15px 40px;
+        }
+    }
+}
+@media screen and (min-width: 1280px) {
+    .cnLot_list{flex:0 0 180px;}
+}

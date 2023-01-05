@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>AE彩票 | 泰国彩</title>
+  <meta name="keywords" content="AE彩票 | 泰国彩">
+  <meta name="description" content="AE彩票 | 泰国彩">
+  <meta name="copyright" content="Awesome Entertainment">
+  <meta name="apple-mobile-web-app-title" content="AE Lottery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="theme-color" content="#25164e" />
+  <meta name="referrer" content="origin">
+  <link href="../css/thLot.min.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../apple-touch-icon.png">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+<body class="th_lottery">
+  <script>
+    var aeLotStorage = sessionStorage.welcomeAeLot;
+    if(!aeLotStorage){
+      switch(window.navigator.language) {
+        case 'th-TH' :
+          location.href = '../th/th_lottery.html';
+          break;
+        case 'en-US' :
+          location.href = '../en/th_lottery.html';
+          break;
+      };
+      sessionStorage.welcomeAeLot = window.navigator.language;
+    }
+  </script>
+  <header class="lotHead"></header>
+  <div class="thLot"></div>
+  <section id="contact"></section>
+  <footer id="foot"></footer>
+  <div id="goToTop"><span></span><span></span></div>
+  <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../../js/i18n.js"></script>
+  <script type="text/javascript" src="../js/thLot.js"></script>
+</body>
+</html>

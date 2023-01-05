@@ -1,0 +1,90 @@
+// header
+$lotHeadHeight:50px;
+.lotHead {
+    width: 100%;
+    height: $lotHeadHeight;
+    background-color:#fff;
+    box-shadow: 0 2px 4px rgba($aeLottery-textPurple, .35);
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    > .wrap{position: relative;}
+    &_menu{
+        display: flex;
+        padding: 5px 0;
+        h2{
+            font-weight: normal;
+            font-size: 1em;
+            margin:0;
+        }
+    }
+    &_list{
+        color:$aeLottery-textPurple;
+        line-height: 20px;
+        padding: 10px;
+        + .lotHead_list{margin-left: 10px;}
+        &.active{color:$aeLottery-yellow;}
+    }
+    &_lang{
+        width: 40px;
+        position:absolute;
+        top:5px;
+        right:10px;
+        &.open{
+            > .lotHead_lang_list{
+                opacity: 1;
+                margin-top: 13px;
+            }
+            > .lotHead_lang_btn{
+                opacity: 1;
+                transform:rotate(0deg);
+            }
+        }
+        &_btn{
+            height: 40px;
+            background-color:$aeLottery-textPurple;
+            border-radius: 50%;
+            opacity: 0;
+            position: relative;
+            z-index:1;
+            transform:rotate(-180deg);
+            transition: opacity .4s, transform .4s;
+            &:before, &:after{
+                content:"";
+                width: 24px;
+                height: 2px;
+                border-radius: 2px;
+                background-color:#fff;
+                position:absolute;
+                top:0;
+                left:0;
+                right: 0;
+                bottom: 0;
+                margin:auto;
+            }
+            &:before{transform:rotate(45deg);}
+            &:after{transform:rotate(-45deg);}
+        }
+        &_list{
+            opacity: 0;
+            margin-top: -40px;
+            transition:opacity .4s, margin-top .4s;
+            &.active{
+                opacity: 1;
+                position: relative;
+            }
+        }
+        &_img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+}
+@media screen and (min-width: 736px) {
+    .lotHead{padding: 0 20px;}
+}
+@media screen and (min-width: 1024px) {
+    .lotHead{padding: 0 30px;}
+}

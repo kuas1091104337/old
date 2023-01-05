@@ -1,0 +1,270 @@
+[
+  {
+    "// 中國彩 中文 list": "",
+    "lotCnName": "浙江30秒",
+    "// 中國彩 英文 list": "",
+    "lotEnName": "ZJ SSC 30s",
+    "// 中國彩 泰文 list": "",
+    "lotThName": "หวยเจ้อเจียง30วินาที",
+    "// 中國彩 list 圖片": "cnLot_img",
+    "lotImg": "NYSSC30S.png"
+  },
+  {
+    "lotCnName": "上海1.5分",
+    "lotEnName": "SH SSC 90s",
+    "lotThName": "หวยปักกิ่ง90วินาที",
+    "lotImg": "NYSSC15F.png"
+  },
+  {
+    "lotCnName": "重庆3分",
+    "lotEnName": "CQ SSC 3",
+    "lotThName": "หวยฉงชิ่ง3",
+    "lotImg": "NYSSC3F.png"
+  },
+  {
+    "lotCnName": "重庆时时彩",
+    "lotEnName": "CQ SSC",
+    "lotThName": "หวยฉงชิ่ง",
+    "lotImg": "CQSSC-1.png"
+  },
+  {
+    "lotCnName": "新疆时时彩",
+    "lotEnName": "XJ SSC",
+    "lotThName": "หวยซินเจียง",
+    "lotImg": "XJSSC.png"
+  },
+  {
+    "lotCnName": "广东5分彩",
+    "lotEnName": "GD SSC 5",
+    "lotThName": "หวยกวางตุ้ง5",
+    "lotImg": "NYSSC5F.png"
+  },
+  {
+    "lotCnName": "江西5分彩",
+    "lotEnName": "JX SSC 5",
+    "lotThName": "หวยเจียงซี5",
+    "lotImg": "NYSSC5F2.png"
+  },
+  {
+    "lotCnName": "新腾讯分分彩",
+    "lotEnName": "New Tencent SSC",
+    "lotThName": "หวยเทนเซ็นต์",
+    "lotImg": "TXFFC-1.png"
+  },
+  {
+    "lotCnName": "重庆5分彩",
+    "lotEnName": "CQ SSC 5",
+    "lotThName": "หวยฉงชิ่ง5",
+    "lotImg": "NYSSC5F3.png"
+  },
+  {
+    "lotCnName": "幸运3分彩",
+    "lotEnName": "Lucky SSC",
+    "lotThName": "หวยลัคกี้3",
+    "lotImg": "NYSSC3F2.png"
+  },
+  {
+    "lotCnName": "腾讯分分彩",
+    "lotEnName": "Tencent SSC",
+    "lotThName": "หวยเทนเซ็นต์1",
+    "lotImg": "NYSSC1F.png"
+  },
+  {
+    "lotCnName": "3分时时彩",
+    "lotEnName": "AE SSC 3",
+    "lotThName": "หวยโชค3",
+    "lotImg": "NYSSC3F3.png"
+  },
+  {
+    "lotCnName": "5分时时彩",
+    "lotEnName": "AE SSC 5",
+    "lotThName": "หวยโชค5",
+    "lotImg": "NYSSC5F4.png"
+  },
+  {
+    "lotCnName": "10分时时彩",
+    "lotEnName": "AE SSC 10",
+    "lotThName": "หวยโชค10",
+    "lotImg": "NYSSC10F.png"
+  },
+  {
+    "lotCnName": "空战风云",
+    "lotEnName": "Air Wars",
+    "lotThName": "หวยเครื่องบินรบ",
+    "lotImg": "NYSC30S.png"
+  },
+  {
+    "lotCnName": "赛车1.5分",
+    "lotEnName": "Fast PK10",
+    "lotThName": "หวยด่วน 90 วินาที",
+    "lotImg": "NYSC15F.png"
+  },
+  {
+    "lotCnName": "竞速3分",
+    "lotEnName": "Quick PK10",
+    "lotThName": "หวยด่วน 3",
+    "lotImg": "NYSC3F.png"
+  },
+  {
+    "lotCnName": "极速赛车",
+    "lotEnName": "Speed PK10",
+    "lotThName": "หวยแข่งรถ PK10",
+    "lotImg": "NYSC75S.png"
+  },
+  {
+    "lotCnName": "墨西哥摩托",
+    "lotEnName": "MX PK10",
+    "lotThName": "หวยแม็กซิโก PK10",
+    "lotImg": "NYSC5F.png"
+  },
+  {
+    "lotCnName": "北京PK10",
+    "lotEnName": "BJ PK10",
+    "lotThName": "หวยปักกิ่ง PK10",
+    "lotImg": "BJPK10.png"
+  },
+  {
+    "lotCnName": "空战风云60秒",
+    "lotEnName": "Air Wars 60s",
+    "lotThName": "หวยเครื่องบินรบ60วินาที",
+    "lotImg": "NYSC1F.png"
+  },
+  {
+    "lotCnName": "澳门PK10",
+    "lotEnName": "MO PK10",
+    "lotThName": "หวยมาเก๊า PK10",
+    "lotImg": "NYSC5F2.png"
+  },
+  {
+    "lotCnName": "幸运飞艇",
+    "lotEnName": "Lucky Airship",
+    "lotThName": "หวยลัคกี้เรือเหาะ",
+    "lotImg": "XYFT.png"
+  },
+  {
+    "lotCnName": "香港赛车",
+    "lotEnName": "HK PK10",
+    "lotThName": "หวยฮ่องกง PK10",
+    "lotImg": "NYSC5F3.png"
+  },
+  {
+    "lotCnName": "凤凰快三",
+    "lotEnName": "FH Sicbo 5",
+    "lotThName": "หวยฟ่งหวาง",
+    "lotImg": "NYK35F3.png"
+  },
+  {
+    "lotCnName": "澳门快三2分",
+    "lotEnName": "MO Sicbo 2",
+    "lotThName": "หวยมาเก็าไฮโล",
+    "lotImg": "NYK32F.png"
+  },
+  {
+    "lotCnName": "新加坡快三5分",
+    "lotEnName": "SG Sicbo 5",
+    "lotThName": "หวยสิงคโปร์ไฮโล 5",
+    "lotImg": "NYK35F4.png"
+  },
+  {
+    "lotCnName": "香港快三",
+    "lotEnName": "HK Sicbo 5",
+    "lotThName": "หวยฮ่องกง",
+    "lotImg": "NYK35F5.png"
+  },
+  {
+    "lotCnName": "台湾风彩",
+    "lotEnName": "TW Sicbo 10",
+    "lotThName": "หวยไต้หวันไฮโล",
+    "lotImg": "NYK310F2.png"
+  },
+  {
+    "lotCnName": "澳门快三",
+    "lotEnName": "MO Sicbo 5",
+    "lotThName": "หวยมาเก็าไฮโล",
+    "lotImg": "NYK35F2.png"
+  },
+  {
+    "lotCnName": "新加坡快三",
+    "lotEnName": "SG Sicbo 5",
+    "lotThName": "หวยสิงคโปร์ไฮโล 10",
+    "lotImg": "NYK310F.png"
+  },
+  {
+    "lotCnName": "极速骰宝",
+    "lotEnName": "Speed Sicbo",
+    "lotThName": "หวยสปีดไฮโล",
+    "lotImg": "NYK31F.png"
+  },
+  {
+    "lotCnName": "幸运骰宝",
+    "lotEnName": "Lucky Sicbo",
+    "lotThName": "หวยลัคกี้ไฮโล",
+    "lotImg": "NYK33F.png"
+  },
+  {
+    "lotCnName": "新3D快三",
+    "lotEnName": "3D Sicbo 5",
+    "lotThName": "หวย3ตัวไฮโล",
+    "lotImg": "NYK35F.png"
+  },
+  {
+    "lotCnName": "安徽快3",
+    "lotEnName": "AH Sicbo",
+    "lotThName": "หวยอานฮุยไฮโล",
+    "lotImg": "AHK3.png"
+  },
+  {
+    "lotCnName": "吉林快3",
+    "lotEnName": "JL Sicbo",
+    "lotThName": "หวยจี๋หลินไฮโล",
+    "lotImg": "JLK3.png"
+  },
+  {
+    "lotCnName": "广东11选5",
+    "lotEnName": "GD 11x5",
+    "lotThName": "หวยกวางตุ้ง",
+    "lotImg": "GDSYXW.png"
+  },
+  {
+    "lotCnName": "江西11选5",
+    "lotEnName": "JX 11x5",
+    "lotThName": "หวยเจียงซี",
+    "lotImg": "JXSYXW.png"
+  },
+  {
+    "lotCnName": "山东11选5",
+    "lotEnName": "SD 11x5",
+    "lotThName": "หวยชานตง",
+    "lotImg": "SDSYXW.png"
+  },
+  {
+    "lotCnName": "香港六合彩",
+    "lotEnName": "HG MarkSix",
+    "lotThName": "หวยฮ่องกง MarkSix",
+    "lotImg": "XGLHC.png"
+  },
+  {
+    "lotCnName": "极速六合彩",
+    "lotEnName": "Speed MarkSix",
+    "lotThName": "หวยสปีดMarkSix",
+    "lotImg": "NYLHC75S.png"
+  },
+  {
+    "lotCnName": "3分六合彩",
+    "lotEnName": "MarkSix 3",
+    "lotThName": "หวยMarkSix 3",
+    "lotImg": "NYLHC3F.png"
+  },
+  {
+    "lotCnName": "5分六合彩",
+    "lotEnName": "MarkSix 5",
+    "lotThName": "หวยMarkSix 5",
+    "lotImg": "NYLHC5F.png"
+  },
+  {
+    "lotCnName": "北京28",
+    "lotEnName": "BJ 28",
+    "lotThName": "หวกปักกิ่ง28",
+    "lotImg": "BJ28.png"
+  }
+]

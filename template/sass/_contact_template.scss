@@ -1,3 +1,15 @@
+$box3Dsize:80px;
+@keyframes Box3Dlogo{
+  0% {transform:translate3d(-50%,0,0);}
+  100% {transform:translate3d(-50%,25%,0);}
+}
+@keyframes box3dRotate{
+  0% {transform:translate3d(0,0,$box3Dsize*-0.5) rotate3d(1,1,1,0deg);}
+  25% {transform:translate3d(0,0,$box3Dsize*-0.5) rotate3d(1,1,1,90deg);}
+  50% {transform:translate3d(0,0,$box3Dsize*-0.5) rotate3d(1,1,1,180deg);}
+  75% {transform:translate3d(0,0,$box3Dsize*-0.5) rotate3d(1,1,1,270deg);}
+  100% {transform:translate3d(0,0,$box3Dsize*-0.5) rotate3d(1,1,1,360deg);}
+}
 #goTop{
   width: 44px;
   height: 44px;
@@ -23,21 +35,84 @@
     + span{margin-top:-6px;}
   }
 }
-#contact{
-	color:#fff;
-	background-color: #333;
-	p{color:#999;}
+.DAfoot{
+  color:#fff;
+  font-weight:300;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background-color:#333;
+  &_Box3D{
+    width:$box3Dsize;
+    height:$box3Dsize;
+    margin:50px auto;
+    perspective:$box3Dsize*2;
+    &_space, &__side{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &_space{
+      transform:translate3d(0,0,$box3Dsize*-0.5) rotateY(45deg) rotateX(45deg);
+      transform-style:preserve-3d;
+      animation:box3dRotate 8s linear infinite;
+    }
+    &__side{
+      background-color: #fff;
+      box-shadow: 0 0 0 1px #fff;
+      &-front{transform:rotateY(0deg) translate3d(0,0,$box3Dsize*0.5);}
+      &-back{transform:rotateY(180deg) translate3d(0,0,$box3Dsize*0.5);}
+      &-up{transform:rotateX(90deg) translate3d(0,0,$box3Dsize*0.5);}
+      &-down{transform:rotateX(270deg) translate3d(0,0,$box3Dsize*0.5);}
+      &-left{transform:rotateY(270deg) translate3d(0,0,$box3Dsize*0.5);}
+      &-right{transform:rotateY(90deg) translate3d(0,0,$box3Dsize*0.5);}
+    }
+    &_logo{
+      color:#333;
+      font-size: 54px;
+      font-family: Arial;
+      font-weight: bold;
+      text-align: center;
+      line-height: 77.6px;
+      user-select: none;
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      transform:translate3d(0,0,$box3Dsize*0.5) scale3d(.75,.75,1); // 解safari bug
+      &:before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-color:#333;
+        display: block;
+        border-radius:50%;
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        transform: translate3d(-50%,0,0);
+        animation:Box3Dlogo .5s cubic-bezier(.5,-0.75,.5,1.75) infinite alternate;
+      }
+    }
+  }
+  &_link, &_txt{margin-bottom: 20px;}
+  &_link{
+    color:#fff;
+    font-size:14px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    transition:color .4s, background-color .4s;
+    &:hover{background-color: rgba(#fff,.25);}
+  }
+  &_txt{
+    font-size:12px;
+    margin-top: 0;
+  }
 }
-#foot{
-	color:rgba(255,255,255,0.5);
-	background-color: #424242;
-	box-sizing:border-box;
-	box-shadow: 0 25px 0 #333 inset;
-	padding-bottom: 20px;
-}
-.ae-logos > div{background-image:url("../../img/ae_footer_logo.png");}
 @media screen and (min-width: 1366px) {
   #goTop{right:332px;}
-  #contact {padding-right: 320px;}
   #foot{padding-right: 350px;}
 }

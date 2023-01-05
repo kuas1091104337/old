@@ -1,0 +1,360 @@
+@import "../../sass/_normalize.scss";
+@import "../../sass/_extendMixinFunction.scss";
+@import "../../sass/_contact.scss";
+@import "./_variable.scss";
+@import "./_lotHead.scss";
+@import "./_contact_aeLot.scss";
+@import url('https://fonts.googleapis.com/css?family=Kanit:600');
+@import url('https://fonts.googleapis.com/css?family=Kanit:400');
+
+// common
+body {
+    color: $aeLottery-textGray;
+    line-height:1.4;
+    -webkit-overflow-scrolling:touch;
+}
+header, #contact, footer {
+    min-width: 320px;
+    box-sizing: border-box;
+}
+.wrap {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+// home
+.thLot{
+    background-color: $aeLottery-pinkLightBlue;
+    padding: $lotHeadHeight+25px 15px 50px;
+    &_item{
+        + .thLot_item{margin-top: 40px;}
+    }
+    &_title{
+        max-width: 1250px;
+        color:$aeLottery-textGray;
+        font-size: 24px;
+        line-height: 1.25;
+        box-sizing:border-box;
+        padding-left: 30px;
+        margin:0 0 20px;
+        position: relative;
+        &:before{
+            content:"";
+            width: 24px;
+            height: 24px;
+            background-image:url("../img/th_lot_icon.png");
+            background-size:96px 24px;
+            position:absolute;
+            top:3px;
+            left:0;
+        }
+    }
+    &_menu{ max-width: 1260px;}
+    &_list{
+        + .thLot_list{margin-top: 15px;}
+        &.show .thLot_info {
+            opacity: 1;
+            z-index: 1;
+            backdrop-filter: blur(3px);
+            transition: opacity .4s, backdrop-filter .4s;
+            &_box{ transform: scale3d(1,1,1);}
+        }
+    }
+    &_text{
+        color:#fff;
+        font-size: 18px;
+        border-radius: 5px;
+        padding: 15px 15px 15px 70px;
+        box-sizing:border-box;
+        overflow: hidden;
+        position: relative;
+        margin:0;
+        &:before, &:after{
+            content:"";
+            position:absolute;
+        }
+        &:before{
+            width: 40px;
+            height: 40px;
+            background-image:url("../img/th_lot_item.png");
+            background-size:160px 40px;
+            margin-top: -20px;
+            top: 50%;
+            left: 15px;
+        }
+        &:after{
+            width: 30px;
+            height: 21px;
+            background:url("../img/lot_CY_icon.jpg") no-repeat 30px 0/180px 21px;
+            top:0;
+            right:0;
+        }
+        > span{margin-left: 12px;}
+        &.CN:after{background-position: 0 0;}
+        &.HK:after{background-position: -30px 0;}
+        &.JP:after{background-position: -60px 0;}
+        &.MAS:after{background-position: -90px 0;}
+        &.TH:after{background-position: -120px 0;}
+        &.VN:after{background-position: -150px 0;}
+    }
+    &_info{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000, .75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        backdrop-filter: blur(0px);
+        transition: opacity .25s, backdrop-filter .25s, z-index 0s .25s;
+        &_box{
+            width: 90%;
+            height: 80%;
+            max-width: 800px;
+            max-height: 600px;
+            display:flex;
+            flex-direction:column;
+            border-radius: 10px;
+            box-sizing:border-box;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 -12px 0 #fff inset;
+            padding-bottom: 10px;
+            position: relative;
+            transform: scale3d(.3,.3,.3);
+            transition: transform .4s;
+        }
+        &_head{
+            color:#fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align:center;
+            line-height: 40px;
+            width: 100%;
+            flex: 0 0 40px;
+            background-image:linear-gradient(90deg, $aeLottery-purple 0%, $aeLottery-lightBlue 100%);
+            border-radius: 10px 10px 0 0;
+            position: relative;
+        }
+        &_close{
+            width: 40px;
+            height: 100%;
+            position:absolute;
+            top:0;
+            right:0;
+            &:hover{
+                &:before, &:after{width: 26px;}
+            }
+            &:before, &:after{
+                content:"";
+                width: 24px;
+                height: 2px;
+                border-radius: 2px;
+                background-color:#fff;
+                margin:auto;
+                position:absolute;
+                top:0;
+                right:0;
+                left:0;
+                bottom:0;
+                transition:width .4s;
+            }
+            &:before{transform:rotate(45deg);}
+            &:after{transform:rotate(-45deg);}
+        }
+        &_content{
+            flex: 1 1 0;
+            background-color: #fff;
+            box-sizing:border-box;
+            padding: 20px 20px 10px;
+            overflow: auto;
+        }
+        &_title{
+            color: $aeLottery-textPurple;
+            font-size: 16px;
+            font-weight: bold;
+            text-align:center;
+            line-height: 40px;
+            border-top: 1px solid #f0f0f6;
+            border-bottom: 1px solid #f0f0f6;
+        }
+        &_text{
+            color:$aeLottery-textGray;
+            line-height: 1.8;
+            padding: 20px 0 5px;
+            &.addLink{
+                padding-bottom: 20px;
+                > p:last-of-type, > a{display: inline;}
+                > a{margin-left: 12px;}
+            }
+            > p{
+                margin:0 0 15px;
+                > strong{
+                    color:#ff6d53;
+                    display: block;
+                    margin-bottom: -15px;
+                }
+            }
+            > a{
+                color: $aeLottery-lightBlue;
+                word-break: break-all;
+                margin-bottom: 15px;
+                &:hover{text-decoration: underline;}
+            }
+            > img{
+                width: 100%;
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+.gov{
+    > .thLot_title:before{background-position: -24px 0;}
+    .thLot_text{
+        background-image: linear-gradient(180deg, #e67467, #c84036);
+        &:before{background-position: -40px 0;}
+    }
+}
+.yeekee{
+    > .thLot_title:before{background-position: -72px 0;}
+    .thLot_text{
+        background-image:linear-gradient(180deg, #a49af9 0%, #7269e6 100%);
+        &:before{background-position: -120px 0;}
+    }
+}
+.stock{
+    > .thLot_title:before{background-position: -48px 0;}
+    .thLot_text{
+        background-image:linear-gradient(180deg, #5fbe25 0%, #4c851f 100%);
+        &:before{background-position: -80px 0;}
+    }
+}
+.foreign{
+    .thLot_text{background-image:linear-gradient(180deg, #1ab7db 0%, #0b80b5 100%);}
+}
+[lang=en] .thLot_text{font-size: 16px;}
+
+.error{
+    color:$aeLottery-textPurple;
+    font-size: 6vw;
+    line-height: 150px;
+    text-align:center;
+    height: 150px;
+    background-color:#fff;
+    padding: 100px 0 50px;
+    margin:0;
+}
+//iPhone4、5 手機版
+@media screen and (max-width: 320px) { }
+// 手機拿橫(568px)，包含平板「以上」版型區
+@media screen and (min-width: 568px) {
+    .thLot{
+        &_item + .thLot_item{margin-top: 25px;}
+        &_menu{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        &_list{
+            flex:0 0 50%;
+            height: 150px;
+            padding-bottom: 20px;
+            + .thLot_list{margin-top: 0;}
+        }
+        &_text{
+            text-align:center;
+            width: 200px;
+            height: 100%;
+            padding:80px 15px 15px;
+            margin: 0 auto;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            &:before{
+                width: 60px;
+                height: 60px;
+                background-size: 240px 60px;
+                margin:0 0 0 -30px;
+                top: 15px;
+                left: 50%;
+            }
+            &:after{
+                width: 40px;
+                height: 28px;
+                background-size: 240px 28px;
+                background-position: 40px 0;
+                top:0;
+                right:0;
+            }
+            > span{margin-left: 0;}
+            &.CN:after{background-position: 0 0;}
+            &.HK:after{background-position: -40px 0;}
+            &.JP:after{background-position: -80px 0;}
+            &.MAS:after{background-position: -120px 0;}
+            &.TH:after{background-position: -160px 0;}
+            &.VN:after{background-position: -200px 0;}
+        }
+        &_info_text > img{width: auto;}
+    }
+    .gov .thLot_text:before{background-position: -60px 0;}
+    .yeekee .thLot_text:before{background-position: -180px 0;}
+    .stock .thLot_text:before{background-position: -120px 0;}
+}
+@media screen and (min-width: 640px) {
+    .thLot{
+        &_menu{margin: 0 -10px;}
+        &_list{
+            flex-basis: 33.33%;
+            padding-bottom: 15px;
+        }
+    }
+}
+@media screen and (min-width: 736px) {
+    .thLot{
+        &_item + .thLot_item{margin-top: 10px;}
+        &_menu{margin: 0;}
+        &_title{margin-left: 3%;}
+        &_list{
+            flex-basis: 33.33%;
+            padding-bottom: 35px;
+        }
+        &_info_content{padding: 20px 40px 10px;}
+    }
+}
+//	桌機1024版型區
+@media screen and (min-width: 1024px) {
+    .thLot{
+        padding: 100px 30px 100px;
+        &_title{margin-left: 2.2%;}
+        &_list{flex-basis: 25%;}
+    }
+}
+@media screen and (min-width: 1280px) {
+    .thLot{
+        padding-right: 0;
+        padding-left: 0;
+        &_item + .thLot_item{margin-top: 30px;}
+        &_menu{margin: 0 auto;}
+        &_title{
+            margin-right: auto;
+            margin-left: auto;
+        }
+        &_list{
+            flex-basis: 210px;
+            padding-bottom: 0;
+            margin-bottom: 15px;
+            &:hover{
+                > .thLot_text{
+                    box-shadow: 0 5px 10px rgba($aeLottery-textPurple, .5) ;
+                    transform:translateY(-10px);
+                }
+            }
+        }
+        &_text{
+            box-shadow: 0 0 0 rgba($aeLottery-textPurple, .5) ;
+            transition: box-shadow .4s, transform .4s;
+        }
+    }
+}
+@media screen and (min-width: 1440px) { }

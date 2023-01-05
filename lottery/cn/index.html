@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>AE Lottery</title>
+  <meta name="keywords" content="AE Lottery 征服東南亞，助您一臂之利。">
+  <meta name="description" content="业界唯一，五大优势。全面精准分析、独家强势推出、东南亚最高赔、创新高性价比、全日严密监控。四大彩种，。泰国彩、中国彩，彩种及玩法介紹，敬请期待 「越南彩」及「大马彩」！AE集团介绍。">
+  <meta name="copyright" content="Awesome Entertainment">
+  <meta name="apple-mobile-web-app-title" content="AE Lottery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="theme-color" content="#25164e"/>
+  <meta name="referrer" content="origin">
+  <link href="../css/layout.min.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../apple-touch-icon.png">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+<body class="zh">
+  <script>
+    var aeLotStorage = sessionStorage.welcomeAeLot;
+    if(!aeLotStorage){
+      switch(window.navigator.language) {
+        case 'th-TH' :
+          location.href = '../th/index.html';
+          break;
+        case 'en-US' :
+          location.href = '../en/index.html';
+          break;
+      };
+      sessionStorage.welcomeAeLot = window.navigator.language;
+    }
+  </script>
+  <section id="contact"></section>
+  <footer id="foot"></footer>
+  <div id="goToTop"><span></span><span></span></div>
+  <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../../js/i18n.js"></script>
+  <script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

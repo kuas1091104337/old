@@ -2,9 +2,7 @@
   var title = Object.keys(e);
   for (var i = 0, max = title.length; i < max; i++) {
       $('[text=' + title[i] + ']').text(e[title[i]]);
-      // console.log(title[i]);
   };
-  // console.log(Object.keys(e));
 }
 
 $(function () {
@@ -163,15 +161,15 @@ $(function () {
       }
       mouseFollow();
     });
-    $('.headAsideMenu').click(function () {
+    $('.headAsideMenu').click(function(){
       $('#head').toggleClass('headAsideMenu-open');
-      if ($('#head').hasClass('headLang-open')) $('#head').removeClass('headLang-open')
+      if($('#head').hasClass('headLang-open')) $('#head').removeClass('headLang-open')
     });
-    $('.headLang_btn').click(function () {
+    $('.headLang_btn').click(function(){
       $('#head').toggleClass('headLang-open');
-      if ($('#head').hasClass('headAsideMenu-open')) $('#head').removeClass('headAsideMenu-open')
+      if($('#head').hasClass('headAsideMenu-open')) $('#head').removeClass('headAsideMenu-open')
     });
-    $('.aside_menu_bg').click(function () {
+    $('.aside_menu_bg').click(function(){
       $('#head').removeClass();
     });
     // 先清除"选择确认"結果，再寫入已(打勾)"选择确认"的風格名稱
@@ -244,29 +242,29 @@ $(function () {
       if ($imgWidth < $fullScreenTemplateBgWidth) $(this).next().find('img').addClass('auto');
     });
     // 關掉圖片放大的功能
-    $('.template-img').click(function () {
+    $('.template-img').click(function(){
       $(this).removeClass('full_screen').find('img').removeClass('auto').end().parent().parent().removeClass('close_auto');
     });
-    $('.template-img > img').click(function (e) { e.stopPropagation(); });
+    $('.template-img > img').click(function(e){e.stopPropagation()});
     // 上一頁
-    $('.template_style_prev').click(function (e) {
+    $('.template_style_prev').click(function (e){
       $(this).parent().click().end().parents('.template_item').prev().find('.full_screen_icon').click();
       e.stopPropagation();
     });
     // 下一頁
-    $('.template_style_next').click(function (e) {
+    $('.template_style_next').click(function(e){
       $(this).parent().click().end().parents('.template_item').next().find('.full_screen_icon').click();
       e.stopPropagation();
     });
     // goTop
-    $("#goTop").click(function () {
-      $("html,body").animate({ scrollTop: 0 }, 600)
+    $("#goTop").click(function(){
+      $("html,body").animate({scrollTop:0},600);
     });
     // 初始設定
     $('.page_item_box_1 > li').eq(0).click();
     $('.template_key > li').eq(0).click();
   },function(){
-    console.log(['ajax error', 'ajax1 :', data1, 'ajax2 :', data2, 'ajax3 :', data3]);
+    console.log(['ajax error', 'ajax :', data]);
   });
   // Clipboard.JS
   var clipboard = new ClipboardJS('#share_btn');
