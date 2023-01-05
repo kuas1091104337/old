@@ -8,8 +8,8 @@
 }
 
 $(function () {
-  var ajax1 = $.ajax({
-        url: 'json/ae_template_data.json',
+  var ajax = $.ajax({
+        url: './json/ae_template_data.json',
         dataType: 'json'
       }).done(function (data) {
         var _styleItemBox = "", // 收集-載入各風格版型大區塊
@@ -59,18 +59,8 @@ $(function () {
         $('#page_select').append(_pageSelect_li).before(_aside_inputRadio);
         // 載入-在內部後面，各風格版型大區塊
         $('#style_select_box').append(_styleItemBox);
-      }), ajax2 = $.ajax({
-        url:'../load/contact.html',
-        dataType:'html'
-      }).done(function(data) {
-        $('#contact').append(data);
-      }), ajax3 = $.ajax({
-        url:'../load/foot.html',
-        dataType:'html'
-      }).done(function(data) {
-        $('#foot').append(data);
       });
-  $.when(ajax1,ajax2,ajax3).then(function(data1,data2,data3){
+  $.when(ajax).then(function(data){
     // come in, computer language. window.navigator.language ： zh-TW 繁中 、 zh-CN 簡中 、 th-TH 泰文 、 vi-VN 越南 、 en-US 英文
     switch(window.navigator.language) {
       case 'zh-TW' :
