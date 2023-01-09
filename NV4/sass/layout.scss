@@ -1,0 +1,12 @@
+@import "../../sass/_normalize";
+@import "./_variables";
+@import "./_extendMixinFunction";
+*, *:before, *:after{box-sizing:border-box;}
+input, button{
+	border:none;
+	outline:none;
+}
+@import "./_nv4HT";
+@import "./_nv4";
+@import "../../sass/_daRightMenu";
+@import "../../sass/_foot";

@@ -1,0 +1,144 @@
+//	z-index:N  最後面最大
+$ncaZ-index:bannerContainerBefore, newsListZone, searchResult, domainsList, domainSearchBar, ulSecondBG, header, ncaLogo, ncaGoTop, ncUlFirstMemberCtrl, ncaMemberLogIn;
+// iconFont基本設定
+%icon-font-base-set{
+	speak:none;
+	font-style:normal;
+	font-weight:normal;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+%text-hide{
+	text-indent:100%;
+	overflow:hidden;
+	white-space:nowrap;
+}
+// 文字超過變點點
+%text-dot-hide{
+	white-space:nowrap;	//文字不進行換行
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+// 偽元素三角形基本設定
+%before-after-arrow-base-set{
+	content:"";
+	width:0;
+	height:0;
+	display:inline-block;
+	border-style:solid;
+}
+%after_clear_both{
+	content:"";
+	display:block;
+	clear:both;
+}
+%desktop-max-width{
+  max-width:1200px;
+	margin:0 auto;
+}
+// 背景圖置中基本設定
+%background-size-pos-cover-set{
+	background-position:center;
+	background-size:cover;
+}
+// 固定全景背景圖預設值
+%background-fixed-size-cover-set{
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	@extend %background-size-pos-cover-set;
+}
+%pos-abs{position:absolute;}
+// 控制用的input推出畫面
+%ctrl-input-hide{
+	@extend %pos-abs;
+	top:-20px;
+	left:-20px;
+}
+%pos-abs-top-center{
+	@extend %pos-abs;
+	top:50%;
+	transform:translateY(-50%);
+}
+// 絕對定位水平垂直置中設定
+%pos-abs-top-left-center{
+	@extend %pos-abs;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+}
+// @include 
+// 偽元素icon-font設定
+@mixin beforeAfterIconFontSet($icon,$fontFamily){
+	@extend %icon-font-base-set;
+	content:$icon;
+	font-family:$fontFamily;
+}
+// 偽元素三角形css設定
+@mixin beforeAfterArrowCssSet($borderWidth, $borderColor){
+	@extend %before-after-arrow-base-set;
+	border-width:$borderWidth;
+	border-color:$borderColor;
+	@content;
+}
+// 標籤內偽元素SVG背景圖設定
+@mixin tagBeforeAfterSvgBgImgSet($width,$height,$img,$content:""){
+	@extend %background-size-pos-cover-set;
+	content:$content;
+	width:$width;
+	height:$height;
+	background-image:image-url($img);
+}
+// 按鈕CSS設定預設值
+@mixin BntCssBaseSet($bgColor:hsl(200,50%,50%), $borderRadius:6px, $boxShadow:(0 0 0 1px rgba(#000,.2) inset,0 2px 0 rgba(#fff,.05) inset,0 2px 1px hsl(200,27%,72%) inset,0 -4px 0 hsl(200,60%,35%) inset,0 2px 4px 2px rgba(#000,.1)), $padding:0 0 3px 0, $margin:0, $boxSizing:content-box, $transition:(padding-bottom .3s .4s, margin-top .3s .4s, box-shadow .3s .4s)){
+	background-color:$bgColor;
+	border-radius:$borderRadius;
+	box-shadow:$boxShadow;
+	padding:$padding;
+	margin:$margin;
+	box-sizing:$boxSizing;
+	transition:$transition;
+}
+// 2.banner上下張箭頭icon內部偽元素水平垂直置中 owl套件上下張箭頭icon外框設定 
+@mixin owlArrowIconOutsideSet($width, $height, $backgroundColor){
+	@extend %text-hide;
+	@extend %pos-abs-top-center;
+	width:$width;
+	height:$height;
+	background-color:$backgroundColor;
+	@content;
+}
+// owl套件上下張箭頭icon偽元素設定 
+@mixin owlArrowIconBeforeAfterSet($borderWidth, $borderColor){
+	@extend %before-after-arrow-base-set;
+	@extend %pos-abs-top-left-center;
+	border-width:$borderWidth;
+	border-color:$borderColor;
+	@content;
+}
+// banner上下張箭頭icon外框設定
+@mixin bannerArrowIconOutsideSet($width, $height, $backgroundColor){
+	@extend %pos-abs-top-center;
+	width:$width;
+	height:$height;
+	cursor:pointer;
+	background-color:$backgroundColor;
+	@content;
+}
+// banner上下張箭頭icon偽元素設定
+@mixin bannerArrowIconBeforeAfterSet($borderWidth, $borderColor){
+	@extend %before-after-arrow-base-set;
+	@extend %pos-abs-top-left-center;
+	border-width:$borderWidth;
+	border-color:$borderColor;
+	@content;
+}
+// input的placeholder值css設定
+@mixin inputPlaceholderCssSet{
+	&:-moz-placeholder{@content;}
+	&::-moz-placeholder{@content;}
+	&:-ms-input-placeholder{@content;}
+	&::-webkit-input-placeholder{@content;}
+}

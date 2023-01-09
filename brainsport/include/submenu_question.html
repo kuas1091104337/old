@@ -1,0 +1,41 @@
+<?php
+if(stripos($_SERVER['PHP_SELF'],'question.php') > 0) {
+	$atag3 = 'now';
+	$atag4 = '';
+} else if(stripos($_SERVER['PHP_SELF'],'issue.php') > 0) {
+	$atag3 = '';
+	$atag4 = 'now';
+} else if(stripos($_SERVER['PHP_SELF'],'issue_notice.php') > 0) {
+    $atag3 = '';
+    $atag4 = 'now';
+}
+?>
+<!--問題表單的子選單 start-->
+<ul class="service_nav">
+    <li class="service-icon">
+        <a class="icon now" href="question.php">
+            <span class="icon-before issue-icon"></span>問題表單<span class="icon-after"></span>
+        </a>
+    </li>
+    <li class="service-icon">
+        <a class="icon" href="faq_account.php">
+            <span class="icon-before faq-icon"></span>常見問題<span class="icon-after"></span>
+        </a>
+    </li>
+    <li class="service-icon">
+        <a class="icon" href="repaid.php">
+            <span class="icon-before account-icon"></span>帳號管理<span class="icon-after"></span>
+        </a>
+    </li>
+</ul>
+<ul class="service_menu">
+    <li>
+        <a href="question.php" class="<?php echo $atag3;?>">我要提問</a>
+    </li>
+    <li>
+        <a href="issue.php" class="<?php echo $atag4;?>">我的問題</a>
+    </li>
+</ul>
+<!--問題表單的子選單 end-->
+
+

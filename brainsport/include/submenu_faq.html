@@ -1,0 +1,36 @@
+<?php
+if(stripos($_SERVER['PHP_SELF'],'faq_account.php') > 0) {
+	$atag3 = 'now';
+	$atag4 = '';
+} else if(stripos($_SERVER['PHP_SELF'],'faq_game.php') > 0) {
+	$atag3 = '';
+	$atag4 = 'now';
+}
+?>
+<!--常見問題的子選單 start-->
+<ul class="service_nav">
+    <li class="service-icon">
+        <a class="icon" href="question.php">
+            <span class="icon-before issue-icon"></span>問題表單<span class="icon-after"></span>
+        </a>
+    </li>
+    <li class="service-icon">
+        <a class="icon now" href="faq_account.php">
+            <span class="icon-before faq-icon"></span>常見問題<span class="icon-after"></span>
+        </a>
+    </li>
+    <li class="service-icon">
+        <a class="icon" href="repaid.php">
+            <span class="icon-before account-icon"></span>帳號管理<span class="icon-after"></span>
+        </a>
+    </li>
+</ul>
+<ul class="service_menu">
+    <li>
+        <a href="faq_account.php" class="<?php echo $atag3;?>">帳號提問</a>
+    </li>
+    <li>
+        <a href="faq_game.php" class="<?php echo $atag4;?>">遊戲問題</a>
+    </li>
+</ul>
+<!--常見問題的子選單 end-->

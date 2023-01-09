@@ -1,0 +1,127 @@
+<!--我要提問  的內容 start-->
+<?php
+$r = rand(0, 65535);
+$k = "Hello 123!";
+$game = 'web';
+
+$option = '';
+
+require_once($_SERVER['DOCUMENT_ROOT'] ."/include/setup/mysqlconn.php");
+select_db('BSAdmin');
+
+$sql = "SELECT n_Email FROM User WHERE n_UserID = '". $n_UserID ."'";
+$result = mysql_query($sql);
+
+list($n_Email) = mysql_fetch_row($result);
+
+$sql = "SELECT n_Type, n_Name FROM IssueType";
+$result = mysql_query($sql);
+
+while($row = mysql_fetch_row($result)) {
+	$option .= '<option value="'. $row[0] .'">'. $row[1] .'</option>';
+}
+?>
+<script type="text/javascript" src="/help/JS/autosize.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#fm').submit(function() {
+		if ($('#n_Content').val() == '') {
+			alert('請輸入問題描述');
+			return false;
+		}
+
+		if ($('#email').val() == '' && $('#phone').val() == '') {
+			alert('請輸入連絡方式');
+			return false;
+		}
+
+		<?php if(empty($n_Email)) {?>
+		alert('表單已送出，客服人員將依照您提供的聯絡方式回覆您，請耐心等候!');
+		<?php } else {?>
+		alert('表單已送出，客服人員將盡快回復您的問題，請耐心等候!');
+		<?php }?>
+		return true;
+	});
+
+	$('textarea').html('請詳細說明您的問題，並提供以下內容 >> \n日期：\n時間：\n可連絡時間：\n詳細問題描述：');
+
+	//var placeholder = '請詳細說明您的問題，並提供以下內容 >> \n日期：2014/12/22\n時間：16:22\n可連絡時間：中午12點到下午2點\n問題：愈詳細愈好，以利服務人員查詢、處理您所遇到的問題';
+	//$('textarea').val(placeholder);
+	$('textarea').focus(function() {
+		//if ($(this).val() == placeholder) {
+			//$(this).val('');
+		//}
+	});
+
+	$('textarea').blur(function() {
+		//if ($(this).val() == '') {
+			//$(this).val(placeholder);
+			autosize.update($('textarea'));
+		//}
+	});
+
+	autosize($('textarea'));
+});
+</script>
+<form name="fm" id="fm" method="post" action="http://pic.skym.com/putbs.php" enctype="multipart/form-data">
+<div id="content">
+	<!--問題表單的子選單 start-->
+	<?php include("submenu_question.php"); ?>
+	<!--問題表單的子選單 end-->
+
+	<section class="service_content">
+		<div class="service_main">
+			<div class="notice">
+				<label class="question">選擇類型 </label>
+				<select class="question" name="n_Type">
+					<?php echo $option;?>
+				</select>
+			</div>
+			<div class="notice">
+				<label class="question">玩家暱稱 </label>
+				<em><?php echo $n_Username;?></em>
+				<?php if(empty($n_Email)) {?><p class="question">訪客身分(使用訪客身分提問，我們將以連絡電話或聯絡信箱回覆)</p><?php }?>
+			</div>
+			<div class="notice">
+				<label class="question vertical">描述</label>
+				<textarea class="question" id="n_Content" name="n_Content"></textarea>
+			</div>
+			<div class="notice">
+				<label class="question" for="phone">添加文件 </label>
+				<div class="file-box">
+					<input type="button" value="上傳檔案" class="btn submitbtn QuBtnSize"/>
+					<input type="text" name="textfield" id="textfield" class="txt"/>
+					<input type="file" name="picupload" class="file" id="fileField" onchange="document.getElementById('textfield').value=this.value"/>
+				</div>
+				<!-- <button type="submit" class="submitbtn QuBtnSize">選擇檔案</button>
+				<strong class="Message">未選擇任何檔案</strong> -->
+			</div>
+			<div class="notice half">
+				<label class="question" for="phone">連絡電話 </label>
+				<input class="question" type="tel" id="phone" name="n_Phone" />
+			</div>
+			<div class="notice half">
+				<label class="question" for="email">連絡信箱 </label>
+				<input class="question" type="text" id="email" name="n_Email" <?php if(!empty($n_Email)) {echo 'value="'. $n_Email .'" disabled';}?> />
+			</div>
+			<ul class="notice clearfix">
+				<p>建議您確認聯繫方式 , 以便客服能在必要時聯繫到您</p>
+				<li>
+					<button type="submit" id="submitBtn" class="submitbtn IsBtnSize">提交</button>
+				</li>
+				<li>
+					<button type="button" id="cancelBtn" class="submitbtn IsBtnSize">取消</button>
+				</li>
+			</ul>
+		</div>
+	</section>
+</div>
+<input type="hidden" name="k" value="<?php echo md5($r . $k);?>" />
+<input type="hidden" name="r" value="<?php echo $r;?>" />
+<input type="hidden" name="hidRedirectPostUrl" value="http://www.brainsportonline.com/help/proccess.php">
+<input type="hidden" name="hidUrl" value="http://www.brainsportonline.com/zh-tw/question.php">
+<input type="hidden" name="n_Userid" value="<?php echo $n_UserID;?>">
+<input type="hidden" name="n_Username" value="<?php echo $n_Username;?>">
+<input type="hidden" name="game" value="<?php echo $game;?>">
+</form>
+<!--我要提問  的內容 end-->

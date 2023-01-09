@@ -1,0 +1,122 @@
+<!--header的選單 start-->
+<header>
+	<hgroup>
+		<h1 id="logo"><a href="index.php" title="回BS首頁">BrainSport 遊戲平台</a></h1>
+		<nav><!-- first選單最多四個，多出的選項請放second選單 -->
+	        <ul class="first">
+	        	<li><a href="bulletin.php" class="m_icon notice">公告</a></li>
+	        	<li><a href="service.php" class="m_icon service">客服</a></li>
+	        	<li>
+		        	<a href="game.php" class="m_icon store">儲值
+		        		<ins></ins><ins></ins><ins></ins>
+		        	</a>
+	        	</li>
+	        	<li><a href="video.php" class="m_icon video">影音</a></li>
+	        	<li class="menu_icon"><a href="javascript:;" class="m_icon menu_icon">選單</a></li>
+	        </ul>
+	        <ul class="second">
+	        	<li><a href="javascript:;" class="m_icon sign_in">登入</a></li><!-- 登入隱藏此li a.sign_in -->
+	        	<li><p>我是溜冰王</p></li><!-- 登出隱藏此這兩個 li>p li>a.sign_out -->
+	        	<li><a href="logout.php" class="m_icon sign_out">登出</a></li><!-- 登出隱藏此這兩個 li>p li>a.sign_out -->
+	        	<!-- <li><a href="video.php" class="m_icon video">影音</a></li> -->
+	        	<li class="half"><a href="https://goo.gl/LNMLVn" class="icon fb" title="BS FB粉絲團" target="_blank"></a></li>
+	        	<li class="half line"><a href="javascript:javascript:alert('尚未開放!');" class="icon line" title="BS LINE群組" target="_blank"></a></li>
+	        	<li class="language"><a href="javascript:;" id="language" class="icon tw" title="語言選擇">語言</a>
+		            <ul>
+		            	<li><a href="../index.php?lang=en" class="icon us">English</a></li>
+		            	<li><a href="javascript:;" class="icon jp">日本語</a></li>
+		            	<li><a href="javascript:;" class="icon ko">한국의</a></li>
+		            	<li><a href="javascript:;" class="icon tw">繁體中文</a></li>
+		            	<li><a href="javascript:;" class="icon cn">简体中文</a></li>
+		            	<li><a href="javascript:;" class="icon"></a></li>
+		            </ul>
+	        	</li>
+	        </ul>
+	    </nav>
+	</hgroup>
+</header>
+<!--header的選單 end-->	
+
+<!--會員登入視窗 start-->
+<div id="popup">
+	<div id="popup-box">
+		<div id="popup-box-close">ã</div>
+		<form class="standardForm" method="post">
+			<h3>BS麻將 事前登入</h3>
+			<div id="socialLogin">
+				<button class="loginBtn facebookBtn" type="button" onclick="checkLoginState();">
+					<em>v</em><label class="buttonText">Facebook 登入</label>
+				</button>
+				<button class="loginBtn googleBtn" type="button" id="googleBtn" onclick="handleClientLoad();">
+					<em>Ć</em><label class="buttonText">Google 登入</label>
+				</button>
+				<button class="loginBtn twitterBtn" type="button">
+					<em>u</em><label clas。s="buttonText">Twitter 登入</label>
+				</button>
+				<a href="signup.php" class="loginBtn LoginBtn">
+					<em>Ü</em><span class="buttonText">註冊BS帳號</span>
+				</a>
+			</div>
+			<ul class="userLogin">
+				<li class="loginUsername">
+					<label for="member-id">帳號</label>
+					<input class="text" id="member-id" type="text" placeholder="BrainSport 帳號 / 玩子 ID">
+				</li>
+				<li class="loginPassword">
+					<label for="member-password">密碼</label>
+					<input class="text" id="member-password" type="password" placeholder="請輪入密碼">
+				</li>
+			</ul>
+			<div id="loginError" style="display:none;">
+				<strong id="errorMessage">此帳號尚未使用。您是否嘗試註冊新帳號？</strong>
+			</div>
+			<div class="formFooter">
+				<div class="formFooterButtons"> 
+					<button class="signIn" type="submit" id="signIn">登入</button>
+				</div>
+				<div class="forgotPassword">
+					<a href="forget.php">忘記帳號密碼</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!--會員登入視窗 end-->
+
+<aside>
+    <div id="goTop">9</div>
+</aside>
+
+<footer>
+    <div id="footer_content">
+        <ul>
+            <li><a href="about.php"><span id="L28">關於我們</span></a></li>
+            <li><a href="copy_protection.php"><span id="L29">隱私權保護</span></a></li>
+            <li><a href="copy_contract.php"><span id="L30">服務契約</span></a></li>
+            <li><a href="javascript:;">企業徵才</a></li>
+        </ul>
+        <p>BrainSport © All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!--[if lte IE 9]>
+	<div class="IE-bg">
+		<div class="IE-tips">
+			<div class="IE-tips-content">
+				<img src="images/BS_ie.jpg" alt="BrainSport 打造棋牌遊戲界的奧林匹克運動賽事">
+				<p>
+					很抱歉，目前本站瀏覽不支援IE 10以下的瀏覽器<br />
+					請升級您的瀏覽器版本。<br />
+					建議您改用 Google Chrome 或 Firefox<br />
+					以取得最佳、最快的瀏覽效果！
+				</p>
+				<p>
+					<span><a href="http://windows.microsoft.com/zh-tw/internet-explorer/ie-11-worldwide-languages" target="_blank">升級IE瀏覽器</a></span>
+					<span><a href="https://www.google.com.tw/intl/zh-TW/chrome/browser/desktop/" target="_blank">下載 Google Chrome</a></span>
+					<span><a href="http://mozilla.com.tw/firefox/new/?scene=2#download-fx" target="_blank">下載 Firefox</a></span>
+				</p>
+				<p class="small-font">www.BrainSports.com.tw</p>
+			</div>
+		</div>
+	</div>
+<![endif]-->

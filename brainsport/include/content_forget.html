@@ -1,0 +1,62 @@
+<!--忘記帳號 / 密碼  的內容 start-->
+<div id="content">
+	<h2>忘記帳號 / 密碼</h2>
+	<section class="BS-girl forget">
+		<ul>
+			<li>
+				<span class="forget_word">
+					<p>請輸入您的電子信箱，即可找回帳號、密碼</p>
+					<p>您所查詢的資訊，將會寄送至您的信箱中。</p>
+					<p style="font-size:15px;">(僅適用於BS註冊會員)</p>
+				</span>
+			</li>
+			<li>
+				<span class="input">
+					<input class="input_field" type="text" id="email" placeholder="請輸入註冊帳號時的電子信箱"/>
+					<label class="input_label" for="email">輸入信箱</label>
+				</span>
+			</li>
+			<li>
+				<span class="button">
+					<button type="submit" class="submitbtn" id="submitbtn">送出</button>
+				</span>
+			</li>
+		</ul>
+	</section>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#submitbtn').click(function() {
+		if ($('#email').val() == '') {
+			alert('請輸入註冊帳號時的電子信箱');
+			return false;
+		} else {
+			re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+			if (!re.test($('#email').val())) {
+				alert('信箱格式不對');
+				return false;
+			} else {
+				$.ajax({
+					url: '/ajax/forget.php',
+					type: 'POST',
+					data: {
+						email: $('#email').val()
+					},
+					success: function(response) {
+						if(response == 'ok') {
+							alert('帳號密碼已傳送至您的電子信箱');
+						} else if(response == 'no') {
+							alert('此電子信箱查無帳號密碼');
+						}
+					},
+					complete: function(response) {
+						location.href = 'forget.php';
+					}
+				});
+			}
+		}
+	});
+});
+</script>
+<!--忘記帳號 / 密碼  的內容 end-->

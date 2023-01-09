@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BrainSport 打造棋牌遊戲界的奧林匹克運動賽事</title>
+<meta name="apple-mobile-web-app-title" content="BrainSport">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="keywords" content="BS, BrainSport, BS麻將, 麻將, 運動, 競技, 博弈, 棋牌, 奧林匹克, 腦力激盪, 免費遊戲">
+<meta name="description" content="BrainSport(簡稱BS)是最重視腦力激盪的博弈遊戲，推出多款獨特的棋排博奕遊戲，豐富的規則、刺激的賽制及BS獨有的特殊玩法，競技的快感，快來挑戰吧！"> 
+<meta name="author" content="BrainSport">
+<link rel="shortcut icon" href="images/website_logo.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+<link href="css/header-popup-aside-footer.css" rel="stylesheet" type="text/css">
+<link href="css/core.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<!--[if lte IE 9]>
+    <link href="css/IE_layout.css" rel="stylesheet" type="text/css">
+<![endif]-->
+</head>
+
+<body>
+	<header id="signIn"></header>
+
+	<div id="popup"></div>
+
+	<article id="white">
+	    <script>
+	    $(function() {
+	        var isResponse = '<?=(isset($rsArr[0]['r_Date'])&&($rsArr[0]['r_Date']!='')?$rsArr[0]['r_Date']:'');?>';
+	        var isStar = '<?=(isset($rsArr[0]['o_Star'])&&($rsArr[0]['o_Star']!='')?$rsArr[0]['o_Star']:'');?>';
+	        if(isResponse != '' && isStar == ''){
+	        //已有回覆並且尚未評分時才開放評分功能
+	            $('.problem_rating').attr('disabled',false);
+	            $('#submitBtn').attr('disabled',false);
+	            $('.picker-stars li').bind('click', function() {
+	                var which = $(this).index();
+	                for (var i = 0; i < $('.picker-stars li').length; i++) {
+	                    var obj = $('.picker-stars li:eq(' + i + ')');
+	                    if (i <= which) {
+	                        if (obj.attr('class') == 'unstar') {
+	                            obj.removeClass('unstar').addClass('star');
+	                        }
+	                    } else {
+	                        if (obj.attr('class') == 'star') {
+	                            obj.removeClass('star').addClass('unstar');
+	                        }
+	                    }
+	                };
+	            });
+	            $('#submitBtn').bind('click', function(e) {
+	                e.preventDefault();
+	                var star_length = $('.picker-stars li.star').length;
+	                if( star_length <=0 ){
+	                    alert("請選擇評分");
+	                    return false;
+	                }
+	                $('#star_val').val(star_length);
+	                $('#myform').submit();
+	            });
+	        }
+	        //顯示評分
+	        if(isStar != ''){
+	            for (var i = 0; i < $('.picker-stars li').length; i++) {
+	                var obj = $('.picker-stars li:eq(' + i + ')');
+	                if (i <= (isStar-1)) {
+	                    if (obj.attr('class') == 'unstar') {
+	                        obj.removeClass('unstar').addClass('star');
+	                    }
+	                } else {
+	                    if (obj.attr('class') == 'star') {
+	                        obj.removeClass('star').addClass('unstar');
+	                    }
+	                }
+	            };
+	        }
+	    });
+	    </script>
+	    <!--我的問題_內頁  的內容 start-->
+	    <div id="content">
+	        <!--問題表單的子選單 start-->
+	        <?php include("include/submenu_question.php"); ?>
+	        <!--問題表單的子選單 end-->
+	        <section class="service_content">
+	            <!--class="service_main"-->
+	            <div class="service_main">
+	                <!--class="service_content"-->
+	                <form action="../../php/issue_handle.html" method="post" id="myform" name="myform">
+	                    <div class="issue_notice">
+	                        <ul class="issue_notice">
+	                            <li>問題編號：
+	                                <?=$rsArr[0]['n_Num'];?>
+	                            </li>
+	                            <!-- <li>提問遊戲：bs7poker</li> -->
+	                            <li>處理進度：
+	                                <?php
+	                                    if($rsArr[0]['r_Status'] == '0'){
+	                                        echo '待回覆';
+	                                    }else if($rsArr[0]['r_Status'] == '1'){    
+	                                        echo '已完成回覆';
+	                                    }
+	                                ?>
+	                            </li>
+	                        </ul>
+	                    </div>
+	                    <div class="notice">
+	                        <label class="issue">問題概述</label>
+	                        <em><span>提問時間 </span><?=$rsArr[0]['n_Date'];?></em>
+	                        <p class="overview" style="word-wrap: break-word;">
+	                            <?=$rsArr[0]['n_Content'];?>
+	                        </p>
+	                    </div>
+	                    <div class="notice">
+	                        <label class="issue reply">問題回覆</label>
+	                        <em><span>回覆時間 </span><?=(isset($rsArr[0]['r_Date'])?$rsArr[0]['r_Date']:'');?></em>
+	                        <div class="problems_reply" style="word-wrap: break-word;">
+	                            <?=(isset($rsArr[0]['r_Date'])?$rsArr[0]['r_Content']:'');?>
+	                        </div>
+	                    </div>
+	                    <div class="notice">
+	                        <label class="issue">問題處理評分</label>
+	                        <ul class="picker-stars">
+	                            <li class="unstar"></li>
+	                            <li class="unstar"></li>
+	                            <li class="unstar"></li>
+	                            <li class="unstar"></li>
+	                            <li class="unstar"></li>
+	                        </ul>
+	                        <h5>(感謝您的評分，您寶貴的意見是我們進步的原動力)</h5>
+	                        <textarea name="content" class="problem_rating" disabled=disabled style="word-wrap: break-word;"><?=(isset($rsArr[0]['o_Content'])?$rsArr[0]['o_Content']:'');?></textarea>
+	                    </div>
+	                    <div class="notice">
+	                        <button type="button" id="submitBtn" class="submitbtn IsBtnSize" disabled=disabled>送出</button>
+	                    </div>
+	                    <input type="hidden" name="serial" value="<?=$rsArr[0]['n_Num'];?>">
+	                    <input type="hidden" name="star_val" value="" id="star_val">
+	                </form>
+	            </div>
+	        </section>
+	    </div>
+	    <!--我的問題_內頁  的內容 end-->
+	</article>
+
+	<aside></aside>
+
+	<footer></footer>
+
+	<div id="lteIE"></div>
+</body>
+</html>

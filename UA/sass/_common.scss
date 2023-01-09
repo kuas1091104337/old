@@ -1,0 +1,233 @@
+// 新細明體 'Noto Serif SC'
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap');
+// 英語 font-family: 'Prata', serif;
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+// 泰語、越語 font-family: 'STIX Two Math', 'STIX Two Text', 'Taviraj', serif;
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Math&family=STIX+Two+Text:wght@400;500;600;700&family=Taviraj:wght@300;400;500;600;700;800&display=swap');
+
+@font-face {
+  font-family: 'TimesNewRomanPS';
+  src:url('../font/TimesNewRomanPS-BoldMT.otf');
+}
+html, body {
+  color:#fff;
+  font-family: 'TimesNewRomanPS', 'Noto Serif SC', Times, Times New Roman, MingLiU, PMingLiU, 'STIX Two Math', 'STIX Two Text', 'Taviraj', Serif;
+  background-color:$ua-bg-color;
+}
+#cn, #vi, #th{font-weight: bold;}
+img{max-width: 100%;}
+.wrap{
+  min-width: 320px;
+  max-width: 1440px;
+  margin:0 auto;
+}
+.UA{
+  &whiteText, &goldText{
+    text-fill-color:transparent;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
+  }
+  &whiteText{
+    background-image:linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.9) 100%);
+  }
+  &goldText{
+    background-image:linear-gradient(90deg, #d8a843 0%, #e8c47e 100%);
+  }
+  &yellowBtn{
+    color:#000;
+    font-size: calc(16/14)+em;
+    line-height:calc(36/16)*1;
+    background-image:linear-gradient(90deg, #c78a03 0%, #e8c47e 50%, #e8c47e 100%);
+    background-size:200% 100%;
+    transition: background-position .4s;
+    &:hover{background-position: 100% 0;}
+  }
+  &frameBtn{
+    background-image: linear-gradient(90deg, $text-yellow2 0%, rgba(232, 196, 126, 0.3) 30%, $text-yellow2 50%, rgba(232, 196, 126, 0.3) 80%, $text-yellow2 100%);
+    background-size: 200% 100%;
+    padding: 1px;
+    transition: background-position .4s;
+    > span{
+      color:$text-yellow2;
+      // font-size: 16px;
+      font-size: calc(16/14)+em;
+      // line-height:34px;
+      line-height:calc(34/16)*1;
+      display: block;
+      background-color:#000;
+      padding: 0 46px 0 28px;
+      position: relative;
+      &:before, &:after{
+        content:"";
+        width: 8px;
+        height: 2px;
+        background-color: $text-yellow2;
+        border-radius: 1px;
+        margin-top: -1px;
+        position:absolute;
+        top:50%;
+        right:27px;
+        transform-origin:calc(100% - 1px) 50%;
+        transition: transform .4s;
+      }
+      &:after{transform:rotate(36deg);}
+      &:before{transform:rotate(-36deg);}
+    }
+    &:hover{
+      background-position: 100% 0;
+      > span{
+        &:after{transform:rotate(44deg);}
+        &:before{transform:rotate(-44deg);}
+      }
+    }
+  }
+  &titleWrap{
+    position: relative;
+    &_text{
+      font-size: 16px;
+      text-shadow: 0 0.0625em 0.25em #000;
+      width: 100%;
+      height: 100%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:0;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+  }
+  &_title{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    &_text{
+      font-size: 20px;
+      line-height: 1.5;
+      margin:0;
+    }
+  }
+  &_content{
+    // padding: 0 20px;
+    padding: 0 calc(20/375)*100%;
+    > p{
+      // font-size: 12px;
+      line-height: 1.67;
+      margin: 10px 0 0;
+      margin: 0.85em 0 0;
+    }
+  }
+  &aLinkWrap{
+    display:flex;
+    justify-content:space-evenly;
+    padding-top:calc(50/375)*100%;
+    &_item{
+      padding: 0 1.25em;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .UAaLinkWrap > .UAyellowBtn{padding: 0 .625em;}
+}
+@media screen and (min-width: 568px) {
+  .UAtitleWrap_text{font-size: imgSize-pxToVw(14, 375);}
+}
+// ===== 平板版型區 =====
+@media screen and (min-width: 768px) {
+  .UA{
+    &frameBtn{
+      > span{
+        font-size: 20px;
+        line-height: 2.42;
+        letter-spacing: 1px;
+        padding: 0 57px 0 42px;
+        &:before, &:after{width: 11px;}
+      }
+    }
+    &yellowBtn{
+      font-size: 20px;
+      line-height: 2.5;
+    }
+    &_title_text{font-size: imgSize-pxToVw(24, 768);}
+    &_content{
+      padding-top: imgSize-pxToVw(12, 768);
+      > p{
+        // font-size: imgSize-pxToVw(14, 768);
+        font-size: imgSize-pxToVw(22, 1440);
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+      }
+    }
+    &aLinkWrap{
+      justify-content:center;
+      &_item{
+        min-width: 240px;
+        text-align:center;
+        box-sizing:border-box;
+        + .UAaLinkWrap_item{
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  #cn{font-weight: 600;}
+  .UA{
+    &titleWrap_text{font-size: 32px;}
+    &frameBtn, &yellowBtn{font-weight: bold;}
+    &frameBtn > span{
+      font-size: imgSize-pxToVw(24, 1440);
+      padding: 0 imgSize-pxToVw(70, 1440) 0 imgSize-pxToVw(55, 1440);
+      &:before, &:after{width: imgSize-pxToVw(14, 1440);}
+    }
+    &yellowBtn{
+      font-size: imgSize-pxToVw(22, 1440);
+      // padding: imgSize-pxToVw(17.5, 1440) imgSize-pxToVw(36, 1440);
+    }
+    &_content{
+      padding-top: 20px;
+      > p{
+        font-size: 22px;
+        margin-top: 20px;
+      }
+    }
+    &aLinkWrap{
+      padding-top:calc(100/1440)*100%;
+      &_item{padding: 0 20px;}
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .UA{
+    &titleWrap{
+      max-width: 1440px;
+      margin:0 auto;
+      &_text{
+        background-image:linear-gradient(90deg, #000 0%, rgba(#000,0) 12.5%, rgba(#000,0) 87.5%, #000 100%);
+      }
+    }
+    &frameBtn > span{
+      font-size: 24px;
+      padding: 0 70px 0 55px;
+      &:before, &:after{width: 14px;}
+    }
+    &yellowBtn{
+      font-size: 22px;
+      line-height: 2.73;
+    }
+    &_title_text{font-size: 48px;}
+    &_content{
+      max-width: 1440px;
+      padding-right: 0;
+      padding-left: 0;
+      margin:0 auto;
+    }
+    &aLinkWrap{padding-top: 100px;}
+  }
+}
+@media screen and (min-width: 1920px) {
+  .wrap{max-width: 1600px;}
+}

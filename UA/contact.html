@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>Dot A - UA</title>
+  <meta name="keywords" content="陳宥宏的作品網站 Dot A">
+  <meta name="description" content="陳宥宏的作品網站 Dot A">
+  <meta name="author" content="陳宥宏, Amos Chen">
+  <meta name="apple-mobile-web-app-title" content="Dot A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="theme-color" content="#000">
+  <link href="./css/layout.min.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+<body id="cn" class="UAcontact">
+  <header class="UAhead"></header>
+  <div class="UAtitleWrap">
+    <img src="./images/title_banner/contact_banner.jpg" alt="Contact Us">
+    <h3 class="UAtitleWrap_text">联系我们</h1>
+  </div>
+  <div class="UA_title">
+    <h1 class="UA_title_text UAgoldText">请填写联络资讯</h1>
+  </div>
+  <div class="UA_content">
+    <p><span>以下栏位皆为必填</span></p>
+  </div>
+  <div class="UAcontact_wrap">
+    <form id="UAcontactForm" method="post" action="">
+      <div class="UAcontact_row">
+        <label class="UAcontact_list">
+          <span class="UAcontact_list_issue">名字</span>
+          <input class="UAcontact_list_input" name="contact_name" type="text" placeholder=" " required>
+          <div class="UAcontact_list_close UAcontact_nameReset"><span></span></div>
+        </label>
+        <label class="UAcontact_list UAcontact_list-select">
+          <span class="UAcontact_list_issue">询问项目</span>
+          <select class="UAcontact_list_select" name="contact_type">
+            <option value="" disabled selected>请选择询问项目</option>
+            <option value="包网系统租用">包网系统租用</option>
+            <option value="游戏API介接">游戏API介接</option>
+            <option value="商务合作">商务合作</option>
+            <option value="其他">其他</option>
+          </select>
+        </label>
+      </div>
+      <div class="UAcontact_row">
+        <label class="UAcontact_list">
+          <span class="UAcontact_list_issue">电子信箱</span>
+          <input class="UAcontact_list_input" name="contact_email" type="email" placeholder=" " required>
+          <div class="UAcontact_list_close UAcontact_emailReset"><span></span></div>
+        </label>
+        <div class="UAcontact_row_sub">
+          <label class="UAcontact_list UAcontact_list-select">
+            <span class="UAcontact_list_issue">联系方式</span>
+            <select class="UAcontact_list_select" name="contact_method">
+              <option value="" disabled selected>请选择联系方式</option>
+              <option value="telegram">Telegram</option>
+              <option value="whatsapp">Whatsapp</option>
+              <option value="line">Line</option>
+            </select>
+          </label>
+          <label class="UAcontact_list">
+            <span class="UAcontact_list_issue">通讯号</span>
+            <input class="UAcontact_list_input" name="contact_number" type="tel" placeholder=" " required>
+            <div class="UAcontact_list_close UAcontact_numberReset"><span></span></div>
+          </label>
+        </div>
+      </div>
+      <textarea class="UAcontact_listTextarea" name="contact_desc" cols="30" rows="12" placeholder="留言" required></textarea>
+      <div class="UAcontact_box">
+        <button class="UAcontact_box_link UAyellowBtn">送出</button>
+      </div>
+    </form>
+  </div>
+  <div class="UAfoot"></div>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./js/head_foot.js"></script>
+  <script type="text/javascript" src="./js/contact.js"></script>
+</body>
+</html>

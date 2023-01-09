@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BrainSport 打造棋牌遊戲界的奧林匹克運動賽事</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="keywords" content="BS, BrainSport, BS麻將, 麻將, 運動, 競技, 博弈, 棋牌, 奧林匹克, 腦力激盪, 免費遊戲">
+<meta name="description" content="BrainSport(簡稱BS)是最重視腦力激盪的博弈遊戲，推出多款獨特的棋排博奕遊戲，豐富的規則、刺激的賽制及BS獨有的特殊玩法，競技的快感，快來挑戰吧！"> 
+<meta name="author" content="BrainSport">
+<meta name="apple-mobile-web-app-title" content="BrainSport">
+<link rel="shortcut icon" href="images/website_logo.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+<link href="css/header-popup-aside-footer.css" rel="stylesheet" type="text/css">
+<link href="css/core.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<!--[if lte IE 9]>
+    <link href="css/IE_layout.css" rel="stylesheet" type="text/css">
+<![endif]-->
+</head>
+<body>
+	<header id="signIn"></header>
+
+	<div id="popup"></div>
+
+	<article id="black">
+<!--確認個人資訊頁  的內容 start-->
+<?php
+if($_POST['n_Gender'] == 1) {
+	$n_Gender = '女';
+} else {
+	$n_Gender = '男';
+}
+$n_Country = explode('_',$_POST['n_Country']);
+$_SESSION['n_Country'] = $n_Country[1];
+?>
+<div id="content">
+	<section class="BS-girl confirm clearfix">
+	<?php if($_SESSION['n_Usertype'] != 1) {?>
+		<p>請確認以下個人資訊：<br>提醒您，性別、國家確認後無法修改，請謹慎保管妥善。</p>
+		<div id="label-form-title">
+			<label class="form-title" for="member-nickname">暱稱：</label>
+			<label class="form-title" for="gender">性別：</label>
+			<label class="form-title" for="nation">國家：</label>
+		</div>
+		<ul id="field_contain">
+			<li id="member-nickname"><?php echo $_POST['n_Username'];?></li>
+			<li id="gender"><?php echo $n_Gender;?></li>
+			<li id="nation"><?php echo $n_Country[0];?></li>
+		</ul>
+	<?php } else {?>
+		<p>請確認以下個人資訊：<br>提醒您，帳號、性別、國家確認後無法修改，請謹慎保管妥善。</p>
+		<div id="label-form-title">
+			<label class="form-title" for="member-account">帳號：</label>
+			<label class="form-title" for="member-nickname">暱稱：</label>
+			<label class="form-title" for="member-password">密碼：</label>
+			<label class="form-title" for="email">電子信箱：</label>
+			<label class="form-title" for="gender">性別：</label>
+			<label class="form-title" for="nation">國家：</label>
+		</div>
+		<ul id="field_contain">
+			<li id="member-account"><?php echo $_POST['n_UserID'];?></li>
+			<li id="member-nickname"><?php echo $_POST['n_Username'];?></li>
+			<li id="member-password"><?php echo $_POST['n_Password'];?></li>
+			<li id="email"><?php echo $_POST['n_Email'];?></li>
+			<li id="gender"><?php echo $n_Gender;?></li>
+			<li id="nation"><?php echo $n_Country[0];?></li>
+		</ul>
+	<?php }?>
+		<ul class="confirm clearfix">
+			<li>
+				<a href="javascript:history.back();">
+					<span class="button">
+						<button type="submit" class="submitbtn">修改</button>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:$('#fm').submit();"><!-- 回上上一頁 -->
+					<span class="button">
+						<button type="submit" class="submitbtn">確定</button>
+					</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+</div>
+<form action="/member/regist.php" method="post" id="fm">
+<input type="hidden" name="n_UserID" value="<?php echo $_POST['n_UserID'];?>"/>
+<input type="hidden" name="n_Username" value="<?php echo $_POST['n_Username'];?>"/>
+<input type="hidden" name="n_Password" value="<?php echo $_POST['n_Password'];?>"/>
+<input type="hidden" name="n_Email" value="<?php echo $_POST['n_Email'];?>"/>
+<input type="hidden" name="n_Gender" value="<?php echo $_POST['n_Gender'];?>"/>
+<input type="hidden" name="n_Country" value="<?php echo $n_Country[0];?>"/>
+</form>
+<!--確認個人資訊頁  的內容 end-->
+	</article>
+  
+	<aside></aside>
+
+	<footer></footer>
+
+	<div id="lteIE"></div>
+</body>
+</html>

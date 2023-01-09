@@ -1,0 +1,103 @@
+<!--公告  的內容 start-->
+<?php
+$subsql = "";
+$subsql .= empty($_GET['n_Post_Type']) ? "" : " AND n_Post_Type = '". $_GET['n_Post_Type'] ."'";
+$subsql .= empty($_POST['search']) ? "" : " AND n_Title LIKE '%". $_POST['search'] ."%'";
+
+switch($_GET['n_Post_Type']) {
+	case 1:
+		$idstr = 'box2';
+		break;
+	case 2:
+		$idstr = 'box3';
+		break;
+	default:
+		$idstr = 'box1';
+		break;
+}
+
+require_once($_SERVER['DOCUMENT_ROOT'] ."/include/setup/mysqlconn.php");
+select_db('BSAdmin');
+
+$ListHTML = "";
+$PageHtml = "";
+
+$sql = "SELECT n_Num, n_Title, n_Post_Date, n_Game_ID, n_Post_Type FROM Announcement WHERE n_On_Off = 1 ". $subsql ." ORDER BY n_Num DESC";
+$result = mysql_query($sql);
+
+$data_nums = mysql_num_rows($result);   //統計總筆數
+$per = 10;   //每頁顯示項目數量
+$pages = ceil($data_nums / $per);   //取得不小於值的下一個整數
+
+if(!isset($_POST['page'])){   //假如$_POST['page']未設置
+	$page = 1;   //則在此設定起始頁數
+} else {
+	$page = intval($_POST['page']);   //確認頁數只能夠是數值資料
+}
+
+$start = ($page - 1) * $per;   //每一頁開始的資料序號
+
+if($page > 1) {
+	$PageHtml .= "<li><a href='javascript:goPage(". $page - 1 .");'><span><</span></a></li>";
+}
+
+for($i = 1; $i <= $pages; $i++) {
+	$PageHtml .= "<li><a href='javascript:goPage(". $i .");'>". $i ."</a></li>";
+}
+
+if($page < $pages) {
+	$PageHtml .= "<li><a href='javascript:goPage(". $page + 1 .");'><span>=</span></a></li>";
+}
+
+$sql = "SELECT n_Num, n_Title, n_Post_Date, n_Post_Type FROM Announcement WHERE n_On_Off = 1 ". $subsql ." ORDER BY n_Num DESC LIMIT ". $start .",". $per;
+$result = mysql_query($sql);
+
+while($row = mysql_fetch_row($result)) {
+	if($row[3] == 1) {
+		$row[3] = 'NEWS';
+	} else if($row[3] == 2) {
+		$row[3] = 'EVENT';
+	}
+
+	$ListHTML .= "<li>";
+	$ListHTML .= "<a href='notice_event.php?n_Num=". $row[0] ."' title='". $row[3] ."' class='". strtolower($row[3]) ."'>";
+	$ListHTML .= "<span><em>". substr($row[2],0,10) ."</em> ". $row[1] ."</span>";
+	$ListHTML .= "</a>";
+	$ListHTML .= "</li>";
+}
+?>
+<script type="text/javascript">
+function goPage(p) {
+	document.fm.page.value = p;
+	document.fm.submit();
+}
+</script>
+<div id="content">
+	<div id="searchBox">
+		<form action="bulletin.php?n_Post_Type=<?php echo $_GET['n_Post_Type'];?>" method="post" name="fm">
+		<input type="search" placeholder="Search..." class="search-input" name="search" value="<?php echo $_POST['search'];?>">
+		<button type="submit" value="submit" class="search-submit">z</button>
+		<input type="hidden" name="page" id="page" value="<?php echo $page;?>">
+		</form>
+	</div>
+	<section class="bulletin_main">
+		<ul id="tabMenu">
+			<li><a <?php if(empty($_GET['n_Post_Type'])) {echo 'class="nowTab"';}?> href="bulletin.php">全部</a></li>
+			<li><a <?php if($_GET['n_Post_Type'] == 1) {echo 'class="nowTab"';}?> href="bulletin.php?n_Post_Type=1">系統</a></li>
+			<li><a <?php if($_GET['n_Post_Type'] == 2) {echo 'class="nowTab"';}?> href="bulletin.php?n_Post_Type=2">活動</a></li>
+		</ul>
+		<div id="allBox">
+			<div class="boxs" id="<?php echo $idstr;?>">
+				<ul>
+					<?php echo $ListHTML;?>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<div id="bottomBar">
+		<ul>
+			<?php echo $PageHtml;?>
+		</ul>
+	</div>
+</div>
+<!--公告  的內容 end-->

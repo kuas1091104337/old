@@ -1,0 +1,122 @@
+.UAcollaborate{
+	&_frame{
+		padding: calc(30/375)*100% calc(15/375)*100% calc(20/375)*100%;
+		&_img{width: 100%;}
+	}
+	&_list{
+		padding-bottom: calc(20/375)*100%;
+		&_item{
+			color:$text-yellow2;
+			display:flex;
+			align-items:center;
+			flex-direction:column;
+			padding-top: calc(20/375)*100%;
+			> strong{
+				font-size: calc(16/14)+em;
+				padding-top: calc(5/375)*100%;
+			}
+			> p{
+				font-size: calc(12/14)+em;
+				opacity: .7;
+				margin:0;
+			}
+		}
+		&_logo{
+			width: calc(100/375)*100%;
+			background-image:linear-gradient(180deg, $text-yellow2 0%, rgba($text-yellow2,0) 100%);
+			box-sizing:border-box;
+			border-radius: 50%;
+			padding: 1px;
+			> i{
+				font-size: imgSize-pxToVw(44, 375);
+				height: 0;
+				display: block;
+				background-color:#000;
+				background-image:linear-gradient(180deg, rgba(#fff,0.3) 0%, rgba(#fff,0) 100%);
+				border-radius: 50%;
+				padding-bottom: 100%;
+				position: relative;
+				&:before{
+					background-image:linear-gradient(180deg, #E8C47E 0%, #D8A843 100%);
+					-webkit-text-fill-color:transparent;
+					text-fill-color:transparent;
+					-webkit-background-clip:text;
+					background-clip:text;
+					position:absolute;
+					top:50%;
+					left:50%;
+					transform:translate3d(-50%,-50%,0);
+				}
+			}
+		}
+	}
+}
+// ===== 平板版型區 =====
+@media screen and (min-width: 768px) {
+	.UAcollaborate_list_logo{
+		width: 150px;
+		> i{font-size: 64px;}
+	}
+}
+@media screen and (min-width: 1024px) {
+	.UAcollaborate{
+		&_frame{
+			max-width: 1000px;
+			margin:0 auto;
+		}
+		&_list{
+			display:flex;
+			justify-content:center;
+			padding-bottom: calc(20/1440)*100%;
+			&_logo{
+				width: 100%;
+				> i{font-size: imgSize-pxToVw(64, 1440);}
+			}
+			&_item{
+				width: calc(150/1440)*100%;
+				padding-top: calc(60/1440)*100%;
+				+ .UAcollaborate_list_item{
+					padding-left: calc(40/1440)*100%;
+				}
+				> strong{
+					font-size: imgSize-pxToVw(22, 1440);
+					padding-top: calc(10/150)*100%;
+				}
+				> p{
+					font-size: imgSize-pxToVw(16, 1440);
+					padding-top: calc(5/150)*100%;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1280px) {
+	.UAcollaborate_frame{
+		padding: calc(60/1440)*100% 0 calc(100/1440)*100%;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.UAcollaborate{
+		&_frame{
+			padding: 60px 0 100px;
+		}
+		&_list{
+			padding-bottom: 20px;
+			&_item{
+				width: 150px;
+				padding-top: 60px;
+				+ .UAcollaborate_list_item{
+					padding-left: 40px;
+				}
+				> strong{
+					font-size: 22px;
+					padding-top: 10px;
+				}
+				> p{
+					font-size: 16px;
+					padding-top: 5px;
+				}
+			}
+		}
+	}
+}

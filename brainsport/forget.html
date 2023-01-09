@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BrainSport 打造棋牌遊戲界的奧林匹克運動賽事</title>
+<meta name="apple-mobile-web-app-title" content="BrainSport">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="keywords" content="BS, BrainSport, BS麻將, 麻將, 運動, 競技, 博弈, 棋牌, 奧林匹克, 腦力激盪, 免費遊戲">
+<meta name="description" content="BrainSport(簡稱BS)是最重視腦力激盪的博弈遊戲，推出多款獨特的棋排博奕遊戲，豐富的規則、刺激的賽制及BS獨有的特殊玩法，競技的快感，快來挑戰吧！"> 
+<meta name="author" content="BrainSport">
+<link rel="shortcut icon" href="images/website_logo.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+<link href="css/header-popup-aside-footer.css" rel="stylesheet" type="text/css">
+<link href="css/core.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<!--[if lte IE 9]>
+    <link href="css/IE_layout.css" rel="stylesheet" type="text/css">
+<![endif]-->
+</head>
+<body>
+	<header id="signIn"></header>
+
+	<div id="popup"></div>
+
+	<article id="black">
+		<!--忘記帳號 / 密碼  的內容 start-->
+		<div id="content">
+			<h2>忘記帳號 / 密碼</h2>
+			<section class="BS-girl forget">
+				<ul>
+					<li>
+						<span class="forget_word">
+							<p>請輸入您的電子信箱，即可找回帳號、密碼</p>
+							<p>您所查詢的資訊，將會寄送至您的信箱中。</p>
+							<p style="font-size:15px;">(僅適用於BS註冊會員)</p>
+						</span>
+					</li>
+					<li>
+						<span class="input">
+							<input class="input_field" type="text" id="email" placeholder="請輸入註冊帳號時的電子信箱"/>
+							<label class="input_label" for="email">輸入信箱</label>
+						</span>
+					</li>
+					<li>
+						<span class="button">
+							<button type="submit" class="submitbtn" id="submitbtn">送出</button>
+						</span>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#submitbtn').click(function() {
+				if ($('#email').val() == '') {
+					alert('請輸入註冊帳號時的電子信箱');
+					return false;
+				} else {
+					re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+					if (!re.test($('#email').val())) {
+						alert('信箱格式不對');
+						return false;
+					} else {
+						$.ajax({
+							url: '/ajax/forget.html',
+							type: 'POST',
+							data: {
+								email: $('#email').val()
+							},
+							success: function(response) {
+								if(response == 'ok') {
+									alert('帳號密碼已傳送至您的電子信箱');
+								} else if(response == 'no') {
+									alert('此電子信箱查無帳號密碼');
+								}
+							},
+							complete: function(response) {
+								location.href = 'forget.html';
+							}
+						});
+					}
+				}
+			});
+		});
+		</script>
+		<!--忘記帳號 / 密碼  的內容 end-->
+	</article>
+
+	<aside></aside>
+
+	<footer></footer>
+
+	<div id="lteIE"></div>
+</body>
+</html>

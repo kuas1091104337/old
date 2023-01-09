@@ -1,0 +1,83 @@
+<?php
+$game = 'web';
+
+require_once($_SERVER['DOCUMENT_ROOT'] ."/include/setup/mysqlconn.php");
+select_db('BSAdmin');
+
+$ListHTML = "";
+$PageHtml = "";
+
+$sql = "SELECT a.n_Num, a.n_Date, a.n_Content, a.n_Type, a.r_Status FROM IssueForm AS a WHERE a.n_Userid = '". $n_UserID ."' AND a.n_Game = '". $game ."' ORDER BY a.n_Num DESC";
+$result = mysql_query($sql);
+
+$data_nums = mysql_num_rows($result);   //統計總筆數
+$per = 5;   //每頁顯示項目數量
+$pages = ceil($data_nums / $per);   //取得不小於值的下一個整數
+
+if (!isset($_POST['page'])){   //假如$_POST['page']未設置
+	$page = 1;   //則在此設定起始頁數
+} else {
+	$page = intval($_POST['page']);   //確認頁數只能夠是數值資料
+}
+
+$start = ($page - 1) * $per;   //每一頁開始的資料序號
+
+if($page > 1) {
+	$PageHtml .= "<li><a href='javascript:goPage(". ($page - 1) .");'><span><</span></a></li>";
+}
+
+for($i = 1; $i <= $pages; $i++) {
+	$PageHtml .= "<li><a href='javascript:goPage(". $i .");'>". $i ."</a></li>";
+}
+
+if($page < $pages) {
+	$PageHtml .= "<li><a href='javascript:goPage(". ($page + 1) .");'><span>=</span></a></li>";
+}
+
+$sql = "SELECT a.n_Num, a.n_Date, a.n_Content, b.n_Name, a.r_Status FROM IssueForm AS a LEFT OUTER JOIN IssueType AS b ON a.n_Type = b.n_Type WHERE a.n_Userid = '". $n_UserID ."' AND a.n_Game = '". $game ."' ORDER BY a.n_Num DESC LIMIT ". $start .",". $per;
+$result = mysql_query($sql);
+
+while($row = mysql_fetch_row($result)) {
+	$ListHTML .= "<ul class='issue_box clearfix'>";
+	$ListHTML .= "<a href='issue_notice.php?n_Num=". $row[0] ."' title='". $row[3] ."'>";
+	$ListHTML .= "<li>";
+	$ListHTML .= "<p class='time'>". substr($row[1],0,10) ."<span class='time'> ". substr($row[1],11,8) ."</p>";
+	$ListHTML .= "<p class='issue'>提問問題：". mb_substr($row[2],0,50,"UTF-8") ." ...</p>";
+	$ListHTML .= "</li>";
+
+	if($row[4] == 0) {
+		$ListHTML .= "<li class='processing'>待處理中</li>";
+	} else {
+		$ListHTML .= "<li class='reply'>客服已回覆</li>";
+	}
+
+	$ListHTML .= "</a>";
+	$ListHTML .= "</ul>";
+}
+?>
+    <script type="text/javascript">
+    function goPage(p) {
+        document.fm.page.value = p;
+        document.fm.submit();
+    }
+    </script>
+    <!--我的問題_首頁  的內容 start-->
+    <div id="content">
+        <!--問題表單的子選單 start-->
+        <?php include("submenu_question.php"); ?>
+            <!--問題表單的子選單 end-->
+            <form action="issue.php" method="post" name="fm">
+                <input type="hidden" name="page" id="page" value="<?php echo $page;?>">
+            </form>
+            <section class="service_content">
+                <div class="service_main">
+                    <?php echo $ListHTML;?>
+                </div>
+                <div id="bottomBar">
+                    <ul class="clearfix">
+                        <?php echo $PageHtml;?>
+                    </ul>
+                </div>
+            </section>
+    </div>
+    <!--我的問題_首頁  的內容 end-->

@@ -1,0 +1,15 @@
+//	網頁設計變數
+$ua-bg-color:#000;
+$ua-item-color:#272727;
+$ua-foot-color:#191919;
+$text-yellow1:#d8a843;
+$text-yellow2:#e8c47e;
+$text-white:rgba(255,255,255,0.5);
+$text-white1:rgba(255,255,255,0.3);
+$text-white2:rgba(255,255,255,0.9);
+
+::selection{
+	color:#000;
+	text-shadow:none;
+  background-color:rgba(#fff, .75);
+}

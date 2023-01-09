@@ -11,7 +11,8 @@ $z-index:body, aside, head, full_screen;
 
 @import "../../sass/_normalize.scss";
 @import "../../sass/_extendMixinFunction.scss";
-@import "./_contact_template.scss";
+@import "../../sass/foot";
+@import "../../sass/daRightMenu";
 
 @keyframes check_box_animate {
   0%, 100% {transform: scale(1);}
@@ -98,14 +99,28 @@ label{cursor:pointer;}
 }
 .head{
   &Logo{
-    @extend %text-indent-out;
-    width:72px;
     height:35px;
-    background-image:url("../../G2E/images/ae_logo.png");
-    background-size:auto 100%;
-    background-repeat: no-repeat;
     margin: 0 0 0 16px;
-    &_a{height: 100%;}
+    &_a{
+      color:#333;
+      font-size:21px;
+      font-weight:normal;
+      height: 100%;
+      display: flex;
+      align-items:center;
+      &:before{
+        content:"";
+        width: 26px;
+        height: 24px;
+        background-image:url("../../img/DotAb.svg");
+        background-size:cover;
+        margin-right:4px;
+      }
+      > span{
+        padding-top: 4px;
+        transform:skew(-8deg);
+      }
+    }
   }
   &Lang{
     width: 40px;
@@ -727,9 +742,7 @@ label{cursor:pointer;}
 #native_app_template{
 
 }
-#H5_app_template{
-
-}
+#H5_app_template{}
 
 // 版形分類
 .template_key{
@@ -783,6 +796,32 @@ label{cursor:pointer;}
   }
 }
 
+#goTop{
+  width: 44px;
+  height: 44px;
+  border-radius:50%;
+  background-color:$AE_red;
+  box-sizing:border-box;
+  box-shadow:0 1px 6px rgba(0,0,0,0.4);
+  cursor:pointer;
+  padding-top:14.5px;
+  position:fixed;
+  bottom:12px;
+  right:12px;
+  z-index:index($z-index, body);
+  > span{
+    width:12px;
+    height:12px;
+    display: block;
+    border:1px solid #fff;
+    border-bottom-style:none;
+    border-right-style:none;
+    margin:0 auto;
+    transform:rotate(45deg);
+    + span{margin-top:-6px;}
+  }
+}
+
 // 多國語言特殊樣式設定
 html[lang=vn], html[lang=th]{
   .template_key{
@@ -790,7 +829,7 @@ html[lang=vn], html[lang=th]{
     > .cursor{padding: 0;}
   }
 }
-  // 棋牌原生
+// 棋牌原生
 // #chess_app_page_ctrl:checked ~ #AE_wrap #chess_app_template{height:228px;}
 // #chess_app_template{
 //   .full_screen_icon, .template-img{height: 140px;}
@@ -855,13 +894,14 @@ html[lang=vn], html[lang=th]{
     &_key{
       background-color:#fff;
       height:auto;
-      padding-left: 132px;
+      padding:5px 0 5px 132px;
       margin: -24px 0 18px 0;
       position: sticky;
       top: 211px;
       z-index:index($z-index, body);
     }
   }
+  .template_key > .cursor{top:5px;}
   .lottery_main .style_item_box > .template_key{top: 127px;}
   html[lang=vn], html[lang=th]{
     .template_key{
@@ -899,7 +939,6 @@ html[lang=vn], html[lang=th]{
 //     margin-left:0;
 //   }
 // }
-
 @media screen and (min-width: 1366px) {
   .headAsideMenu{
     display: none;
@@ -948,6 +987,8 @@ html[lang=vn], html[lang=th]{
     box-shadow:none;
     &_bg{display:none;}
   }
+  #goTop{right:332px;}
+  #foot{padding-right: 350px;}
 }
 @media screen and (min-width: 1600px) {
   .template-img.full_screen{

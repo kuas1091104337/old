@@ -1,0 +1,56 @@
+<?php
+if(stripos($_SERVER['PHP_SELF'],'repaid.php') > 0) {
+	$atag3 = 'now';
+	$atag4 = '';
+    $atag5 = '';
+    $atag6 = '';
+} else if(stripos($_SERVER['PHP_SELF'],'currency.php') > 0) {
+	$atag3 = '';
+	$atag4 = 'now';
+    $atag5 = '';
+    $atag6 = '';
+}else if(stripos($_SERVER['PHP_SELF'],'e_invoice.php') > 0) {
+    $atag3 = '';
+    $atag4 = '';
+    $atag5 = 'now';
+    $atag6 = '';
+}else if(stripos($_SERVER['PHP_SELF'],'differ_invoice.php') > 0) {
+    $atag3 = '';
+    $atag4 = '';
+    $atag5 = '';
+    $atag6 = 'now';
+}
+?>
+<!--帳號管理的子選單 start-->
+<ul class="service_nav">
+    <li class="service-icon">
+        <a class="icon" href="question.php">
+            <span class="icon-before issue-icon"></span>問題表單<span class="icon-after"></span>
+        </a>
+    </li>
+    <li class="service-icon">
+        <a class="icon" href="faq_account.php">
+            <span class="icon-before faq-icon"></span>常見問題<span class="icon-after"></span>
+        </a>
+    </li>
+    <li class="service-icon">
+        <a class="icon now" href="repaid.php">
+            <span class="icon-before account-icon"></span>帳號管理<span class="icon-after"></span>
+        </a>
+    </li>
+</ul>
+<ul class="service_menu clearfix">
+    <li>
+        <a href="repaid.php" class="<?php echo $atag3;?>">儲值紀錄</a>
+    </li>
+    <li>
+        <a href="currency.php" class="<?php echo $atag4;?>">購幣紀錄</a>
+    </li>
+    <li>
+        <a href="e_invoice.php" class="<?php echo $atag5;?>">電子發票歸戶</a>
+    </li>
+    <li>
+        <a href="differ_invoice.php" class="<?php echo $atag6;?>">發票差異說明</a>
+    </li>
+</ul>
+<!--帳號管理的子選單 end-->

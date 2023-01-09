@@ -1,0 +1,148 @@
+<?php
+include_once($_SERVER['DOCUMENT_ROOT'].'/php/adodb/adodb.inc.php');
+include_once("../../mobile.skym.com/include/DB_config.php");
+if( !isset($_GET['n_Num']) || empty($_GET['n_Num']) ){
+    $WebUtility->AlertMsgAndGoto("參數有誤","/zh-tw/index.php");exit();
+}
+if ((!preg_match("/^[0-9]{11}/",$_GET['n_Num']))) {
+   $WebUtility->AlertMsgAndGoto("參數格式有誤","/zh-tw/index.php");exit();
+}
+//宣告資料庫連線變數         
+$conn = ADONewConnection("mysqli");
+$conn->charPage="CP_UTF8";
+//$conn->debug = true;
+$conn->Connect($_DB['host'],$_DB['username'],$_DB['password'],$_DB['dbname']);
+$conn->SetFetchMode(ADODB_FETCH_ASSOC);
+//for uft-8
+$sql = "set names utf8";
+$conn->Execute($sql);
+
+$sql = "SELECT n_Num, n_Date, n_Content, r_Status, r_Date, r_Content, o_Date, o_Content, o_Star FROM IssueForm  where n_num = '".$_GET['n_Num']."'";
+$rs =  $conn->Execute($sql);
+$rsArr = Array();
+if($rs){    
+    if( $rs->RowCount() > 0 ){
+        $rsArr = $rs->GetArray();
+        print_r($rsArr);
+    }
+    $rs->Close();
+}
+$conn->Close();
+
+?>
+    <script>
+    $(function() {
+        var isResponse = '<?=(isset($rsArr[0]['r_Date'])&&($rsArr[0]['r_Date']!='')?$rsArr[0]['r_Date']:'');?>';
+        var isStar = '<?=(isset($rsArr[0]['o_Star'])&&($rsArr[0]['o_Star']!='')?$rsArr[0]['o_Star']:'');?>';
+        
+
+        if(isResponse != '' && isStar == ''){
+        //已有回覆並且尚未評分時才開放評分功能
+            $('.problem_rating').attr('disabled',false);
+            $('#submitBtn').attr('disabled',false);
+            $('.picker-stars li').bind('click', function() {
+                var which = $(this).index();
+                for (var i = 0; i < $('.picker-stars li').length; i++) {
+                    var obj = $('.picker-stars li:eq(' + i + ')');
+                    if (i <= which) {
+                        if (obj.attr('class') == 'unstar') {
+                            obj.removeClass('unstar').addClass('star');
+                        }
+                    } else {
+                        if (obj.attr('class') == 'star') {
+                            obj.removeClass('star').addClass('unstar');
+                        }
+                    }
+                };
+            });
+            $('#submitBtn').bind('click', function(e) {
+                e.preventDefault();
+                var star_length = $('.picker-stars li.star').length;
+                if( star_length <=0 ){
+                    alert("請選擇評分");
+                    return false;
+                }
+                $('#star_val').val(star_length);
+                $('#myform').submit();
+            });
+        }
+        //顯示評分
+        if(isStar != ''){
+            for (var i = 0; i < $('.picker-stars li').length; i++) {
+                var obj = $('.picker-stars li:eq(' + i + ')');
+                if (i <= (isStar-1)) {
+                    if (obj.attr('class') == 'unstar') {
+                        obj.removeClass('unstar').addClass('star');
+                    }
+                } else {
+                    if (obj.attr('class') == 'star') {
+                        obj.removeClass('star').addClass('unstar');
+                    }
+                }
+            };
+        }
+    });
+    </script>
+    <!--我的問題_內頁  的內容 start-->
+    <div id="content">
+        <!--問題表單的子選單 start-->
+        <?php include("include/submenu_question.php"); ?>
+            <!--問題表單的子選單 end-->
+            <section class="service_content">
+                <!--class="service_main"-->
+                <div class="service_main">
+                    <!--class="service_content"-->
+                    <form action="../../php/issue_handle.php" method="post" id="myform" name="myform">
+                        <div class="issue_notice">
+                            <ul class="issue_notice">
+                                <li>問題編號：
+                                    <?=$rsArr[0]['n_Num'];?>
+                                </li>
+                                <!-- <li>提問遊戲：bs7poker</li> -->
+                                <li>處理進度：
+                                    <?php
+                    if($rsArr[0]['r_Status'] == '0'){
+                        echo '待回覆';
+                    }else if($rsArr[0]['r_Status'] == '1'){    
+                        echo '已完成回覆';
+                    }
+                    ?>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="notice">
+                            <label class="issue">問題概述</label>
+                            <em><span>提問時間 </span><?=$rsArr[0]['n_Date'];?></em>
+                            <p class="overview" style="word-wrap: break-word;">
+                                <?=$rsArr[0]['n_Content'];?>
+                            </p>
+                        </div>
+                        <div class="notice">
+                            <label class="issue reply">問題回覆</label>
+                            <em><span>回覆時間 </span><?=(isset($rsArr[0]['r_Date'])?$rsArr[0]['r_Date']:'');?></em>
+                            <div class="problems_reply" style="word-wrap: break-word;">
+                                <?=(isset($rsArr[0]['r_Date'])?$rsArr[0]['r_Content']:'');?>
+                            </div>
+                        </div>
+                        <div class="notice">
+                            <label class="issue">問題處理評分</label>
+                            <ul class="picker-stars">
+                                <li class="unstar"></li>
+                                <li class="unstar"></li>
+                                <li class="unstar"></li>
+                                <li class="unstar"></li>
+                                <li class="unstar"></li>
+                            </ul>
+                            <h5>(感謝您的評分，您寶貴的意見是我們進步的原動力)</h5>
+                            <textarea name="content" class="problem_rating" disabled=disabled style="word-wrap: break-word;"><?=(isset($rsArr[0]['o_Content'])?$rsArr[0]['o_Content']:'');?></textarea>
+                        </div>
+                        <div class="notice">
+                            <button type="button" id="submitBtn" class="submitbtn IsBtnSize" disabled=disabled>送出</button>
+                        </div>
+                        <input type="hidden" name="serial" value="<?=$rsArr[0]['n_Num'];?>">
+                        <input type="hidden" name="star_val" value="" id="star_val">
+                    </form>
+                </div>
+            </section>
+    </div>
+    <!--我的問題_內頁  的內容 end-->

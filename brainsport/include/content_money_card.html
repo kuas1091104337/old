@@ -1,0 +1,162 @@
+<div id="content">
+  <nav>
+    <ul class="breadcrumb">
+        <li class="visited">
+          <a class="game-icon SOSA" href="game.php"><em>選擇遊戲</em></a>
+        </li>
+        <li class="visited">
+          <a class="exchange-icon SOSA" href="exchange-local.php"><em>儲值方式</em></a>
+        </li>
+        <li class="current">
+          <span class="money-icon RAPH"><em>儲值金額</em></span>
+        </li>
+        <li>
+          <span class="invoice-icon SOSA"><em>儲值資訊</em></span>
+        </li>
+        <li>
+          <span class="result-icon RAPH"><em>儲值結果</em></span>
+        </li>
+    </ul>
+  </nav>
+  <section class="store">
+    <p class="game-7poker">BS 7POKER</p>
+    <div class="store-data">
+      <div class="storeNickname">暱稱五個字</div>
+      <div class="diamond">9,999,999</div>
+      <div class="chips">99,999,999,999</div>
+      <div class="prepaid-mode">線上刷卡</div>
+    </div>
+    <div class="lightBlue">
+      <h3>請選擇以下儲值面額</h3>
+      <div id="money-card" class="storeMenu">
+        <figure class="money hundredX1-2">
+          <a href="javascript:;">
+            <ins></ins>
+            <p>100鑽</p>
+            <figcaption>
+              <h4>NTD 100</h4>
+              <span>加贈 籌碼10萬</span>
+            </figcaption>
+          </a>
+        </figure>
+        <figure class="money hundredX3-5">
+          <a href="javascript:;">
+            <ins></ins>
+            <p>300鑽</p>
+            <figcaption>
+              <h4>NTD 300</h4>
+              <span>加贈 籌碼33萬</span>
+            </figcaption>
+          </a>
+        </figure>
+        <figure class="money hundredX3-5">
+          <a href="javascript:;">
+            <ins></ins>
+            <p>500鑽</p>
+            <figcaption>
+              <h4>NTD 500</h4>
+              <span>加贈 籌碼60萬</span>
+            </figcaption>
+          </a>
+        </figure>
+        <figure class="money thousandX1-2">
+          <a href="javascript:;">
+            <ins></ins>
+            <p>1,000鑽</p>
+            <figcaption>
+              <h4>NTD 1,000</h4>
+              <span>加贈 籌碼150萬</span>
+            </figcaption>
+          </a>
+        </figure>
+        <figure class="money thousandX1-2">
+          <a href="javascript:;">
+            <ins></ins>
+            <p>2,000鑽</p>
+            <figcaption>
+              <h4>NTD 2,000</h4>
+              <span>加贈 籌碼340萬</span>
+            </figcaption>
+          </a>
+        </figure>
+        <figure class="money thousandX3-5">
+          <a href="javascript:;">
+            <ins></ins>
+            <p>3,000鑽</p>
+            <figcaption>
+              <h4>NTD 3,000</h4>
+              <span>加贈 籌碼600萬</span>
+            </figcaption>
+          </a>
+        </figure>
+      </div>
+      <div id="creditCardMechanism" class="storeMenu">
+        <em>請選擇信用卡機制</em>
+        <ul>
+          <li class="authenticateNon3D">
+            <a href="javascript:;">非3D認證機制</a>
+          </li>
+          <li class="authenticate3D">
+            <a href="javascript:;">3D認證機制</a>
+          </li>
+          <li>
+            <p>需進行手機認證</p>
+          </li>
+          <li>
+            <p class="certification3D">什麼是3D認證機制<span>?</span></p>
+          </li>
+        </ul> 
+        <div id="lightbox3D">
+          <h6 class="lightbox-close">Â</h6>
+          <p>信用卡3D驗證機制說明：</p>
+          <ul>
+            <li>依照各發卡行的規定，使用安全的「信用卡密碼」驗證服務。當您在線上刷卡時，需要多一個輸入密碼的步驟，以確保您的信用卡不會被盜刷。</li>
+            <li>所謂3D驗證，指持卡人經由發卡銀行網頁自己設定信用卡密碼（只需設定1次，請記住此密碼，勿將密碼告知任何人），以後當在網路上使用此信用卡交易時，皆需輸入此信用卡密碼，經發卡銀行連線確認卡號跟密碼正確後，才會進行扣款，這樣就能避免卡片遺失時遭人線上盜刷。</li>
+          </ul>
+        </div>
+      </div> 
+      <div id="non-3D">
+        <p>請輸入手機號碼，系統將在3分鐘內發送認證碼至您的手機，請於3分鐘內輸入認證碼，認證成功後即可進行交易。</p>
+        <ul>
+          <li class="clearfix">
+            <span class="cardInput">
+              <input class="cardInput_field" id="phone-number" type="text" placeholder="請填寫真實手機號碼">
+              <label class="cardInput_label" for="phone-number">手機號碼</label>
+            </span>
+            <div class="cardInput_data">
+              <button type="submit" id="phoneNumber" class="submitbtn ReBtnSize">發送</button>
+            </div>
+            <div class="cardInput_data">
+              <em>請輸入手機號碼</em>
+            </div>
+          </li>
+          <li class="clearfix">
+            <span class="cardInput">
+              <input class="cardInput_field" id="certification-number" type="text" placeholder="請輸入簡訊認證號">
+              <label class="cardInput_label" for="certification-number">認證號碼</label>
+            </span>
+            <div class="cardInput_data">
+              <button type="submit" id="certNumber" class="submitbtn ReBtnSize">認證</button>
+            </div>
+            <div class="cardInput_data">
+              <em>認證號碼格式有誤</em>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="attention">
+        <p>注意事項</p>
+        <ol>
+          <li>若您是「美國運通」的銀行用戶者，無法使用本服務。</li>
+          <li>每日信用卡使用上限為新台幣5,000元</li>
+        </ol>
+      </div>
+      <div id="creditCardPayment" class="storeBtn">
+        <ul>
+          <li class="storeLightBtn"><a href="invoice.php" class="submitbtn">確定付款</a></li>
+          <li class="storeLightBtn"><a href="exchange-local.php" class="submitbtn">重選儲值方式</a></li>
+        </ul> 
+      </div>
+    </div>
+  </section>
+</div>

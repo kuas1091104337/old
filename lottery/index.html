@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Dot A Lottery by Dot A works</title>
+  <meta name="keywords" content="Dot A Lottery">
+  <meta name="description" content="Dot A Lottery">
+  <meta name="author" content="陳宥宏, Amos Chen">
+  <meta name="apple-mobile-web-app-title" content="Dot A Lottery">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="theme-color" content="#25164e"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="../img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+  <link href="./css/layout.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="zh">
+  <script>
+    var aeLotStorage = sessionStorage.welcomeAeLot;
+    if(!aeLotStorage){
+      switch(window.navigator.language) {
+        case 'th-TH' :
+          location.href = './index_th.html';
+          break;
+        case 'en-US' :
+          location.href = './index_en.html';
+          break;
+      };
+      sessionStorage.welcomeAeLot = window.navigator.language;
+    }
+  </script>
+  <div id="goToTop"><span></span><span></span></div>
+  <footer id="foot" class="DAfoot active"></footer>
+  <div id="DArightMenu"></div>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/i18n.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="../js/daRightMenu.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+[
+    {
+        "BBFrameFileName":"./img/long_banner/B1.jpg",
+        "BBFrameAlt":"",
+        "BSFrameFileName":"./img/long_banner/S1.jpg",
+        "BSFrameAlt":""
+    },{
+        "BBFrameFileName":"./img/long_banner/B2.jpg",
+        "BBFrameAlt":"",
+        "BSFrameFileName":"./img/long_banner/S2.jpg",
+        "BSFrameAlt":""
+    },{
+        "BBFrameFileName":"./img/long_banner/B3.jpg",
+        "BBFrameAlt":"",
+        "BSFrameFileName":"./img/long_banner/S3.jpg",
+        "BSFrameAlt":""
+    },{
+        "BBFrameFileName":"./img/long_banner/B4.jpg",
+        "BBFrameAlt":"",
+        "BSFrameFileName":"./img/long_banner/S4.jpg",
+        "BSFrameAlt":""
+    },{
+        "BBFrameFileName":"./img/long_banner/B5.jpg",
+        "BBFrameAlt":"",
+        "BSFrameFileName":"./img/long_banner/S5.jpg",
+        "BSFrameAlt":""
+    }
+]

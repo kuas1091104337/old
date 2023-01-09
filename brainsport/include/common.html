@@ -1,0 +1,262 @@
+<!-- header選單 登入 start -->
+<header id="signIn">
+	<hgroup>
+		<h1 id="logo"><a href="index.html" title="回BS首頁">BrainSport 遊戲平台</a></h1>
+		<nav><!-- first選單最多四個，多出的選項請放second選單 -->
+	        <ul class="first">
+	        	<li><a href="bulletin.html" class="m_icon notice">公告</a></li>
+	        	<li><a href="service.html" class="m_icon service">客服</a></li>
+	        	<li>
+		        	<a href="game.html" class="m_icon store">儲值
+		        		<ins></ins><ins></ins><ins></ins>
+		        	</a>
+	        	</li>
+	        	<!-- <li><a href="video.html" class="m_icon video">影音</a></li> -->
+	        	<li class="menu_icon"><a href="javascript:;" class="m_icon menu_icon">選單</a></li>
+	        </ul>
+	        <ul class="second">
+	        	<li><a href="video.html" class="m_icon video">影音</a></li>
+	        	<li><a href="javascript:;" class="m_icon sign_in">登入</a></li>
+	        	<li class="half"><a href="https://goo.gl/LNMLVn" class="icon fb" title="BS FB粉絲團" target="_blank"></a></li>
+	        	<li class="half line"><a href="javascript:javascript:alert('尚未開放!');" class="icon line" title="BS LINE群組" target="_blank"></a></li>
+	        	<li class="language"><a href="javascript:;" id="language" class="icon tw" title="語言選擇">語言</a>
+		            <ul>
+		            	<li><a href="javascript:;" class="icon us">English</a></li>
+		            	<li><a href="javascript:;" class="icon jp">日本語</a></li>
+		            	<li><a href="javascript:;" class="icon ko">한국의</a></li>
+		            	<li><a href="javascript:;" class="icon tw">繁體中文</a></li>
+		            	<li><a href="javascript:;" class="icon cn">简体中文</a></li>
+		            	<li><a href="javascript:;" class="icon"></a></li>
+		            </ul>
+	        	</li>
+	        </ul>
+	    </nav>
+	</hgroup>
+</header>
+<!-- header選單 登入 end -->	
+
+<!-- header選單 登出 start -->
+<header id="signOut">
+	<hgroup>
+		<h1 id="logo"><a href="index.html" title="回BS首頁">BrainSport 遊戲平台</a></h1>
+		<nav><!-- first選單最多四個，多出的選項請放second選單 -->
+	        <ul class="first">
+	        	<li><a href="bulletin.html" class="m_icon notice">公告</a></li>
+	        	<li><a href="service.html" class="m_icon service">客服</a></li>
+	        	<li>
+		        	<a href="game.html" class="m_icon store">儲值
+		        		<ins></ins><ins></ins><ins></ins>
+		        	</a>
+	        	</li>
+	        	<!-- <li><a href="video.html" class="m_icon video">影音</a></li> -->
+	        	<li class="menu_icon"><a href="javascript:;" class="m_icon menu_icon">選單</a></li>
+	        </ul>
+	        <ul class="second">
+		        <li><a href="video.html" class="m_icon video">影音</a></li>
+	        	<li><p>我是溜冰王</p></li>
+	        	<li><a href="index.html" class="m_icon sign_out">登出</a></li>
+	        	<li class="half"><a href="https://goo.gl/LNMLVn" class="icon fb" title="BS FB粉絲團" target="_blank"></a></li>
+	        	<li class="half line"><a href="javascript:javascript:alert('尚未開放!');" class="icon line" title="BS LINE群組" target="_blank"></a></li>
+	        	<li class="language"><a href="javascript:;" id="language" class="icon tw" title="語言選擇">語言</a>
+		            <ul>
+		            	<li><a href="javascript:;" class="icon us">English</a></li>
+		            	<li><a href="javascript:;" class="icon jp">日本語</a></li>
+		            	<li><a href="javascript:;" class="icon ko">한국의</a></li>
+		            	<li><a href="javascript:;" class="icon tw">繁體中文</a></li>
+		            	<li><a href="javascript:;" class="icon cn">简体中文</a></li>
+		            	<li><a href="javascript:;" class="icon"></a></li>
+		            </ul>
+	        	</li>
+	        </ul>
+	    </nav>
+	</hgroup>
+</header>
+<!-- header選單 登出 end -->	
+
+<!-- 會員登入視窗 start -->
+<div id="popup">
+	<div id="popup-box">
+		<div id="popup-box-close">ã</div>
+		<form class="standardForm" method="post">
+			<h3>BS麻將 事前登入</h3>
+			<div id="socialLogin">
+				<button class="loginBtn facebookBtn" type="button">
+					<em>v</em><label class="buttonText">Facebook 登入</label>
+				</button>
+				<button class="loginBtn googleBtn" type="button" id="googleBtn">
+					<em>Ć</em><label class="buttonText">Google 登入</label>
+				</button>
+				<button class="loginBtn twitterBtn" type="button">
+					<em>u</em><label class="buttonText">Twitter 登入</label>
+				</button>
+				<a href="signup.html" class="loginBtn LoginBtn">
+					<em>Ü</em><span class="buttonText">註冊BS帳號</span>
+				</a>
+			</div>
+			<ul class="userLogin">
+				<li class="loginUsername">
+					<label for="member-id">帳號</label>
+					<input class="text" id="member-id" type="text" placeholder="BrainSport 帳號 / 玩子 ID">
+				</li>
+				<li class="loginPassword">
+					<label for="member-password">密碼</label>
+					<input class="text" id="member-password" type="password" placeholder="請輪入密碼">
+				</li>
+			</ul>
+			<div id="loginError">
+				<strong id="errorMessage">此帳號尚未使用。您是否嘗試註冊新帳號？</strong>
+			</div>
+			<div class="formFooter">
+				<div class="formFooterButtons"> 
+					<button class="signIn" type="submit" id="signIn">登入</button>
+				</div>
+				<div class="forgotPassword">
+					<a href="forget.html">忘記帳號密碼</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- 會員登入視窗 end -->
+
+<aside>
+    <div id="goTop">9</div>
+</aside>
+
+<footer>
+    <div id="footer_content">
+        <ul>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="copy_protection.html">隱私權保護</a></li>
+            <li><a href="copy_contract.html">服務契約</a></li>
+            <li><a href="javascript:;">企業徵才</a></li>
+        </ul>
+        <p>BrainSport © All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!--客服系列頁面_選單 start-->
+<ul class="service_nav">
+    <li class="service-icon">
+        <a class="icon" href="question.html">
+        	<span class="icon-before issue-icon"></span>問題表單<span class="icon-after"></span>
+        </a>
+    </li>
+    <li class="service-icon">
+        <a class="icon" href="faq_account.html">
+        	<span class="icon-before faq-icon"></span>常見問題<span class="icon-after"></span>
+        </a>
+    </li>
+    <li class="service-icon">
+        <a class="icon" href="repaid.html">
+        	<span class="icon-before account-icon"></span>帳號管理<span class="icon-after"></span>
+        </a>
+    </li>
+</ul>
+    
+<!--    客服 > 帳號管理子選單 start-->
+    <ul class="accountManagement">
+        <li>
+            <a href="repaid.html" class="">儲值紀錄</a>
+        </li>
+        <li>
+            <a href="currency.html" class="">購幣紀錄</a>
+        </li>
+        <li>
+            <a href="e_invoice.html" class="">電子發票歸戶</a>
+        </li>
+        <li>
+            <a href="differ_invoice.html" class="">發票差異說明</a>
+        </li>
+    </ul>
+<!--    客服 > 帳號管理子選單 end-->
+
+<!--    客服 > 問題表單子選單 start-->
+    <ul class="issueForms">
+        <li>
+            <a href="question.html" class="">我要提問</a>
+        </li>
+        <li>
+            <a href="issue.html" class="">我的問題</a>
+        </li>
+    </ul>
+<!--    客服 > 問題表單子選單 end-->
+
+<!--    客服 > 常見問題子選單 start-->
+    <ul class="FAQ">
+        <li>
+            <a href="faq_account.html" class="">帳號提問</a>
+        </li>
+        <li>
+            <a href="faq_game.html" class="">遊戲問題</a>
+        </li>
+    </ul>
+<!--    客服 > 常見問題子選單 end-->
+<!--客服系列頁面_選單 end-->
+
+<!-- 購買同意書lightBox start -->
+<div id="lightbox">
+	<div id="lightbox-content">
+		<h2>BrainSport 打造博弈遊戲界的奧林匹克運動賽事</h2>
+		<div class="title_bar">
+			<h3>購買同意書條款內容</h3>
+			<p>歡迎來到Brainsport，並使用Brainsport付款相關服務，感謝你的支持愛用。<br>為保障你的使用權益，請於使用本服務前，詳細閱讀同意書之所有內容，當瞭解並同意在線上點選『我同意』按鍵時，即表示你已瞭解並同意遵守下列條款及相關法律規定：</p>
+			<h6 class="lightbox-close">Â</h6>
+		</div>
+		<ul>
+			<li>
+				<p>你瞭解你所購買的Brainsport相關點數，一旦完成交易，即表示你已經確認進行 Brainsport系統下各項服務之消費；付款入你帳號的點數，本公司將無法轉讓給第三人 ( 包括同一人擁有多組帳號之情形 ) ，付款兌幣後，一經開始遊戲就無法退費或點數回復。</p>
+			</li>
+			<li>
+				<p>若你使用虛偽不正之方式進行「付款」，本公司有權扣除你付款之點數，並保留隨時終止你會員資格及各項會員服務之權利。</p>
+			</li>
+			<li>
+				<p>本公司遊戲收費制度之說明公告於 Brainsport 網站上，所有實際收取費用以新台幣為單位，所有費用之收取均採預付方式且不辦理退費。若你同意接受本同意書，即視為你同意本公司依照公告的收費制度從你的娛樂玩子 帳號中自動扣取點數。</p>
+			</li>
+			<li>
+				<p>本公司保留新增、修改本服務之全部或局部之權利，並於修改時於首頁 公告，且不另行個別通知，你同意不因此而要求任何補償或賠償，並且自該修訂條款於本網站公告之時起受其拘束。 一旦你於公告後繼續使用本服務，即視為你已經同意該修訂條款。</p>
+			</li>
+			<li>
+				<p>凡涉有不法者，應由當事人自負法律責任。當本公司合理懷疑有不法情事發生時，你同意本公司主動或配合相關單位移送你的相關資料供檢警調機關調查處理。</p>
+			</li>
+			<li>
+				<p>本同意書所訂之任何會員條款之全部或一部無效時，不影響其他有效條款之效力。</p>
+			</li>
+			<li>
+				<p>本同意書未約定事項悉依 娛樂玩子之使用者合約及其他服務之相關規範內容解釋之，並以中華民國法令、規章及慣例為處理依據。</p>
+			</li>
+			<li>
+				<p>其因此所生之爭議，均同意本誠信原則解決之，如有訴訟之必要時，同意以台灣台北地方法院為第一審管轄法院。</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 購買同意書lightBox end -->
+
+<!-- 目前不支援IE 10以下瀏覽器 start -->
+<div id="lteIE">
+	<div>
+	<!--[if lte IE 9]>
+		<div class="IE-bg">
+			<div class="IE-tips">
+				<div class="IE-tips-content">
+					<img src="images/BS_ie.jpg" alt="BrainSport 打造棋牌遊戲界的奧林匹克運動賽事">
+					<p>
+						很抱歉，目前本站瀏覽不支援IE 10以下的瀏覽器<br />
+						請升級您的瀏覽器版本。<br />
+						建議您改用 Google Chrome 或 Firefox<br />
+						以取得最佳、最快的瀏覽效果！
+					</p>
+					<p>
+						<span><a href="http://windows.microsoft.com/zh-tw/internet-explorer/ie-11-worldwide-languages" target="_blank">升級IE瀏覽器</a></span>
+						<span><a href="https://www.google.com.tw/intl/zh-TW/chrome/browser/desktop/" target="_blank">下載 Google Chrome</a></span>
+						<span><a href="http://mozilla.com.tw/firefox/new/?scene=2#download-fx" target="_blank">下載 Firefox</a></span>
+					</p>
+					<p class="small-font">www.BrainSports.com.tw</p>
+				</div>
+			</div>
+		</div>
+	<![endif]-->
+	</div>
+</div>
+<!-- 目前不支援IE 10以下瀏覽器 end -->

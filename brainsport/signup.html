@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BrainSport 打造棋牌遊戲界的奧林匹克運動賽事</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="keywords" content="BS, BrainSport, BS麻將, 麻將, 運動, 競技, 博弈, 棋牌, 奧林匹克, 腦力激盪, 免費遊戲">
+<meta name="description" content="BrainSport(簡稱BS)是最重視腦力激盪的博弈遊戲，推出多款獨特的棋排博奕遊戲，豐富的規則、刺激的賽制及BS獨有的特殊玩法，競技的快感，快來挑戰吧！"> 
+<meta name="author" content="BrainSport">
+<meta name="apple-mobile-web-app-title" content="BrainSport">
+<link rel="shortcut icon" href="images/website_logo.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+<link href="css/header-popup-aside-footer.css" rel="stylesheet" type="text/css">
+<link href="css/core.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<!--[if lte IE 9]>
+    <link href="css/IE_layout.css" rel="stylesheet" type="text/css">
+<![endif]-->
+</head>
+<body>
+	<header id="signIn"></header>
+
+	<div id="popup"></div>
+
+	<article id="black">
+		<!--BS會員註冊的內容 start-->
+		<form action="signup_confirm.php" method="post">
+		<div id="content">
+			<h2>B<span>rain </span>S<span>port</span> 會員註冊</h2>
+			<section class="BS-girl">
+				<ul>
+					<li class="clearfix">
+						<span class="input">
+							<input class="input_field" type="text" id="member-account" name="n_UserID" placeholder="請輸入1~10位半形英文、數字組合" autocomplete="請輸入1~10位半形英文、數字組合"/>
+							<label class="input_label" for="member-account">帳號</label>
+						</span>
+						<span class="checklist" id="member-account-checklist"></span>
+					</li>
+					<li class="clearfix">
+						<span class="input nickname">
+							<input class="input_field" type="text" id="member-nickname" name="n_Username" placeholder="中文5個字以內或英數組合10個字內"/>
+							<label class="input_label" for="member-nickname">暱稱</label>
+						</span>
+						<span class="checkSystem" id="chgnickname">y</span>
+						<span class="checklist" id="member-nickname-checklist"></span>
+					</li>
+					<li class="clearfix">
+						<span class="input">
+							<input class="input_field" type="password" id="member-password-1" name="n_Password" placeholder="請輸入4~10位英數組合的密碼"/>
+							<label class="input_label" for="member-password-1">密碼</label>
+						</span>
+						<span class="checklist" id="member-password-1-checklist"></span>
+					</li>
+					<li class="clearfix">
+						<span class="input">
+							<input class="input_field" type="password" id="member-password-2" placeholder="請再次輸入密碼"/>
+							<label class="input_label" for="member-password-2">確認密碼</label>
+						</span>
+						<span class="checklist" id="member-password-2-checklist"></span>
+					</li>
+					<li class="clearfix">
+						<span class="input">
+							<input class="input_field" type="text" id="email" name="n_Email" placeholder="請填寫真實信箱，若忘記帳密將由信箱找回"/>
+							<label class="input_label" for="email">電子信箱</label>
+						</span>
+						<span class="checklist" id="email-checklist"></span>
+					</li>
+					<li class="clearfix">
+						<span class="button">
+							<input type="hidden" id="gender" name="n_Gender"/>
+							<label for="gender" class="button_label gender">性別</label>
+							<button id="TAB_MAN" class="gender_button man" type="button">男</button>
+							<button id="TAB_WOMAN" class="gender_button woman" type="button">女</button>
+						</span>
+						<span class="checklist" id="gender-checklist"></span>
+					</li>
+					<li class="clearfix">
+						<span class="button">
+							<label for="nation" class="button_label nation">國家</label>
+							<input id="choose" class="nation" type="image" src="images/National/National-flag01.png" width="69" height="50" alt="國家">
+							<select class="nation" id="nation" name="n_Country">
+								<option value="台灣_1">台灣</option>
+								<option value="韓國_2">韓國</option>
+								<option value="日本_3">日本</option>
+								<option value="香港_4">香港</option>
+								<option value="澳門_5">澳門</option>
+								<option value="大陸_6">大陸</option>
+								<option value="新加坡_7">新加坡</option>
+								<option value="馬來西亞_8">馬來西亞</option>
+								<option value="越南_9">越南</option>
+								<option value="緬甸_10">緬甸</option>
+								<option value="冰島_11">冰島</option>
+								<option value="俄羅斯_12">俄羅斯</option>
+								<option value="德國_13">德國</option>
+								<option value="挪威_14">挪威</option>
+								<option value="芬蘭_15">芬蘭</option>
+								<option value="法國_16">法國</option>
+								<option value="土耳其_17">土耳其</option>
+								<option value="丹麥_18">丹麥</option>
+								<option value="義大利_19">義大利</option>
+								<option value="烏克蘭_20">烏克蘭</option>
+								<option value="瑞士_21">瑞士</option>
+								<option value="瑞典_22">瑞典</option>
+								<option value="比利時_23">比利時</option>
+								<option value="波蘭_24">波蘭</option>
+								<option value="愛爾蘭_25">愛爾蘭</option>
+								<option value="荷蘭_26">荷蘭</option>
+								<option value="西班牙_27">西班牙</option>
+								<option value="希臘_28">希臘</option>
+								<option value="澳洲_29">澳洲</option>
+								<option value="紐西蘭_30">紐西蘭</option>
+								<option value="加拿大_31">加拿大</option>
+								<option value="美國_32">美國</option>
+								<option value="巴西_33">巴西</option>
+								<option value="智利_34">智利</option>
+								<option value="阿根廷_35">阿根廷</option>
+								<option value="英國_36">英國</option>
+								<option value="以色列_37">以色列</option>
+								<option value="奧地利_38">奧地利</option>
+								<option value="葡萄牙_39">葡萄牙</option>
+								<option value="其他_40">其他</option>
+							</select>
+							<p class="nation">（送出<span>後將</span>無法修改）</p>
+						</span>
+						<span class="checklist"></span>
+					</li>
+					<li class="check_link clearfix">按下送出表示您已同意《<a href="copy_contract.html" target="_blank"><span>BrainSport</span>會員服務條款</a>》</li>
+					<li class="clearfix">
+						<span class="button">
+							<button type="submit" class="submitbtn">送出</button>
+						</span>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<input type="hidden" id="member-account-flag" value="n"/>
+		<input type="hidden" id="member-nickname-flag" value="y"/>
+		<input type="hidden" id="email-flag" value="n"/>
+		</form>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#member-account').blur(function() {
+				re = /^[\d|a-zA-Z]+$/;
+				if (!re.test($(this).val())) {
+					$('#member-account-checklist').html('<i>ã</i>帳號格式不對');
+				} else {
+					if (getStrActualLen($(this).val()) > 10) {
+						$('#member-account-checklist').html('<i>ã</i>帳號長度超過上限');
+					} else {
+						ajax('member-account',$(this).val(),'id','帳號');
+					}
+				}
+			});
+			$('#member-nickname').blur(function() {
+				re = /^[\u4E00-\u9FA5a-zA-Z0-9]+$/;
+				if (!re.test($(this).val())) {
+					$('#member-nickname-checklist').html('<i>ã</i>暱稱格式不對');
+				} else {
+					if (getStrActualLen($(this).val()) > 10) {
+						$('#member-nickname-checklist').html('<i>ã</i>暱稱長度超過上限');
+					} else {
+						ajax('member-nickname',$(this).val(),'nick','暱稱');
+					}
+				}
+			});
+			$('#member-password-1').blur(function() {
+				re = /^[\d|a-zA-Z]+$/;
+
+				if (!re.test($(this).val())) {
+					$('#member-password-1-checklist').html('<i>ã</i>密碼格式不對');
+				} else {
+					if (getStrActualLen($(this).val()) > 10) {
+						$('#member-password-1-checklist').html('<i>ã</i>密碼長度超過上限');
+					} else if (getStrActualLen($(this).val()) < 4) {
+						$('#member-password-1-checklist').html('<i>ã</i>密碼長度少於下限');
+					} else {
+						$('#member-password-1-checklist').html('<b>å</b>');
+					}
+				}
+			});
+			$('#member-password-2').blur(function() {
+				if ($(this).val() != $('#member-password-1').val()) {
+					$('#member-password-2-checklist').html('<i>ã</i>輸入錯誤，請再次輸入密碼');
+				} else {
+					$('#member-password-2-checklist').html('<b>å</b>');
+				}
+			});
+			$('#email').blur(function() {
+				re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+				if (!re.test($(this).val())) {
+					$('#email-checklist').html('<i>ã</i>信箱格式不對');
+				} else {
+					ajax('email',$(this).val(),'email','信箱');
+				}
+			});
+			$('#TAB_MAN').click(function() {
+				$('#gender').val(2);
+			});
+			$('#TAB_WOMAN').click(function() {
+				$('#gender').val(1);
+			});
+			$('#nation').change(function() {
+				var imgstr = $(this).val().split('_');
+				$('#choose').attr('src','images/National/National-flag'+ right('0'+ imgstr[1],2) +'.png');
+			});
+			$('form').submit(function() {
+				if ($('#member-account').val() == '') {
+					showmessage('member-account','請輸入帳號');
+					return false;
+				}
+				if ($('#member-account-flag').val() == 'n') {
+					showmessage('member-account','請確認帳號');
+					return false;
+				}
+				if ($('#member-nickname').val() == '') {
+					showmessage('member-nickname','請輸入暱稱');
+					return false;
+				}
+				if ($('#member-nickname-flag').val() == 'n') {
+					showmessage('member-nickname','請確認暱稱');
+					return false;
+				}
+				if ($('#member-password-1').val() == '') {
+					showmessage('member-password-1','請輸入密碼');
+					return false;
+				}
+				if ($('#member-password-2').val() == '') {
+					showmessage('member-password-2','請輸入確認密碼');
+					return false;
+				}
+				if ($('#email').val() == '') {
+					showmessage('email','請輸入電子信箱');
+					return false;
+				}
+				if ($('#email-flag').val() == 'n') {
+					showmessage('email','請確認電子信箱');
+					return false;
+				}
+				if ($('#gender').val() == '') {
+					showmessage('gender','請選擇性別 ');
+					return false;
+				}
+				return true;
+			});
+			function ajax(inputname,inputvalue,inputtype,inputstr) {
+				$.ajax({
+					url: '/ajax/check.php',
+					type: 'POST',
+					data: {
+						inputvalue: inputvalue,
+						inputtype: inputtype
+					},
+					success: function(msg) {
+						if (msg == 'ok') {
+							$('#'+ inputname +'-checklist').html('<b>å</b>'+ inputstr +'可以使用');
+							$('#'+ inputname +'-flag').val('y');
+						} else {
+							$('#'+ inputname +'-checklist').html('<i>ã</i>'+ inputstr +'無法使用');
+							$('#'+ inputname +'-flag').val('n');
+						}
+					},
+					error: function(xhr, ajaxOptions, thrownError) {
+						$('#'+ inputname +'-checklist').html('<i>ã</i>發生錯誤');
+						$('#'+ inputname +'-flag').val('n');
+					}
+				});
+			}
+			function showmessage(inputname,inputstr) {
+				$('#'+ inputname +'-checklist').html('<i>ã</i>'+ inputstr);
+			}
+			$('#chgnickname').click(function() {
+				$.ajax({
+					url: '/ajax/chgnick.php',
+					type: 'POST',
+					success: function(msg) {
+						$('#member-nickname').val(msg);
+					}
+				});
+			});
+			// 得到字串的真實長度（雙位元組換算為兩個單位元組）
+			function getStrActualLen(sChars) {
+				return sChars.replace(/[^\x00-\xff]/g,"xx").length;
+			}
+			// 截取固定長度子字串 sSource為字串iLen為長度
+			function getInterceptedStr(sSource, iLen) {
+				if(sSource.replace(/[^\x00-\xff]/g,"xx").length <= iLen) {
+					return sSource;
+				}
+				var str = "";
+				var l = 0;
+				var schar;
+				for(var i=0; schar=sSource.charAt(i); i++) {
+					str += schar;
+
+					l += (schar.match(/[^\x00-\xff]/) != null ? 2 : 1);
+
+					if(l >= iLen) {
+						break;
+					}
+				}
+				return str;
+			}
+			function right(str,num) {
+				return str.substring(str.length-num,str.length)
+			}
+		});
+		</script>
+		<!--BS會員註冊的內容 end-->
+	</article>
+  
+	<aside></aside>
+
+	<footer></footer>
+
+	<div id="lteIE"></div>
+</body>
+</html>

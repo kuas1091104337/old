@@ -1,7 +1,5 @@
-@import "_normalize.scss";
-@import "compass";
-@import "breakpoint";
-@import "susy";
+@import "../../sass/normalize";
+@import "../../sass/daRightMenu";
 // 媽咪佳肋比 網頁設計變數
 $媽咪佳肋比_網頁_藍:#0b478c;
 $媽咪佳肋比_網頁_signOut深藍:#0a4180;
@@ -44,7 +42,7 @@ $媽咪佳肋比_菜單頁bannerSlideBox_li寬度:16.6667%;		//100% ÷ 6(目前�
 	font-style:normal;
 }
 html, body, header, article, footer, #wrap, #loading{min-width:320px;}
-@include border-box-sizing;
+*, *:before, *:after{box-sizing:border-box;}
 a{
 	text-decoration:none;
 	display:block;
@@ -135,13 +133,13 @@ html, body{
 	padding-bottom:4px;
 	margin:0 2px 2px 0;
 	box-sizing:content-box;
-	@include transition(all .3s .4s);
+	transition:all .3s .4s;
 }
 %紅色按鈕按下時CSS設定預設值{
 	box-shadow:inset 0 0 0 1px rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.05), 0 2px 1px $媽咪佳肋比_網頁_淡紅 inset, inset 0 0 0 $媽咪佳肋比_網頁_深紅, 0 2px 4px 2px rgba(0,0,0,.05);
 	padding-bottom: 0;
 	margin-top: 4px;
-	@include transition(all .3s);
+	transition:all .3s;
 }
 %左右箭頭icon基本設定{
 	width:26px;
@@ -154,7 +152,7 @@ html, body{
     position:absolute;
     top:50%;
     z-index:30;
-    @include transform(translateY(-50%));
+    transform:translateY(-50%);
 }
 %左右箭頭icon偽元素基本設定{
 	content:"";
@@ -182,7 +180,7 @@ html, body{
 			position: absolute;
 			top: 50%;
 			opacity:0;
-			@include transition(margin-top .4s);
+			transition:margin-top .4s;
 		}
 		h2{@include 載入動畫文字移動的距離();}
 		h3{
@@ -195,7 +193,7 @@ html, body{
 			width: 0%;
 			position: absolute;
 			top: 50%;
-			@include transition(width .4s .4s ease-out);	
+			transition:width .4s .4s ease-out;	
 		}
 		&:before{
 			@include loading區的載入紅藍線條();
@@ -210,7 +208,7 @@ html, body{
 		width: 0;
 		height: 0;
 		position: absolute;
-		@include transform(rotate(45deg));
+		transform:rotate(45deg);
 	}
 	div[class^="up_left_"], div[class^="down_right_"]{
 		border-top: 35px solid transparent;
@@ -255,12 +253,12 @@ html, body{
 		h2{@include 載入動畫文字移動的距離(-200px);}
 		h3{@include 載入動畫文字移動的距離(-150px);}
 		p{@include 載入動畫文字移動的距離(130px);}
-		#Moms_Kalbi_logo{ @include animation(pulse .4s both);}
+		#Moms_Kalbi_logo{animation:pulse .4s both;}
 	}
-	@include keyframes(pulse) {
-		0% {@include transform(scale3d(1, 1, 1));}
-		50% {@include transform(scale3d(1.05, 1.05, 1.05));}
-		100% {@include transform(scale3d(1, 1, 1));}
+	@keyframes pulse{
+		0% {transform:scale3d(1, 1, 1);}
+		50% {transform:scale3d(1.05, 1.05, 1.05);}
+		100% {transform:scale3d(1, 1, 1);}
 	}
 	// #OOO{
 	// 	width: 240px;height: 240px;background:rgba(0,255,255,0.7);margin:-120px 0 0 -120px;position: absolute;top:10px;left:10px;top: 50%;left: 50%;border-radius:50%;
@@ -359,7 +357,7 @@ html, body{
 				background:transparent;
 				padding: 1px;
 				margin-right: 1px;
-				@include transition(all .3s);
+				transition:all .3s;
 				span{
 					text-indent:100%;
 					overflow:hidden;
@@ -378,17 +376,21 @@ html, body{
 				display:block;
 				border-radius:2px;
 				margin:8px auto;
-				@include transition(all .3s);
+				transition:all .3s;
 			}
 			li.menu.click{
 				background:$媽咪佳肋比_網頁_藍;
 				box-shadow:0 2px 0 $媽咪佳肋比_網頁_藍; 
-				@include transform(rotate(180deg));
+				transform:rotate(180deg);
 				span{background: transparent;}
 				&:before, &:after{background:#fff;}
-				&:before{@include transform(translateY(13px) rotate(-45deg));}
-				&:after{@include transform(translateY(-13px) rotate(45deg));}
+				&:before{transform:translateY(13px) rotate(-45deg);}
+				&:after{transform:translateY(-13px) rotate(45deg);}
 			}
+			a.carte:after{content:"\e901";}
+			a.activity:after{content:"\e900";}
+			a.reserve:after{content:"\e907";}
+			a.select, a.active{color:$媽咪佳肋比_網頁_紅;}	
 			a{
 				color:$媽咪佳肋比_網頁_藍;
 				line-height:76px;
@@ -398,12 +400,7 @@ html, body{
 					top:3px;
 					left:50%;
 				}
-				&:active{@extend a.select;}
 			}
-			a.carte:after{content:"\e901";}
-			a.activity:after{content:"\e900";}
-			a.reserve:after{content:"\e907";}
-			a.select{color:$媽咪佳肋比_網頁_紅;}	
 		}
 		ul.second{
 			width: 100%;
@@ -418,8 +415,7 @@ html, body{
 				color:#fff;
 				line-height:50px;
 				width:100%;
-				@include transition(all .3s);
-				&:active{@extend a.select;}
+				transition:all .3s;
 			}
 			a.video:after{content:"\e90b";}
 			a.join:after{content:"\e972";}
@@ -439,7 +435,7 @@ html, body{
 				background-position:$媽咪佳肋比_頁首選單_關於我們icon背景圖定位;
 				top:1px;
 			}
-			a.select{
+			a.select, a.active{
 				color:$媽咪佳肋比_網頁_藍;
 				background-color:#fff;
 			}
@@ -447,7 +443,10 @@ html, body{
 				height: auto;
 				border-bottom:none;
 				&:hover, &:focus{
-					a.language{@extend a.select;}
+					a.language{
+						color:$媽咪佳肋比_網頁_藍;
+						background-color:#fff;
+					}
 					ul{margin-top:0;}
 					li{
 						height: 50px;
@@ -460,7 +459,7 @@ html, body{
 				width:calc(100% + 2px);
 				margin-left:-1px;
 				margin-top:-50px;
-				@include transition(margin-top .3s);
+				transition:margin-top .3s;
 				li{
 					width:50%;
 					height:25px;
@@ -538,7 +537,7 @@ html, body{
 		em{
 			font-style: normal;
 			display: block;
-			@include transform(skew(-6deg));
+			transform:skew(-6deg);
 		}
 	}
 	.darkTextTitle{
@@ -605,7 +604,7 @@ html, body{
 			position:absolute;
 			top:6px;
 			left:6px;
-			@include transition(all .3s);
+			transition:all .3s;
 			mix-blend-mode:multiply;
 		}
 		.wordBox{
@@ -617,7 +616,7 @@ html, body{
 				display: block;
 				position: relative;
 				top: 0;
-				@include transition(all .3s);
+				transition:all .3s;
 				&:after{
 					content:attr(data-title);
 					width: 100%;
@@ -634,7 +633,7 @@ html, body{
 			position: absolute;
 			top: 16px;
 			left: -28px;
-			@include transition(all .3s);
+			transition:all .3s;
 			&:before, &:after{
 				content:"";
 				display:inline-block;
@@ -755,11 +754,11 @@ html, body{
 				position: absolute;
 				left: 50%;
 				top: 50%;
-				@include transition(transform .6s);
-				@include transform(translate(-50%, -50%) scale(0));
+				transition:transform .6s;
+				transform:translate(-50%, -50%) scale(0);
 			}
 			&:hover:after{
-				@include transform(translate(-50%, -50%) scale(1));
+				transform:translate(-50%, -50%) scale(1);
 			}
 		}
 	}
@@ -769,7 +768,7 @@ html, body{
 		position: absolute;
 		left: 0;
 		top: 0;
-		@include transition(all 1s cubic-bezier(0.2, -0.2, 0.2, 1.2));
+		transition:all 1s cubic-bezier(0.2, -0.2, 0.2, 1.2);
 		div[class^="indexBanner_"]{
 			width: 100%;
 			height: 100%;
@@ -787,7 +786,7 @@ html, body{
 				background-color:$媽咪佳肋比_網頁_透明黑;
 				padding:10px 6%;
 				margin:0;
-				@include transform(translateY(50%) skew(-6deg));
+				transform:translateY(50%) skew(-6deg);
 				position: absolute;
 				bottom:50%;
 				left:-5%;
@@ -804,7 +803,7 @@ html, body{
 				position: absolute;
 				top:50%;
 				left:50%;
-				@include transform(translate(-50%, -50%));
+				transform:translate(-50%, -50%);
 			}
 		}
 		.indexBanner_1{
@@ -888,7 +887,7 @@ html, body{
 	input#bannerControl_7:checked ~ #indexBannerPage .indexBannerPage_7,
 	input#bannerControl_8:checked ~ #indexBannerPage .indexBannerPage_8,
 	input#bannerControl_9:checked ~ #indexBannerPage .indexBannerPage_9{
-		&:after{@include transform(translate(-50%, -50%) scale(1));}
+		&:after{transform:translate(-50%, -50%) scale(1);}
 	}
 //	菜單article區
 	%bannerContainerBeforeAfter{
@@ -909,12 +908,12 @@ html, body{
 		position: relative;
 		&:before{
 			@extend %bannerContainerBeforeAfter;
-			@include background(linear-gradient(90deg, rgba(255,255,255,.35), transparent));
+			background-image:linear-gradient(90deg, rgba(255,255,255,.35), transparent);
 			left:0;
 		}
 		&:after{
 			@extend %bannerContainerBeforeAfter;
-			@include background(linear-gradient(90deg, transparent, rgba(255,255,255,.35)));
+			background-image:linear-gradient(90deg, transparent, rgba(255,255,255,.35));
 			right:0;
 		}
 	}
@@ -954,7 +953,7 @@ html, body{
 		position:absolute;
 		top:0;
 		left:0;
-		@include transition(left .4s);
+		transition:left .4s;
 		>li{
 			width:$媽咪佳肋比_菜單頁bannerSlideBox_li寬度;
 			height:100%;
@@ -964,7 +963,7 @@ html, body{
 			float:left;
 		}
 		>li.active{
-			@include animation(articleBannerMove 8s ease-out both);
+			animation:articleBannerMove 8s ease-out both;
 		}
 		#bannerImg_1{background-image:url(../images/carte_banner/01.jpg);}
 		#bannerImg_2{background-image:url(../images/carte_banner/02.jpg);}
@@ -990,7 +989,7 @@ html, body{
 			left:0;
 		}
 	}
-	@include keyframes(articleBannerMove) {
+	@keyframes articleBannerMove{
 		0% {background-position:47% 50%;}
 		100% {background-position:53% 50%;}  
 	}
@@ -1017,14 +1016,14 @@ html, body{
 				position: absolute;
 				left: 50%;
 				top: 50%;
-				@include transition(transform .6s);
-				@include transform(translate(-50%, -50%) scale(0));
+				transition:transform .6s;
+				transform:translate(-50%, -50%) scale(0);
 			}
 		}
 		li:first-child{margin-left:0;}
 		li:last-child{margin-right:0;}
 		li.active:after, li:hover:after{
-			@include transform(translate(-50%, -50%) scale(1));
+			transform:translate(-50%, -50%) scale(1);
 		}
 	}
 	.carteBox{
@@ -1081,11 +1080,11 @@ html, body{
 		width: 300px;
 		height: 300px;
 		border:3px solid $媽咪佳肋比_網頁_藍;
-		@include transition(box-shadow .2s);
+		transition:box-shadow .2s;
 		div{overflow: hidden;}
 		img{
 			vertical-align:top;
-			@include transition(transform .2s);
+			transition:transform .2s;
 		}
 		&:before{
 			@include 偽元素三角形相對定位CSS設定預設值(65px,rgba(255,255,255,0.25) transparent transparent rgba(255,255,255,0.25));
@@ -1095,7 +1094,7 @@ html, body{
 		}
 		&:hover{
 			box-shadow:0 14px 18px -4px rgba(0,0,0,.6);
-			img{@include transform(scale(1.05));}
+			img{transform:scale(1.05);}
 		}
 	}
 //	活動內頁activityInpage區 & 關於我們
@@ -1134,7 +1133,7 @@ html, body{
 				overflow:hidden;
 				vertical-align:top;
 				position: relative;
-				@include transition(all .3s);
+				transition:all .3s;
 				&:after{
 					text-indent:0;
 					@extend %偽元素icon-font基本設定;
@@ -1148,7 +1147,7 @@ html, body{
 		.place #MAP{
 			width:0;
 			height:0;
-			@include transition(width .3s, height .3s);
+			transition:width .3s, height .3s;
 		}
 		.place a:hover{text-decoration:underline;}
 		.place em:after{content:"\e905";}
@@ -1167,7 +1166,7 @@ html, body{
 				height: 100%;
 				display: block;
 				position: relative;
-				@include transition(transform .3s);
+				transition:transform .3s;
 				&:before, &:after{
 					content:"";
 					width: 26px;
@@ -1178,10 +1177,10 @@ html, body{
 					top: 50%;
 					left: 50%;
 					margin: -3px 0 0 -13px;
-					@include transition(transform .3s);
+					transition:transform .3s;
 				}
 				&:after{
-					@include transform(rotate(-90deg));
+					transform:rotate(-90deg);
 				}
 			}
 		}
@@ -1216,7 +1215,7 @@ html, body{
 		.place a{
 			color:$媽咪佳肋比_網頁_紅;
 			display: inline;
-			@include animation(hyperlinkBottomLine 1s .5s 3);
+			animation:hyperlinkBottomLine 1s .5s 3;
 		}
 		.tel a{
 			color:#fff;
@@ -1232,12 +1231,12 @@ html, body{
 		}
 		.reserveInfoBtn{
 			span{
-				@include transform(rotate(180deg));
-				&:after{@include transform(rotate(0deg));}
+				transform:rotate(180deg);
+				&:after{transform:rotate(0deg);}
 			}
 		}
 	}
-	@include keyframes(hyperlinkBottomLine) {
+	@keyframes hyperlinkBottomLine{
 		0% {text-decoration: underline;}
 		100% {text-decoration: none;}
 	}					
@@ -1332,13 +1331,12 @@ html, body{
 			letter-spacing:0;
 			text-align:center;
 			margin: 0;
-			span{display: block;}
 		}
 	}
-	footer.fixed{
-		position: fixed;
-		bottom: 0;
-	}
+	// footer.fixed{
+	// 	position: fixed;
+	// 	bottom: 0;
+	// }
 //	會員登入&資訊LightBox
 	div[id^="lightBoxMKmember"]{
 		height:100%;
@@ -1366,7 +1364,7 @@ html, body{
 		width: 120px;
 		margin:20px 15px 15px 43px;
 		position: relative;
-		@include animation(hyperlinkBottomLine .75s .5s 3);
+		animation:hyperlinkBottomLine .75s .5s 3;
 		&:before{
 			@extend %偽元素icon-font基本設定;
 			@extend %偽元素icon-font共用icon設定;
@@ -1390,7 +1388,7 @@ html, body{
 		margin:40px auto 0;
 	}
 	.memberInformationBox{		
-		@include animation(memberInfoBoxGo .5s .5s forwards);
+		animation:memberInfoBoxGo .5s .5s forwards;
 		div[id^="MKmember"]{
 			color:$媽咪佳肋比_網頁_藍;
 			text-align:right;
@@ -1403,10 +1401,10 @@ html, body{
 			}
 		}
 		&:before{
-			@include animation(memberInfoBoxBeforeGo .5s .5s forwards);
+			animation:memberInfoBoxBeforeGo .5s .5s forwards;
 		}
 		&:after{
-			@include animation(memberInfoBoxAfterGo .5s .5s forwards);	
+			animation:memberInfoBoxAfterGo .5s .5s forwards;
 		}
 	}
 	#MKmemberAccount{
@@ -1435,11 +1433,11 @@ html, body{
 			vertical-align: top;
 		}
 	}
-	@include keyframes(memberInfoBoxGo) {
+	@keyframes memberInfoBoxGo{
 		0% {box-shadow:0 0 0 #ebebeb, 0 0 0 #ebebeb;}
 		100% {box-shadow: 15px 0 0 #ebebeb, -15px 0 0 #ebebeb;}
 	}
-	@include keyframes(memberInfoBoxBeforeGo) {
+	@keyframes memberInfoBoxBeforeGo{
 		0% {
 			width:100%;
 			border-color:$媽咪佳肋比_網頁_紅 transparent transparent $媽咪佳肋比_網頁_紅;
@@ -1447,10 +1445,10 @@ html, body{
 		100% {
 			width:50%;
 			border-color:$媽咪佳肋比_網頁_紅 transparent $媽咪佳肋比_網頁_紅 $媽咪佳肋比_網頁_紅;
-			@include transform(translate(-15px,0));
+			transform:translate(-15px,0);
 		}
 	}
-	@include keyframes(memberInfoBoxAfterGo) {
+	@keyframes memberInfoBoxAfterGo{
 		0% {
 			width:100%;
 			border-color:transparent $媽咪佳肋比_網頁_藍 $媽咪佳肋比_網頁_藍 transparent;
@@ -1459,7 +1457,7 @@ html, body{
 			width:50%;
 			border-color:$媽咪佳肋比_網頁_藍 $媽咪佳肋比_網頁_藍 $媽咪佳肋比_網頁_藍 transparent;
 			left:50%;
-			@include transform(translate(15px,0));
+			transform:translate(15px,0);
 		}
 	}
 //	註冊登入頁面
@@ -1491,10 +1489,10 @@ html, body{
 			right:0;
 			bottom:0;
 			margin: auto;
-			@include transform(rotate(45deg));
+			transform:rotate(45deg);
 		}
 		&:before{
-			@include transform(rotate(135deg));
+			transform:rotate(135deg);
 		}
 	}
 	#logIn, #logOut{
@@ -1537,7 +1535,7 @@ html, body{
 		position:absolute;
 		top:0;
 		left:0;
-		@include transition(box-shadow .3s);
+		transition:box-shadow .3s;
 	}
 	.MKlabelText{
 		width:100%;
@@ -1555,7 +1553,7 @@ html, body{
 			position: absolute;
 			top: 0;
 			left: 0;
-			@include transition(all .5s);
+			transition:all .5s;
 		}
 	}
 	.MKlabel, #residence, .memberInformationBox{
@@ -1566,7 +1564,7 @@ html, body{
 	}
 	input[id^="MKmember"]:focus, input[id^="MKmember"].click{
 		opacity:1;
-		@include transition-delay(.3s);
+		transition-delay:.3s;
 	}
 	input[id^="MKmember"]:focus + .MKlabel, input[id^="MKmember"]:focus + .MKlabel, input[id^="MKmember"].click + .MKlabel{
 		box-shadow: 15px 0 0 #ebebeb, -15px 0 0 #ebebeb;
@@ -1582,16 +1580,16 @@ html, body{
 		}
 	}
 	input[id^="MKmember"]:focus + .MKlabel .MKlabelText, input[id^="MKmember"].click + .MKlabel .MKlabelText{
-		@include animation(MKlabelTextGo .3s forwards);
+		animation:MKlabelTextGo .3s forwards;
 	}
-	@include keyframes(MKlabelTextGo) {
+	@keyframes MKlabelTextGo{
 		0% {
 			opacity:0;
-			@include transform(translate(0,0)  scale(0.1));
+			transform:translate(0,0) scale(0.1);
 		}
 		100% {
 			opacity:1;
-			@include transform(translate(-18px,-40px) scale(1));
+			transform:translate(-18px,-40px) scale(1);
 		}
 	}
 	#residence{
@@ -1622,13 +1620,13 @@ html, body{
 	}
 
 //	iPhone4、5 手機版
-@include breakpoint(max-width 320px){
+@media screen and (max-width:320px){
 	.reserveBox{width:300px;}
 	#indexBannerSlideBox div[class^="indexBanner_"] h2{font-size:32px;}
 }
 
 /** ===== iPhone5以上，平板 「以上」 版型區 ===== **/
-@include breakpoint(568px){
+@media screen and (min-width:568px){
 //	loading區
 	#loading.load{
 		h2{margin-top:-220px;}
@@ -1764,7 +1762,7 @@ html, body{
 		.place a{
 			color:$媽咪佳肋比_網頁_紅;
 			display: inline;
-			@include animation(hyperlinkBottomLine .75s .5s 3);
+			animation:hyperlinkBottomLine .75s .5s 3;
 		}
 		.tel, .time{width: 50%;}
 		.tel a{
@@ -1780,12 +1778,12 @@ html, body{
 			box-sizing:content-box;
 			margin:0 2px 2px 0;
 			padding-bottom:4px;
-			@include transition(all .3s .4s);
+			transition:all .3s .4s;
 			&:active{
 				box-shadow:inset 0 0 0 1px rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.05), 0 2px 1px $媽咪佳肋比_網頁_淡紅 inset, inset 0 0 0 $媽咪佳肋比_網頁_深紅, 0 2px 4px 2px rgba(0,0,0,.05);
 				padding-bottom: 0;
 				margin-top: 4px;
-				@include transition(all .3s);
+				transition:all .3s;
 			}
 		}
 		.reserveInfoBtn{display:none;}
@@ -1798,7 +1796,7 @@ html, body{
 }
 
 //	iPhone4以上手機拿橫的時候
-@include breakpoint(500px (max-width 736px) (orientation landscape)){
+@media screen and (min-width:500px) and (max-width:736px) and (orientation:landscape){
 //	loading區
 	#loading.load{
 		h2{margin-top:-200px;}
@@ -1833,7 +1831,7 @@ html, body{
 	#bannerContainer{padding-bottom:37.11%;}
 }
 
-@include breakpoint(700px){
+@media screen and (min-width:700px){
 //	預約reserve區
 	.reserveBox, .reserveBox.click{
 		.place #MAP{height:240px;}
@@ -1877,17 +1875,11 @@ html, body{
 		p{
 			font-size: 14px;
 			line-height:42px;
-			span{display:inline;}
-			span:first-child{
-				border-right:1px solid #808080;
-				padding-right:10px;
-				margin-right:10px;
-			}
 		}
 	}	
 }
 
-@include breakpoint(880px){
+@media screen and (min-width:880px){
 //	預約reserve區
 	.reserveBox, .reserveBox.click{
 		.place #MAP{height:300px;}
@@ -1895,7 +1887,7 @@ html, body{
 }
 
 /** ===== 桌機 「以上」 版型區 ===== **/
-@include breakpoint(1017px){
+@media screen and (min-width:1017px){
 	html, body{letter-spacing:1px;}
 //	頁首選單區
 	header{
@@ -1927,7 +1919,7 @@ html, body{
 			}
 			a{
 				text-shadow:0 0 1px $媽咪佳肋比_桌機網頁_頁首選單藍字陰影;
-				@include transition(color .3s);
+				transition:color .3s;
 				span{
 					display: inline-block;
 					position: relative;
@@ -1957,18 +1949,18 @@ html, body{
 			a.about{
 				&:after{
 					top:4px;
-					@include transition(transform .3s);
+					transition:transform .3s;
 				}
-				&:hover:after{@include transform(rotate(180deg));}
+				&:hover:after{transform:rotate(180deg);}
 			}
-			a.about.select:after{@include transform(rotate(180deg));}
+			a.about.select:after{transform:rotate(180deg);}
 			li#language{
 				width:98px;
 				&:hover{
-					>a{color:#fff;}
+					>a.language{color:#fff;}
 					ul{height:$媽咪佳肋比_頁首選單_語言選擇_桌機版_高度;}
 					li{
-						height: auto;
+						height:auto;
 						a{line-height:44px;}
 					}
 					span{
@@ -1988,7 +1980,7 @@ html, body{
 				padding-top: 8px;
 				margin:0;
 				overflow: hidden;
-				@include transition(height .3s .1s);
+				transition:height .3s .1s;
 				li{
 					font-size: 18px;
 					width:100%;
@@ -2050,7 +2042,7 @@ html, body{
 			position: absolute;
 			top:0;
 			left:0;
-			@include transition(all .3s cubic-bezier(0.5,-0.5,0.5,1.5));
+			transition:all .3s cubic-bezier(0.5,-0.5,0.5,1.5);
 		}
 		>ul>li>a:hover:before, >ul>li>a.select:before, ul.second li#language:hover a:before{
 			width:100%;
@@ -2075,7 +2067,7 @@ html, body{
 	}
 	.lightTextTitle{text-shadow:0 0 1px $媽咪佳肋比_桌機網頁_Title藍字陰影;}
 	.whiteBackgroundGo, .redBackgroundGo, .blueBackgroundGo{
-		@include animation(backgroundGo 350s infinite linear);
+		animation:backgroundGo 350s infinite linear;
 	}
 	.whiteBackgroundGo{
 		background-image: -webkit-radial-gradient(#fff 70%,#ededed 70%);
@@ -2092,7 +2084,7 @@ html, body{
 		background-image: -moz-radial-gradient($媽咪佳肋比_網頁_藍 70%,$媽咪佳肋比_網頁_signOut深藍 70%);
 		background-image: radial-gradient($媽咪佳肋比_網頁_藍 70%,$媽咪佳肋比_網頁_signOut深藍 70%);
 	}
-	@include keyframes(backgroundGo) {
+	@keyframes backgroundGo{
 		0%{background-position: 0px 0px;}  
 		100%{background-position: 100% 100%;}  
 	}
@@ -2126,7 +2118,7 @@ html, body{
 		&:before, &:after{border-width: 20px 0 20px 15px;}
 	}
 	#bannerSlideBox{
-		>li.active{@include animation-duration(5s);}
+		>li.active{animation-duration:5s;}
 		&:after{
 			background-image:-webkit-radial-gradient(rgba(0,0,0,.12) 25%, transparent 25%);
 			background-image:-moz-radial-gradient(rgba(0,0,0,.12) 25%, transparent 25%);
@@ -2137,7 +2129,7 @@ html, body{
 	body.index article, #bannerSlideBox{
 		&:after{background-size: 6px 6px;}
 	}
-	@include keyframes(articleBannerMove) {
+	@keyframes articleBannerMove{
 		0% {background-position:45% 50%;}
 		100% {background-position:55% 50%;}  
 	}
@@ -2165,9 +2157,9 @@ html, body{
 	article div.carteBox{margin:0 0 75px;}
 //	活動activity區
 	.activityBox{
-		@include transition(box-shadow .6s);
+		transition:box-shadow .6s;
 		&:before{border-width:90px;}
-		img{@include transition(transform .6s);}	
+		img{transition:transform .6s;}	
 	}
 //	預約reserve區
 	.reserveBox, .reserveBox.click{
@@ -2208,16 +2200,16 @@ html, body{
 		box-shadow: 15px 0 0 #e8e8e8, -15px 0 0 #e8e8e8;
 	}
 }
-@include breakpoint(1025px){
+@media screen and (min-width:1025px){
 	#indexBannerSlideBox div[class^="indexBanner_"] h2{font-size:64px;}
 }
-@include breakpoint(1280px){
+@media screen and (min-width:1280px){
   #goTop, #signIn {right:7%;}
 }
-@include breakpoint(1600px){
+@media screen and (min-width:1600px){
   #goTop, #signIn {right:12%;}
 }
-@include breakpoint(1920px){
+@media screen and (min-width:1920px){
   #goTop, #signIn {right:19%;}
 }
 html>/**/body nav ul.second li.fb a:after, x:-moz-any-link {line-height:50px;}
@@ -2232,4 +2224,24 @@ html>/**/body .reserveBox>div em:after, x:-moz-any-link, x:default {line-height:
 	nav ul.second li.fb a:after, nav ul.second li.line a:after{line-height:50px;}
 	#signIn a:after{line-height:80px;}
 	nav>ul>li>a:after, .reserveBox>div em:after, .lightBoxLink:before{line-height:28px;}
+}
+
+@media screen and (max-width: 767px){
+	 
+}
+// 手機版拿直的時候 portrait
+@media screen and (max-width: 767px) and (orientation:portrait){
+	 
+}
+// 手機版拿橫的時候 Landscape
+@media screen and (max-width: 767px) and (orientation:landscape){
+	 
+}
+// ===== 平板版型區 =====
+@media screen and (min-width: 768px) and (max-width: 1019px) {
+	 
+}
+// ===== 桌機版型區 =====
+@media screen and (min-width: 1020px) {
+	 
 }

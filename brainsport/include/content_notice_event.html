@@ -1,0 +1,39 @@
+<!--公告活動  的內容 start-->
+<?php
+$n_Num = $_GET['n_Num'];
+
+require_once($_SERVER['DOCUMENT_ROOT'] ."/include/setup/mysqlconn.php");
+select_db('BSAdmin');
+
+$sql = "SELECT n_Title, n_Content, n_Post_Date, n_Image_URL, n_Post_Type FROM Announcement WHERE n_Num = ". $n_Num;
+$result = mysql_query($sql);
+
+list($n_Title, $n_Content, $n_Post_Date, $n_Image_URL, $n_Post_Type) = mysql_fetch_row($result);
+
+if($n_Post_Type == 1) {
+	$n_Post_Type = 'news';
+	$n_Post_Str = '系統';
+} else if($n_Post_Type == 2) {
+	$n_Post_Type = 'event';
+	$n_Post_Str = '活動';
+}
+?>
+<div id="content">
+	<em class="title <?php echo $n_Post_Type;?>"><?php echo $n_Post_Str;?></em>
+	<h2 class="title"><?php echo $n_Title;?></h2>
+	<section class="notice_main">
+		<span class="date"><?php echo substr($n_Post_Date,0,10);?></span>
+		<?php if(!empty($n_Image_URL)) {?>
+		<img src="<?php echo $n_Image_URL;?>">
+		<?php }?>
+		<?php echo $n_Content;?>
+	</section>
+	<div id="bottomBtn">
+		<ul>
+			<!-- <li class="notice_btn"><a href="notice_news.php">上一篇</a></li> -->
+			<li class="notice_btn"><a href="bulletin.php">回列表</a></li>
+			<!-- <li class="notice_btn"><a href="notice_news.php">下一篇</a></li> -->
+		</ul> 
+	</div>
+</div>
+<!--公告活動  的內容 end-->

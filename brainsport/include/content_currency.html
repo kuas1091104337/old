@@ -1,0 +1,225 @@
+<?php
+session_start();
+include_once($_SERVER['DOCUMENT_ROOT']."/php/WebUtility.php");
+include_once($_SERVER['DOCUMENT_ROOT'].'/php/adodb/adodb.inc.php');
+include_once("../../mobile.skym.com/include/DB_config.php");
+$WebUtility = new WebUtility;
+
+if( !isset($_SESSION['n_UserID']) || empty($_SESSION['n_UserID']) ){
+    $WebUtility->AlertMsgAndGoto("請先登入","/zh-tw/index.php");exit();
+}
+if( isset($_POST['year']) && !empty($_POST['year']) ){
+    $year = $_POST['year'];
+}else{
+    $year = date("Y");
+}
+if( isset($_POST['month']) && !empty($_POST['month']) ){
+    $month = $_POST['month'];
+}else{
+    $month = date("m");
+}
+//$search = " AND (year(a.ib_Itembuytime) = '".$year."' and month(a.ib_Itembuytime) = '".$month."')'";
+$search = " AND year(a.ib_Itembuytime) = '".$year."' and month(a.ib_Itembuytime) = '".$month."'";
+$ListHTML = "";
+$isError = '';
+$ruby = '';
+$bs_id = '';
+//宣告資料庫連線變數         
+$conn = ADONewConnection("mssql");
+$conn->charPage="CP_UTF8";
+//$conn->debug = true;
+$conn->Connect($_BS7PokerDB['host'],$_BS7PokerDB['username'],$_BS7PokerDB['password'],$_BS7PokerDB['dbname']);
+$conn->SetFetchMode(ADODB_FETCH_ASSOC);
+
+$sql = "SELECT a.user_Idx, b.u_Ruby from BS7Poker.dbo.tbUser a left join BS7Poker.dbo.tbUserData b on a.user_Idx = b.user_Idx where a.u_Id = '".$_SESSION['n_UserID']."'";
+$rs = $conn->Execute($sql);
+if($rs){
+    if( $rs->RowCount() == 1 ){
+        $bs_id = $rs->fields['user_Idx'];
+        $ruby = number_format($rs->fields['u_Ruby']);        
+    }
+    $rs->Close();
+}
+
+$sql = "SELECT a.itembuylog_Idx,b.u_Id,b.u_Name,c.il_BuyType,c.il_Price,c.titlekeyname,convert(varchar(19), a.ib_Itembuytime, 120) as buy_datetime
+  FROM BS7Poker.dbo.tbItemBuyLog as a left outer join BS7Poker.dbo.tbUser as b on a.user_Idx = b.user_Idx
+  left outer join BS7Poker.dbo.tbItemList as c on a.item_Idx = c.itemidx_Idx  
+   where a.user_Idx = '".$bs_id."'".$search." order by a.ib_Itembuytime desc";
+$rs = $conn->Execute($sql);
+if($rs){
+    if($rs->RowCount() > 0){
+        while(!$rs->EOF) {  
+            $ListHTML .= "<tr>";
+            $ListHTML .= "<td data-th='購買項目'><span class='label'>". $rs->fields['titlekeyname'] ."</span></td>";   
+            $buytype = '';
+            if($rs->fields['il_BuyType'] == 1) {
+                $buytype = "遊戲幣";
+            } else if($rs->fields['il_BuyType'] == 2) {
+                $buytype = "鑽石";
+            }else if($rs->fields['il_BuyType'] == 3) {
+                $buytype = "現金";
+            }
+            $ListHTML .= "<td data-th='鑽石面額'>". number_format($rs->fields['il_Price']).$buytype."</td>";    
+            $ListHTML .= "<td data-th='日期'>". substr($rs->fields['buy_datetime'],0,10) ."</td>";
+            $ListHTML .= "<td data-th='時間'>". substr($rs->fields['buy_datetime'],11,8) ."</td>";
+            $ListHTML .= "</tr>";
+            $rs->MoveNext();
+            $i ++;
+        }
+        $rs->Close();
+    }else{
+        $isError = '無資料';
+    }   
+}else{
+    $isError = '系統執行有誤';
+}
+
+$conn->Close();
+if( $isError != ''){
+    $ListHTML .= "<tr>";
+    $ListHTML .= "<td colspan='4'>". $isError ."</td>";
+    $ListHTML .= "</tr>";
+}
+?>
+<!--帳號管理_購幣紀錄  的內容 start-->
+<div id="content">
+    <!--帳號管理的子選單 start-->
+    <?php include("submenu_repaid.php"); ?>
+    <!--帳號管理的子選單 end-->
+
+    <section class="service_content">
+        <div class="service_main">
+
+            <div class="notice">
+                <label class="repaid">會員暱稱<em><?=$_SESSION['n_Username'];?></em></label> 
+               <!--  <span class="repaid">BS等級 ： 10級<a href="#">【 什麼是BS等級 ? 】</a></span> -->
+            </div>
+
+            <div class="notice">
+                <label class="repaid">目前持有<em><?=$ruby;?></em> 鑽石</label>
+                <ul class="repaid">
+                    <form action="currency.php" method="post" name="fm">
+                    <li>
+                        <select class="question" name="year">
+                           <?php
+                            $this_year = date("Y");
+                            for($i=$this_year;$i >= 2016; $i-- ){
+                            ?>
+                                <option value="<?=$i?>" <?=($year==$i)? 'selected': '';?>>
+                                    <?=$i?>
+                                </option>
+                            <?php
+                            }
+                            ?>
+                        </select>
+                    </li>
+                    <li>
+                        <select class="question" name="month">
+                            <option value="1" <?=($month=='1' )? 'selected': '';?>>1月</option>
+                            <option value="2" <?=($month=='2' )? 'selected': '';?>>2月</option>
+                            <option value="3" <?=($month=='3' )? 'selected': '';?>>3月</option>
+                            <option value="4" <?=($month=='4' )? 'selected': '';?>>4月</option>
+                            <option value="5" <?=($month=='5' )? 'selected': '';?>>5月</option>
+                            <option value="6" <?=($month=='6' )? 'selected': '';?>>6月</option>
+                            <option value="7" <?=($month=='7' )? 'selected': '';?>>7月</option>
+                            <option value="8" <?=($month=='8' )? 'selected': '';?>>8月</option>
+                            <option value="9" <?=($month=='9' )? 'selected': '';?>>9月</option>
+                            <option value="10" <?=($month=='10' )? 'selected': '';?>>10月</option>
+                            <option value="11" <?=($month=='11' )? 'selected': '';?>>11月</option>
+                            <option value="12" <?=($month=='12' )? 'selected': '';?>>12月</option>
+                        </select>
+                    </li>
+                    <li class="">
+                        <button type="submit" class="submitbtn ReBtnSize">查看</button>
+                    </li>
+                    </form>
+                </ul>
+            </div>
+                                
+            <table class="table mobile">
+                <thead>
+                    <tr>      
+                        <th class="col-xs-3">購買項目</th>
+                        <th class="col-xs-2">鑽石面額</th>
+                        <th class="col-xs-3">日期</th>
+                        <th class="col-xs-2">時間</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?=$ListHTML;?>
+                    <!-- <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="遊戲類別">Bingo</td>
+                        <td data-th="購買項目"><span class="label">1500籌碼</span></td>
+                        <td data-th="鑽石面額">150鑽石</td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </section>  
+</div>
+<!--帳號管理_購幣紀錄  的內容 end-->

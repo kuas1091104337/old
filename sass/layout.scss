@@ -1,0 +1,33 @@
+@import "./normalize";
+@import "./extendMixinFunction";
+.DAwoks{
+  background-color:#000;
+}
+.list{
+  width:260px;
+  padding:12px 0;
+  margin:0 auto;
+  &_item{
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    margin-bottom: 16px;
+    &_link{
+      color:#fff;
+      font-size:16px;
+      border-radius:3px;
+      padding:5px 5px 3px 5px;
+      margin-bottom: 4px;
+      transition:color .4s, background-color .4s;
+      &:hover{
+        color:#000;
+        background-color:#ff0;
+      }
+    }
+    &__txt{
+      display: block;
+      transform:skew(-8deg);
+    }
+    &___hide{opacity:0;}
+  }
+}

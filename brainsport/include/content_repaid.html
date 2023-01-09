@@ -1,0 +1,156 @@
+<?php
+session_start();
+include_once($_SERVER['DOCUMENT_ROOT']."/php/WebUtility.php");
+include_once($_SERVER['DOCUMENT_ROOT'].'/php/adodb/adodb.inc.php');
+include_once("../../mobile.skym.com/include/DB_config.php");
+$WebUtility = new WebUtility;
+
+if( !isset($_SESSION['n_UserID']) || empty($_SESSION['n_UserID']) ){
+    $WebUtility->AlertMsgAndGoto("請先登入","/zh-tw/index.php");exit();
+}
+
+$bs_id = '';
+//宣告資料庫連線變數         
+$conn = ADONewConnection("mssql");
+$conn->charPage="CP_UTF8";
+//$conn->debug = true;
+$conn->Connect($_BS7PokerDB['host'],$_BS7PokerDB['username'],$_BS7PokerDB['password'],$_BS7PokerDB['dbname']);
+$conn->SetFetchMode(ADODB_FETCH_ASSOC);
+
+$sql = "SELECT a.user_Idx, b.u_Ruby from BS7Poker.dbo.tbUser a left join BS7Poker.dbo.tbUserData b on a.user_Idx = b.user_Idx where a.u_Id = '".$_SESSION['n_UserID']."'";
+$rs = $conn->Execute($sql);
+if($rs){
+    if( $rs->RowCount() == 1 ){
+        $bs_id = $rs->fields['user_Idx'];
+        $ruby = number_format($rs->fields['u_Ruby']);        
+    }
+    $rs->Close();
+}
+
+$conn->Close();
+?>
+<!--帳號管理_儲值紀錄  的內容 start-->
+<div id="content">
+    <!--帳號管理的子選單 start-->
+    <?php include("submenu_repaid.php"); ?>
+    <!--帳號管理的子選單 end-->
+
+    <section class="service_content">
+        <div class="service_main">
+
+            <div class="notice">
+                <label class="repaid">會員暱稱<em><?=$_SESSION['n_Username'];?></em></label> 
+               <!--  <span class="repaid">BS等級 ： 10級<a href="#">【 什麼是BS等級 ? 】</a></span> -->
+            </div>
+
+            <div class="notice">
+                <label class="repaid">目前持有<em><?=$ruby;?></em> 鑽石</label>
+                <ul class="repaid">
+                    <li>
+                        <select class="question">
+                            <option value="" id="">2015年</option>
+                            <option value="" id="">2016年</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select class="question">
+                            <option value="" id="">1月</option>
+                            <option value="" id="">2月</option>
+                            <option value="" id="">3月</option>
+                            <option value="" id="">4月</option>
+                            <option value="" id="">5月</option>
+                            <option value="" id="">6月</option>
+                            <option value="" id="">7月</option>
+                            <option value="" id="">8月</option>
+                            <option value="" id="">9月</option>
+                            <option value="" id="">10月</option>
+                            <option value="" id="">11月</option>
+                            <option value="" id="">12月</option>
+                        </select>
+                    </li>
+                    <li class="">
+                        <button type="submit" class="submitbtn ReBtnSize">查看</button>
+                    </li>
+                </ul>
+            </div>
+
+            <table class="table mobile">
+                <thead>
+                    <tr>
+                        <th class="col-xs-3">購買項目</th>
+                        <th class="col-xs-3">花費金額</th>
+                        <th class="col-xs-3">日期</th>
+                        <th class="col-xs-3">時間</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">尚無資料</td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr>
+                    <tr>
+                        <td data-th="購買項目">1500鑽石</td>
+                        <td data-th="花費金額"><span class="label">150 NT</span></td>
+                        <td data-th="日期">2014-12-31</td>
+                        <td data-th="時間">16:08</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </section>  
+</div>
+<!--帳號管理_儲值紀錄  的內容 end-->

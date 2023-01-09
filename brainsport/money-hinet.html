@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BrainSport 打造棋牌遊戲界的奧林匹克運動賽事</title>
+<meta name="apple-mobile-web-app-title" content="BrainSport">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="keywords" content="BS, BrainSport, BS麻將, 麻將, 運動, 競技, 博弈, 棋牌, 奧林匹克, 腦力激盪, 免費遊戲">
+<meta name="description" content="BrainSport(簡稱BS)是最重視腦力激盪的博弈遊戲，推出多款獨特的棋排博奕遊戲，豐富的規則、刺激的賽制及BS獨有的特殊玩法，競技的快感，快來挑戰吧！"> 
+<meta name="author" content="BrainSport">
+<link rel="shortcut icon" href="images/website_logo.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+<link href="css/header-popup-aside-footer.css" rel="stylesheet" type="text/css">
+<link href="css/core.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<!--[if lte IE 9]>
+    <link href="css/IE_layout.css" rel="stylesheet" type="text/css">
+<![endif]-->
+</head>
+<body>
+	<header id="signOut"></header>
+
+	<div id="popup"></div>
+
+	<article id="white">
+		<div id="content">
+			<nav>
+				<ul class="breadcrumb">
+					<li class="visited">
+						<a class="game-icon SOSA" href="game.html"><em>選擇遊戲</em></a>
+					</li>
+					<li class="visited">
+						<a class="exchange-icon SOSA" href="exchange-local.html"><em>儲值方式</em></a>
+					</li>
+					<li class="current">
+						<span class="money-icon RAPH"><em>儲值金額</em></span>
+					</li>
+					<li>
+						<span class="invoice-icon SOSA"><em>儲值資訊</em></span>
+					</li>
+					<li>
+						<span class="result-icon RAPH"><em>儲值結果</em></span>
+					</li>
+				</ul>
+			</nav>
+			<section class="store">
+				<p class="game-7poker">BS 7POKER</p>
+				<div class="store-data">
+					<div class="storeNickname">暱稱五個字</div>
+					<div class="diamond">9,999,999</div>
+					<div class="chips">99,999,999,999</div>
+					<div class="prepaid-mode">Hinet小額付費</div>
+				</div>
+				<div class="lightBlue">
+					<h3>請選擇以下儲值面額</h3>
+					<div id="money-hinet" class="storeMenu">
+						<figure class="money hundredX1-2">
+							<a href="javascript:;">
+								<ins></ins>
+								<p>100鑽</p>
+								<figcaption>
+									<h4>NTD 100</h4>
+									<span>加贈 籌碼10萬</span>
+								</figcaption>
+							</a>
+						</figure>
+						<figure class="money hundredX3-5">
+							<a href="javascript:;">
+								<ins></ins>
+								<p>300鑽</p>
+								<figcaption>
+									<h4>NTD 300</h4>
+									<span>加贈 籌碼33萬</span>
+								</figcaption>
+							</a>
+						</figure>
+						<figure class="money hundredX3-5">
+							<a href="javascript:;">
+								<ins></ins>
+								<p>500鑽</p>
+								<figcaption>
+									<h4>NTD 500</h4>
+									<span>加贈 籌碼60萬</span>
+								</figcaption>
+							</a>
+						</figure>
+						<figure class="money thousandX1-2">
+							<a href="javascript:;">
+								<ins></ins>
+								<p>1,000鑽</p>
+								<figcaption>
+									<h4>NTD 1,000</h4>
+									<span>加贈 籌碼150萬</span>
+								</figcaption>
+							</a>
+						</figure>
+						<figure class="money thousandX1-2">
+							<a href="javascript:;">
+								<ins></ins>
+								<p>2,000鑽</p>
+								<figcaption>
+									<h4>NTD 2,000</h4>
+									<span>加贈 籌碼340萬</span>
+								</figcaption>
+							</a>
+						</figure>
+						<figure class="money thousandX3-5">
+							<a href="javascript:;">
+								<ins></ins>
+								<p>3,000鑽</p>
+								<figcaption>
+									<h4>NTD 3,000</h4>
+									<span>加贈 籌碼600萬</span>
+								</figcaption>
+							</a>
+						</figure>
+					</div>
+					<div id="non-3D">
+						<p>請輸入手機號碼，系統將在3分鐘內發送認證碼至您的手機，請於3分鐘內輸入認證碼，認證成功後即可進行交易。</p>
+						<ul>
+							<li class="clearfix">
+								<span class="cardInput">
+									<input class="cardInput_field" type="text" placeholder="請填寫真實手機號碼">
+									<label class="cardInput_label" for="phone-number">手機號碼</label>
+								</span>
+								<div class="cardInput_data" id="">
+									<button type="submit" id="phoneNumber" class="submitbtn ReBtnSize">發送</button>
+								</div>
+								<div class="cardInput_data">
+									<em>請輸入手機號碼</em>
+								</div>
+							</li>
+							<li class="clearfix">
+								<span class="cardInput">
+									<input class="cardInput_field" type="text" placeholder="請輸入簡訊認證號">
+									<label class="cardInput_label" for="certification-number">認證號碼</label>
+								</span>
+								<div class="cardInput_data">
+									<button type="submit" id="certNumber" class="submitbtn ReBtnSize">認證</button>
+								</div>
+								<div class="cardInput_data">
+									<em>認證成功</em>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="hinetPayment">
+						<div class="consentCheckbox">
+							<label>我瞭解並同意遵守《<span class="consent">購買同意書</span>》內容</label>
+							<input class="consentCheck" type="checkbox">
+						</div>
+						<ul>
+							<li class="storeLightBtn">
+								<a href="javascript:;" id="okPay" class="submitbtn">確定付款</a>
+							</li>
+							<li class="storeLightBtn">
+								<a href="exchange-local.html" class="submitbtn">重選儲值方式</a>
+							</li>
+						</ul> 
+					</div>
+				</div>
+			</section>
+		</div>
+		<div id="lightbox"></div>
+	</article>
+
+	<aside></aside>
+
+	<footer></footer>
+
+	<div id="lteIE"></div>
+</body>
+</html>

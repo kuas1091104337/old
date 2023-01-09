@@ -5,27 +5,20 @@
       $('[text=' + title[i] + ']').text(e[title[i]]);
   };
 }
-
 $(function () {
   var ajax1 = $.ajax({
-    url:'../load/lottery.html',
+    url:'./load/lottery.html',
     dataType:'html'
   }).done(function(data) {
-    $('#contact').before(data);
+    $('#foot').before(data);
   });
   var ajax2 = $.ajax({
-    url:'../../load/contact.html',
+    url:'../load/common.html',
     dataType:'html'
   }).done(function(data) {
-    $('#contact').append(data);
+    $("#foot").html($("<div>"+data+"</div>").find('#foot').html());
   });
-  var ajax3 = $.ajax({
-    url:'../../load/foot.html',
-    dataType:'html'
-  }).done(function(data) {
-    $('#foot').append(data);
-  });
-  $.when(ajax1, ajax2, ajax3).then(function(data1, data2, data3){
+  $.when(ajax1, ajax2).then(function(data1, data2){
     switch($('body').attr('class')) {
       case 'zh' :
         setLang(i18n.zh);

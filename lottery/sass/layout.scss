@@ -1,7 +1,8 @@
-@import "./_variable.scss";
 @import "../../sass/_normalize.scss";
 @import "../../sass/_extendMixinFunction.scss";
-@import "../../sass/_contact.scss";
+@import "../../sass/_foot.scss";
+@import "../../sass/_daRightMenu.scss";
+@import "./_variable.scss";
 @import "./_contact_aeLot.scss";
 @import url('https://fonts.googleapis.com/css?family=Kanit:600');
 @import url('https://fonts.googleapis.com/css?family=Kanit:400');
@@ -147,26 +148,34 @@ section {
     z-index: 2;
     transition: background .3s;
     &#white, &#lilac{
-        .head_logo_svg {fill:#000;}
-        .head_mBtn {
-            > span, &:before, &:after{background-color:#000;}
-        }
-        &.menu-open {
-            .head_logo_svg {fill:#fff;}
-            .head_mBtn {
-                > span, &:before, &:after{background-color:#fff;}
-            }
-        }
+			.head{
+				&_logo{
+					color:#333;
+					&:before{background-image:url("../../img/DotAb.svg");}
+				}
+				&_mBtn{
+					> span, &:before, &:after{background-color:#000;}
+				}
+			}
+			&.menu-open .head_mBtn{
+				> span, &:before, &:after{background-color:#fff;}
+			}
     }
     &#white{
-        background:#fff;
-        + .home{background:#fff;}
+			background:#fff;
+			+ .home{background:#fff;}
     }
     &#lilac{
-        background: $aeLottery-pinkLightBlue;
-        ~ .features{background-color: $aeLottery-pinkLightBlue;}
+			background: $aeLottery-pinkLightBlue;
+			~ .features{background-color: $aeLottery-pinkLightBlue;}
     }
-    &#blue ~ .about{@extend %blueBackgroundGradient;}
+    &#blue{
+			.head_logo{
+				color:#fff;
+				&:before{background-image:url("../../img/DotAw.svg");}
+			}
+			~ .about{@extend %blueBackgroundGradient;}
+		}
     &.menu-open {
         .head_menu {
             transition: transform .4s;
@@ -214,21 +223,27 @@ section {
         &_mark{ position: absolute;}
     }
     &_logo{
-        width: 72px;
-        height: 35px;
-        display:flex;
-        align-items:center;
-        position: fixed;
-        top: 9px;
-        left: 10px;
-        &_img{height: 100%;}
-        &_svg{
-            flex:0 0 40px;
-            height: 23px;
-            margin-left: -2px;
-            fill:#fff;
-            transition:fill .4s;
-        }
+			color:#333;
+      font-size:21px;
+      font-weight:normal;
+			height: 35px;
+			display:flex;
+			align-items:center;
+			position: fixed;
+			top: 9px;
+			left: 10px;
+			&:before{
+				content:"";
+				width: 26px;
+				height: 24px;
+				background-image:url("../../img/DotAb.svg");
+				background-size:cover;
+				margin-right:4px;
+			}
+			> span{
+				padding-top: 4px;
+				transform:skew(-8deg);
+			}
     }
     &_lang {
         display: flex;
@@ -295,7 +310,7 @@ $home-phone-height:142;
     }
     .imgBox{
         height: 0;
-        padding-bottom: $home-height / $iphone678-width * 100%;
+        padding-bottom:calc($home-height/$iphone678-width)*100%;
         margin-top: 48px;
         position: relative;
         &:before, &:after{
@@ -305,24 +320,25 @@ $home-phone-height:142;
             background-size:cover;
         }
         &:after{
-            width: $home-phone-width / $iphone678-width * 100%;
+            width:calc($home-phone-width/$iphone678-width)*100%;
             background-image:url("../img/home_phone.png");
-            padding-bottom: ($home-phone-height / $home-phone-width) * ($home-phone-width / $iphone678-width) * 100%;
-            right: 13 / $iphone678-width * 100%;
+            padding-bottom:calc($home-phone-height / $home-phone-width) * calc($home-phone-width / $iphone678-width) * 100%;
+            right:calc(13 / $iphone678-width) * 100%;
             bottom: 0;
         }
         &:before{
-            width: $home-desktop-width / $iphone678-width * 100%;
+            width:calc($home-desktop-width / $iphone678-width) * 100%;
             background-image:url("../img/home_desktop.png");
             background-position: center;
-            padding-bottom: $home-desktop-height / $iphone678-width * 100%;
+            padding-bottom:calc($home-desktop-height / $iphone678-width) * 100%;
             top: 0;
-            left: (($home-desktop-width / $iphone678-width) - 1) * -50%;
+            left:calc(($home-desktop-width / $iphone678-width) - 1) * -50%;
         }
     }
     &_ball{
         width: 100%;
         height: 100%;
+        pointer-events:none;
         position:absolute;
         top:0;
         left:0;
@@ -332,34 +348,34 @@ $home-phone-height:142;
         animation-fill-mode: both;
         animation-play-state: paused;
         &:nth-of-type(1){
-            animation-duration: 6s;
-            animation-delay: -1.5s;
-            // animation-duration: 18s;   
-            // animation-delay: -4.5s;
+            // animation-duration: 6s;
+            // animation-delay: -1.5s;
+            animation-duration: 18s;   
+            animation-delay: -4.5s;
         }
         &:nth-of-type(2){
-            animation-duration: 5s;
-            animation-delay: -1.25s;
-            // animation-duration: 16s;
-            // animation-delay: -4s;
+            // animation-duration: 5s;
+            // animation-delay: -1.25s;
+            animation-duration: 16s;
+            animation-delay: -4s;
         }
         &:nth-of-type(3){
-            animation-duration: 4s;
-            animation-delay: -1s;
-            // animation-duration: 14s;
-            // animation-delay: -3.5s;
+            // animation-duration: 4s;
+            // animation-delay: -1s;
+            animation-duration: 14s;
+            animation-delay: -3.5s;
         }
         &:nth-of-type(4){
-            animation-duration: 3s;
-            animation-delay: -0.75s;
-            // animation-duration: 12s;
-            // animation-delay: -3s;
+            // animation-duration: 3s;
+            // animation-delay: -0.75s;
+            animation-duration: 12s;
+            animation-delay: -3s;
         }
         &:nth-of-type(5){
-            animation-duration: 2s;
-            animation-delay: -0.5s;
-            // animation-duration: 10s;
-            // animation-delay: -2.5s;
+            // animation-duration: 2s;
+            // animation-delay: -0.5s;
+            animation-duration: 10s;
+            animation-delay: -2.5s;
         }
         > img{position: absolute;}
     }
@@ -425,7 +441,7 @@ $featuresScreen-width:557;
     }
     .imgBox{
         height: 0;
-        padding-bottom: $features-height / $features-width * 100%;
+        padding-bottom:calc($features-height / $features-width) * 100%;
         position:relative;
     }
     &_screen, &_box, &_userCoin, &_news{ position:absolute; }
@@ -435,7 +451,7 @@ $featuresScreen-width:557;
         left:0;
     }
     &_screen{
-        width: $featuresScreen-width / $features-width * 100%;
+        width:calc($featuresScreen-width / $features-width) * 100%;
         left: 3%;
         bottom: 4%;
     }
@@ -696,11 +712,11 @@ $home-desk-height:626;
         }
         .imgBox{
             flex:0 0 65%;
-            padding-bottom: $home-height / $home-width * 65%;
+            padding-bottom:calc($home-height / $home-width) * 65%;
             margin-top: 0;
             &:before{
                 width: 100%;
-                padding-bottom: $home-desk-height / $home-width * 100%;
+                padding-bottom:calc($home-desk-height / $home-width) * 100%;
                 left: 0;
             }
             &:after{right: 0;}
@@ -746,7 +762,7 @@ $home-desk-height:626;
         }
         .imgBox{
             flex:0 0 50%;
-            padding-bottom: $features-height / $features-width * 50%;
+            padding-bottom:calc($features-height / $features-width) * 50%;
         }
         .contentBox{
             flex:0 0 50%;
@@ -839,7 +855,6 @@ $home-desk-height:626;
     }
     .th .home_title{font-size: 4.6vw;}
 }
-@media screen and (min-width: 640px) {}
 @media screen and (min-width: 568px) and (max-width: 1024px) and (orientation:portrait) {
     .head{
         &_menu_list + .head_menu_list{margin-top: 40px;}
@@ -854,7 +869,7 @@ $home-desk-height:626;
         }
         .imgBox{
             flex:0 0 75%;
-            padding-bottom: $home-height / $home-width * 75%;
+            padding-bottom:calc($home-height / $home-width) * 75%;
         }
     }
     .features{padding: 54px 0;}
@@ -911,15 +926,9 @@ $desk-head:64px;
             }
         }
         &_logo{
-            flex: 0 0 82px;
             height: 40px;
             margin-right: auto;
             position: initial;
-            &_svg{
-                flex-basis: 47px;
-                height: 26px;
-                margin-left: -3.5px;
-            }
         }
         &_lang{
             width: 40px;
@@ -987,7 +996,7 @@ $desk-head:64px;
         &_title{font-weight: normal;}
         .imgBox{
             flex:0 0 80%;
-            padding-bottom: $home-height / $home-width * 80%;
+            padding-bottom:calc($home-height / $home-width) * 80%;
             &:before{left: 0;}
             &:after{right: 0;}
         }
@@ -1134,7 +1143,7 @@ $desk-head:64px;
     .features{
         .imgBox{
             flex:0 0 55%;
-            padding-bottom: $features-height / $features-width * 55%;
+            padding-bottom:calc($features-height / $features-width) * 55%;
         }
         .contentBox{
             flex:0 0 45%;
@@ -1193,7 +1202,7 @@ $desk-head:64px;
          }
          .imgBox{
             flex:0 0 75%;
-            padding-bottom: $home-height / $home-width * 75%;
+            padding-bottom:calc($home-height / $home-width) * 75%;
          }
     }
     .zh .home_title{padding-left: 6vw;}
@@ -1209,7 +1218,7 @@ $desk-head:64px;
         }
         .imgBox{
             flex:0 0 84%;
-            padding-bottom: $home-height / $home-width * 84%;
+            padding-bottom:calc($home-height / $home-width) * 84%;
         }
     }
     .description_box + .description_box{margin-top: 250px;}
@@ -1217,6 +1226,3 @@ $desk-head:64px;
         .home_title{padding-left: 0;}
     }
 }
-@media screen and (min-width: 1600px) {}
-@media screen and (min-width: 1800px) {}
-@media screen and (min-width: 2000px) {}

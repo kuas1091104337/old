@@ -1,0 +1,11 @@
+//extend
+%text-out-point{//文字超過變點點
+	white-space:nowrap;	//文字不進行換行
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+//mixin 
+@function imgSize-pxToVw($imgSizePx, $web-width) {
+  @return calc($imgSizePx / $web-width) * 100vw;
+}
+// font-size: imgSize-pxToVw(72, 1440);

@@ -1,0 +1,71 @@
+<!--確認個人資訊頁  的內容 start-->
+<?php
+if($_POST['n_Gender'] == 1) {
+	$n_Gender = '女';
+} else {
+	$n_Gender = '男';
+}
+
+$n_Country = explode('_',$_POST['n_Country']);
+$_SESSION['n_Country'] = $n_Country[1];
+?>
+<div id="content">
+	<section class="BS-girl confirm clearfix">
+	<?php if($_SESSION['n_Usertype'] != 1) {?>
+		<p>請確認以下個人資訊：<br>提醒您，性別、國家確認後無法修改，請謹慎保管妥善。</p>
+		<div id="label-form-title">
+			<label class="form-title" for="member-nickname">暱稱：</label>
+			<label class="form-title" for="gender">性別：</label>
+			<label class="form-title" for="nation">國家：</label>
+		</div>
+		<ul id="field_contain">
+			<li id="member-nickname"><?php echo $_POST['n_Username'];?></li>
+			<li id="gender"><?php echo $n_Gender;?></li>
+			<li id="nation"><?php echo $n_Country[0];?></li>
+		</ul>
+	<?php } else {?>
+		<p>請確認以下個人資訊：<br>提醒您，帳號、性別、國家確認後無法修改，請謹慎保管妥善。</p>
+		<div id="label-form-title">
+			<label class="form-title" for="member-account">帳號：</label>
+			<label class="form-title" for="member-nickname">暱稱：</label>
+			<label class="form-title" for="member-password">密碼：</label>
+			<label class="form-title" for="email">電子信箱：</label>
+			<label class="form-title" for="gender">性別：</label>
+			<label class="form-title" for="nation">國家：</label>
+		</div>
+		<ul id="field_contain">
+			<li id="member-account"><?php echo $_POST['n_UserID'];?></li>
+			<li id="member-nickname"><?php echo $_POST['n_Username'];?></li>
+			<li id="member-password"><?php echo $_POST['n_Password'];?></li>
+			<li id="email"><?php echo $_POST['n_Email'];?></li>
+			<li id="gender"><?php echo $n_Gender;?></li>
+			<li id="nation"><?php echo $n_Country[0];?></li>
+		</ul>
+	<?php }?>
+		<ul class="confirm clearfix">
+			<li>
+				<a href="javascript:history.back();">
+					<span class="button">
+						<button type="submit" class="submitbtn">修改</button>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:$('#fm').submit();"><!-- 回上上一頁 -->
+					<span class="button">
+						<button type="submit" class="submitbtn">確定</button>
+					</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+</div>
+<form action="/member/regist.php" method="post" id="fm">
+<input type="hidden" name="n_UserID" value="<?php echo $_POST['n_UserID'];?>"/>
+<input type="hidden" name="n_Username" value="<?php echo $_POST['n_Username'];?>"/>
+<input type="hidden" name="n_Password" value="<?php echo $_POST['n_Password'];?>"/>
+<input type="hidden" name="n_Email" value="<?php echo $_POST['n_Email'];?>"/>
+<input type="hidden" name="n_Gender" value="<?php echo $_POST['n_Gender'];?>"/>
+<input type="hidden" name="n_Country" value="<?php echo $n_Country[0];?>"/>
+</form>
+<!--確認個人資訊頁  的內容 end-->

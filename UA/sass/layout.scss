@@ -1,0 +1,36 @@
+@import "../../sass/normalize";
+@import "_extendMixinFunction";
+@import "_theme";
+@import "_icon";
+@import "_animation";
+$z-index: body, head; // z-index:n 最後面最大
+// z-index:index($z-index, UAvedio_frame);
+@import "_common";
+@import "_headFoot";
+@import "_index";
+@import "_about";
+@import "_nvaMenu";
+@import "_product";
+@import "_collaboration";
+@import "_partners";
+@import "_contact";
+// ol { 
+//     list-style: none;
+//     padding-left: 0;
+// }
+
+//iPhone4、5 手機版
+// @media screen and (max-width: 320px) {}
+// 手機拿橫(568px)，包含平板「以上」版型區
+// @media screen and (min-width: 568px) {}
+// @media screen and (min-width: 640px) {}
+// ===== 平板版型區 =====
+// @media screen and (min-width: 768px) {}
+// @media screen and (min-width: 768px) and (max-width: 1000px) and (orientation:portrait) {}
+// @media screen and (min-width: 1000px) {}
+// @media screen and (min-width: 1200px) {}
+// @media screen and (min-width: 1280px) {}
+// @media screen and (min-width: 1440px) {}
+// @media screen and (min-width: 1600px) {}
+// @media screen and (min-width: 1800px) {}
+// @media screen and (min-width: 2000px) {}

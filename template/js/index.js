@@ -6,7 +6,7 @@
 }
 
 $(function () {
-  var ajax = $.ajax({
+  var ajax1 = $.ajax({
         url: './json/ae_template_data.json',
         dataType: 'json'
       }).done(function (data) {
@@ -57,8 +57,13 @@ $(function () {
         $('#page_select').append(_pageSelect_li).before(_aside_inputRadio);
         // 載入-在內部後面，各風格版型大區塊
         $('#style_select_box').append(_styleItemBox);
+      }),ajax2 = $.ajax({
+        url:'../load/common.html',
+        dataType:'html'
+      }).done(function(data) {
+        $("#foot").html($("<div>"+data+"</div>").find('#foot').html());
       });
-  $.when(ajax).then(function(data){
+  $.when(ajax1,ajax2).then(function(data1,data2){
     // come in, computer language. window.navigator.language ： zh-TW 繁中 、 zh-CN 簡中 、 th-TH 泰文 、 vi-VN 越南 、 en-US 英文
     switch(window.navigator.language) {
       case 'zh-TW' :
@@ -264,7 +269,7 @@ $(function () {
     $('.page_item_box_1 > li').eq(0).click();
     $('.template_key > li').eq(0).click();
   },function(){
-    console.log(['ajax error', 'ajax :', data]);
+    console.log(['ajax error', 'ajax1 :', data1, 'ajax2 :', data2]);
   });
   // Clipboard.JS
   var clipboard = new ClipboardJS('#share_btn');
