@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<title>BS 7POKER 事前登錄活動</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="templatemo">
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="images/website_logo.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/templatemo-style.css">
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/templatemo_script.js"></script>
+	<!--[if lt IE 9]>
+		<link href="css/IE_layout.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+</head>
+<body>
+<header class="site-header" id="top">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+				<div class="logo-wrapper">
+					<a class="navbar-brand" href="#top" title="前住Brain Sport登錄">Brain Sport 7POKER</a>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse" id="main-menu">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#gameIntroduce" class="gameIntroduce">遊戲介紹</a></li>
+					<li><a href="#preLogin" class="preLogin">事前登錄</a></li>
+					<li><a href="#gameFeatures" class="gameFeatures">遊戲特色</a></li>
+					<li><a href="https://www.facebook.com/bs7poker/" class="linkFB" target="_blank"><i class="fa fa-facebook-square fa-lg"> </i></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<!-- 事前登錄-主視覺 -->
+<div id="top">
+	<div class="container">
+		<div class="top-content">
+			<a href="#preLogin" class="topPreLoginBTN"></a>
+		</div>
+	</div>
+</div>
+
+<!-- 遊戲介紹 -->
+<div id="gameIntroduce">
+	<div class="container">
+		<div class="gameIntroduce-content">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="heading">
+						<h2 class="d-ib m-b0 m-rl0">全球精英爭奪電競撲克</h2><h2 class="d-ib m-rl0"><span>最高榮耀</span></h2>
+					</div>
+					<div id="video_box">
+						<img src="images/youtube_video.jpg" width="100%" height="auto" alt="BS七撲克（BS 7Poker）遊戲宣傳影片">
+					</div>	
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- 事前登錄 -->
+<div id="preLogin">
+	<div class="container">
+		<div class="preLogin-content">
+			<div class="row">
+				<div class="heading">
+					<h2 class="m-b0">登錄豪禮1000鑽</h2>
+					<h3>價值新台幣1,000元</h3>
+				</div>
+			</div>
+			<form method="post" id="contact">
+				<ul class="preLoginRadio">
+					<p>行動裝置</p>
+					<li>
+						<input type="radio" id="Mobile-Android" name="Mobile-type" value="Android" checked>
+	            		<label for="Mobile-Android" class="">Android</label>
+					</li>
+					<li>
+						<input type="radio" id="Mobile-IOS" name="Mobile-type" value="IOS">
+	            		<label for="Mobile-IOS" class="">IOS</label>
+					</li>
+				</ul>
+				<div class="preLoginBoxPhoneNumber">
+					<div class="preLoginInput">
+						<label class="preLoginInput_label" for="phone-number">手機號碼</label>
+						<input class="preLoginInput_field" id="phone-number" type="text" placeholder="輸入10位數字手機號碼">
+					</div>
+					<div class="preLoginInput_data">
+						<input type="button" class="submitbtn" value="領取驗證碼">
+					</div>
+				</div>
+				<div class="phoneNumberError">
+					<em>手機號碼格式不對</em>
+				</div>
+				<div class="checkContentOne">
+					<p>遊戲通知</p>
+					<input id="consentCheck" class="consentCheck" type="checkbox" name="consentCheck">
+					<label for="consentCheck">我願意收到來自7poker遊戲相關訊息</label>
+					<input type="button" class="ReBtnSize submitbtn2" value="進行登錄">
+	        	</div>
+				<div class="preLoginBoxCertificationNumber">
+					<div class="preLoginInput">
+						<label class="preLoginInput_label" for="certification-number">認證號碼</label>
+						<input class="preLoginInput_field" id="certification-number" type="text" placeholder="請輸入簡訊認證號">
+					</div>
+					<div class="preLoginInput_data">
+						<input type="button" class="submitbtn" value="認證">
+					</div>
+				</div>
+				<div class="checkContentTwo">
+					<em>驗證碼已發送至您手機簡訊中</em>
+					<em>請於5分鐘內輸入驗證碼，通過驗證才可完成登錄</em>
+					<input type="button" class="ReBtnSize submitbtn2" value="完成登錄">
+				</div>
+				<div class="successfulLoginBox">
+					<em>恭喜登錄成功 !</em>
+					<div class="preLoginBoxeventID">
+						<div class="preLoginInput">
+							<label class="preLoginInput_label" for="eventID">活動序號</label>
+							<input class="preLoginInput_field" id="eventID" type="text" value="ASDFGH99">
+						</div>
+						<div class="preLoginInput_data">
+							<input type="button" class="submitbtn" value="複製序號">
+						</div>
+					</div>	
+					<em>序號可於7POKER正式開放後，於遊戲中使用。</em>
+					<em>我們將以簡訊方式通知您最新遊戲狀況。</em>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- 人物特色 -->
+<div id="gameFeatures">
+	<div class="container">
+		<div class="gameFeatures-content">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading">
+						<h2><span>Pro級牌局分析</span></h2>
+						<h2 class="d-ib">讓你的牌力由<span>業餘玩家</span></h2><h2 class="d-ib">蛻變為<span>國際選手</span></h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-portfolio" >
+						<div class="row portfolio-holder">
+							<article class="portfolio col-md-4 col-sm-6 col-xs-12">
+								<div class="entry-thumbnail">
+									<img src="images/item1-1.jpg" alt="">
+								</div>
+							</article>
+							<article class="portfolio col-md-4 col-sm-6 col-xs-12">
+								<div class="entry-thumbnail">
+									<img src="images/item1-2.jpg" alt="">
+								</div>
+							</article>
+							<article class="portfolio col-md-4 col-sm-6 col-xs-12">
+								<div class="entry-thumbnail">
+									<img src="images/item1-3.jpg" alt="">
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="container">
+		<div class="footer-content">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-4">
+						<div class="copyright-text">
+							<p><a href="http://wwwoffice.brainsportonline.com/index.php">Brain Sport © All Rights Reserved.</a></p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="back-to-top">
+							<a href="#top"><i class="fa fa-angle-up"></i></a>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="social-icons">
+							<ul>
+								<li><a href="https://www.facebook.com/pages/BS%E9%BA%BB%E5%B0%87/465272800313986?fref=ts" class="fb-link" target="_blank"><i class="fa fa-facebook"></i></a></li>
+								<li><img src="images/rating_15.jpg" class="rating_15" alt=""></li>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- 遊戲介紹 youtube 影片 -->
+<div class="video_lightbox">
+  <div class="lightbox_video_iframe">
+    <div class="lightbox-video-close">ã</div>
+    <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+</body>
+</html>

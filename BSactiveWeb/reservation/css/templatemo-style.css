@@ -1,0 +1,728 @@
+/* ---css共用區---  start*/
+  html, body, header, article, footer{min-width:320px;}
+  html, body{
+    font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+    background: url(../images/index.jpg) no-repeat fixed left top;
+    background-size:cover;
+  }
+  a:hover {
+  	color: #0c4e5c;
+    text-shadow: 0 0 1px #0c4e5c;
+  }
+  .blue {
+  	color: #3b589c;
+    text-shadow: 0 0 1px rgba(59,88,159,0.35);
+  	font-weight: normal;
+  }
+  .yellow {
+  	color: #FF0;
+  	font-weight: normal;
+  }
+  .container {
+  	width: 95%;
+  	max-width: 1200px;
+    min-width: 320px;
+  }
+  span.orange{
+    padding: 1px 4px 2px;
+    margin: 0 4px;
+    border-radius: 4px;
+    background-color: #ff5d5d;
+  }
+  span.blueGreen{
+    padding: 2px 5px 3px;
+    margin: 0 4px;
+    border-radius: 5px;
+    background-color: #e25048;
+    letter-spacing: 1px;
+  }
+  div[class$="-content"]{
+    border-radius: 10px;
+    margin-bottom: 35px;
+    padding:18px 0;
+    background:rgba(0,0,0,0.6);
+    box-shadow:0 0 100px rgba(0,0,0,0.25) inset;
+  }
+  a, input{outline:none;}
+  /* 宣告載入字型 */
+  @font-face{
+    font-family:SOSA;
+    src: url('../font/sosa-regular-webfont.eot') format('eot'), url('../font/sosa-regular-webfont.woff') format('woff'), url('../font/sosa-regular-webfont.ttf') format('truetype');
+  }
+  @font-face{
+    font-family:RAPH;
+    src: url(../font/raphaelicons-webfont.ttf);
+  }
+/* ---css共用區---  end*/
+
+/*nav 選單區 start*/
+  .navbar-header {
+    height: 70px;
+    margin-top: -2px;
+  }
+  .navbar-default .navbar-collapse {
+    -webkit-border-radius: 0 0 15px 10px;
+    -moz-border-radius: 0 0 15px 10px;
+    -ms-border-radius: 0 0 15px 10px;
+    -o-border-radius: 0 0 15px 10px;
+    border-radius: 0 0 15px 10px;
+    height:70px;
+  }
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .navbar>.container a.navbar-brand{
+    width: 170px;
+    height:70px;
+    background-image: url(../images/brain_sport_logo.png);
+    text-indent: -9999px;
+    background-size: 170px 70px;
+    margin: 2px 0 0 0;
+    display: inline-block;
+    padding: 0;
+  }
+  .navbar-nav.navbar-right:last-child {
+    margin-right: auto;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: #fff;
+    text-align: center;
+    padding:25px;
+    overflow: hidden;
+    font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    background:rgba(0,0,0,0.75);
+    text-shadow:0 0 1px rgba(0,0,0,0.3);
+  }
+  .navbar-default .navbar-nav>li>p {
+    color: #3b589c;
+    text-align: center;
+    padding: 31px 22px 31px 0;
+    overflow: hidden;
+    font-size: 18px;
+    text-shadow: 0 0 1px rgba(59,88,159,0.35);
+    line-height: 1;
+    margin: 0;
+  }
+  .navbar-default .navbar-nav>li>a:hover {
+    color: #00b9e7;
+    text-shadow: 0 0 1px #00b9e7;
+    text-shadow:1px 1px 2px rgba(0,0,0,.25), 0 0 1px rgba(0,0,0,0.25);
+    background: rgba(77,77,77,0.8);
+  }
+  .navbar-default .navbar-nav>li>a.gameIntroduce{border-radius:10px 0 0 10px;}
+  .navbar-default .navbar-nav>li>a.preLogin{  }
+  .navbar-default .navbar-nav>li>a.gameFeatures{  }
+  .navbar-default .navbar-nav>li>a.linkFB{
+    background-color:rgba(78,105,162,0.75);
+    border-radius:0 10px 10px 0;
+  }
+  .linkFB .fa-lg {line-height: 16px;}
+/*nav 選單區 end*/
+
+/*top 事前登錄-主視覺 start*/
+  #top .top-content{
+    position:relative;
+    width:100%;
+    height:0;
+    padding:0 0 50% 0;
+    background:url(../images/templatemo-image.jpg);   
+    background-size:cover;
+    box-shadow: 0 0 1px #4c768e, 0 0 1px 2px #4c768e inset, 0 0 12px 1px rgba(0,0,0,.35) inset;
+    margin-top:70px;
+  }
+  .topPreLoginBTN{
+    position: absolute;
+    top:68%;
+    left:36.8%;
+    width:27.5%;
+    height:18%;
+    background:url(../images/top-btn.png);
+    background-size:cover;
+  }
+/*top 事前登錄-主視覺 end*/
+
+/*gameIntroduce 遊戲介紹 start*/
+  .gameIntroduce-content{
+    background: #3a6e9d;
+  }
+  .heading {
+    text-align: center;
+  }
+  .heading h2{
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    line-height:1.6;
+    letter-spacing:1px;
+    text-shadow: 0 1px 0 #777, 0 2px 0 #666, 0 3px 0 #555, 0 4px 0 #444, 0 5px 5px rgba(0,0,0,0.5);
+    margin: 0 0 20px 0;
+    transform: skew(-6deg);
+  }
+  .heading h2.d-ib{
+    display: inline-block;
+    margin:0 10px 20px;
+  }
+  .heading h2.m-b0{margin:0;}
+  .heading h2.m-rl0{
+    margin-right:0;
+    margin-left:0;
+  }
+  .heading h2 span{
+    color: #ffe89f;
+    text-shadow:0 1px 0 hsl(45.6,100%,36.2%), 
+                0 2px 0 hsl(45.6,100%,32.2%), 
+                0 3px 0 hsl(45.6,100%,28.2%), 
+                0 4px 0 hsl(45.6,100%,24.2%), 
+                0 5px 5px rgba(0,0,0,0.6);
+  }
+  .heading h3{
+    color:#ffe89f;
+    font-size:32px;
+    line-height:1.6;
+    letter-spacing:1px;
+    margin: 0 0 20px 0;
+    transform: skew(-6deg);
+  }
+  #video_box{
+    width: 100%;
+    max-width:780px;
+    height: auto;
+    margin: 0 auto;
+    border-radius:1.923% 1.923% 1.923% 1.923% / 3.48% 3.48% 3.48% 3.48%;
+    overflow: hidden;
+    box-shadow: 0 0 12px 1px rgba(0,0,0,.35), 0 0 12px rgba(0,0,0,.3) inset;
+  }
+/*gameIntroduce 遊戲介紹 end*/
+
+/*preLogin 事前登錄 start*/
+  .preLogin-content{
+    background-color: #315e85;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 -1px 2px rgba(0,0,0,0.6) inset, 0 0 8px rgba(0,0,0,0.15), 0 0 16px rgba(0,0,0,0.15), 0 0 24px rgba(0,0,0,0.15);
+  }
+  .preLogin-content .heading{
+    background:url(../images/diamond.png) no-repeat center top;   
+  }
+  .preLogin-content #contact{
+    color:#666;
+    font-size:18px;
+    text-shadow:0 0 1px rgba(102,102,102,.3);
+    background:#ebebeb;
+    padding:15px 30px;
+    border:5px solid #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 12px 1px rgba(0,0,0,.35), 0 0 12px rgba(0,0,0,.3) inset;
+  } 
+  ul.preLoginRadio{margin-bottom: 20px;}
+  ul.preLoginRadio, div[class^="preLoginBox"]{font-size:0;}
+  ul.preLoginRadio li,ul.preLoginRadio p{
+    display: inline-block;
+    font-size:18px;
+    line-height:2.4;
+    margin-right:30px;
+  }
+  ul.preLoginRadio p{margin-bottom:0;}
+  .preLogin-content form{
+    width: 100%;
+    max-width:780px;
+    margin:0 auto;
+  }
+  .preLoginRadio label{
+    position:relative;
+    cursor:pointer;
+    color:#666;
+    padding:0 0 0 12px;
+  }
+  .preLoginRadio label:before, .preLoginRadio label:after{
+    content:"";
+    display:block;
+    border-radius:50%;
+    position:absolute;
+  }
+  .preLoginRadio label:before{
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border: 3px solid #aaa;
+    top: 0px;
+    left: -17px;
+  } 
+  .preLoginRadio label:after{
+    width: 12px;
+    height: 12px;
+    background: #1f4cac;
+    top: 6px;
+    left: -11px;
+    -webkit-animation:bounceout .4s;
+    -moz-animation:bounceout .4s;
+    animation:bounceout .4s;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  }
+  .preLoginRadio input[type="radio"]{
+    opacity:0;
+    width: 13px;
+    height: 13px;
+  }
+  .preLoginRadio input[type="radio"]:checked+label:after{
+    -webkit-animation:bounce .4s;
+    -moz-animation:bounce .4s;
+    animation:bounce .4s;
+  }
+  @-webkit-keyframes bounce {
+    0%  { -webkit-transform:scale(.75); opacity:.75;}
+    25% { -webkit-transform:scale(.25); opacity:.25;}
+    50% { -webkit-transform:scale(1.5); opacity:1;}
+    75% { -webkit-transform:scale(.75); opacity:.75;}
+    100%{ -webkit-transform:scale(1); opacity:1;}
+  }
+  @keyframes bounce {
+    0%  { transform:scale(.75); opacity:.75;}
+    25% { transform:scale(.25); opacity:.25;}
+    50% { transform:scale(1.5); opacity:1;}
+    75% { transform:scale(.75); opacity:.75;}
+    100%{ transform:scale(1); opacity:1;}
+  }
+  @-webkit-keyframes bounceout {
+    0%  { -webkit-transform:scale(0)}
+    25% { -webkit-transform:scale(.75)}
+    50% { -webkit-transform:scale(1.5)}
+    75% { -webkit-transform:scale(.25)}
+    100%{ -webkit-transform:scale(0)}
+  }
+  @keyframes bounceout {
+    0%  { transform:scale(0)}
+    25% { transform:scale(.75)}
+    50% { transform:scale(1.5)}
+    75% { transform:scale(.25)}
+    100%{ transform:scale(0)}
+  }
+  .preLoginInput{
+    display:inline-block;
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .preLoginInput_field{
+    display:inline-block;
+    width:210px;
+    height:42px;
+    line-height:38px;
+    text-align:center;
+    border:3px solid #aaa;
+    background: #fff;
+    border-radius:6px;
+  }
+  .preLoginInput_label{
+    display:inline-block;
+    line-height:1;
+    padding:12px 26px 12px 0;
+  }
+  .preLoginInput_data{
+    display: inline-block;
+    margin-bottom:24px;
+  }
+  .preLoginInput_data input{
+    width:125px;
+    height: 42px;
+    color: #fff;
+    font:18px/30px "微軟正黑體", sans-serif;
+    letter-spacing:1px;
+    border-radius: 6px;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    background: -webkit-linear-gradient(270deg, #335384 0%,#263c72 100%);
+    background: -moz-linear-gradient(270deg, #335384 0%, #263c72 100%);
+    background: -ms-linear-gradient(270deg, #335384 0%,#263c72 100%);
+    background: -o-linear-gradient(270deg, #335384 0%,#263c72 100%);
+    background: linear-gradient(180deg, #335384 0%,#263c72 100%);
+    position: relative;
+    margin:0 0 0 30px;
+  }
+  .submitbtn{
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 1px rgba(155,201,255,0.7) inset, 0 -2px 1px rgba(83,127,179,0.35) inset, 0 4px rgba(0,0,0,0.9);
+    text-shadow: 0px 0px 4px #1f3357, 0px 0px 6px #1f3357, 0px 0px 8px #1f3357, 0px 0px 10px #1f3357;
+  }
+  @media screen and (min-width: 1020px) {
+    .preLoginInput_data input:hover, .preLoginInput_data input:active{
+      top: 1px;
+      box-shadow: 0 0 8px 4px rgba(31,51,87,0.35) inset,0px 2px 1px rgba(155,201,255,0.55) inset, 0 -2px 1px rgba(83,127,179,0.3) inset, 0 3px rgba(0,0,0,0.9), 0 0 6px rgba(0,0,0,0.2), 0 0 12px rgba(0,0,0,0.1);
+    }
+  }
+  .clickSubmitbtn {
+    top: 3px !important;
+    border: 1px solid #1f3357 !important;
+    box-shadow: 0 0 6px 3px rgba(31,51,87,0.5) inset, 0 0 18px 9px rgba(31,51,87,0.35) inset, 0px 0px 3px 1px rgba(0,0,0,0.35), 0px 0px 10px 5px rgba(0,0,0,0.15) !important;
+    text-shadow: 0px 0px 4px #9bc9ff, 0px 0px 8px #9bc9ff !important;
+  }
+  .checkContentOne p{
+    display:inline-block;
+    margin:0 30px 20px 0;
+  }
+  input.consentCheck {
+    position: relative;
+    margin-right:12px;
+  }
+  input.consentCheck:before, input.consentCheck:after{
+    content:"";
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    bottom:-6px;
+    right:-9px;
+  }
+  input.consentCheck:before{
+    background:#fff;
+    border:3px solid #aaa;
+    border-radius:3px;
+    box-sizing:border-box;
+    transition: all 0.3s ease-in-out;
+  }
+  input.consentCheck:checked:before{
+    box-shadow: 0 0 0 10px #1f4cac inset;
+  }
+  input.consentCheck:after{
+    content:"å";
+    color:transparent;
+    font-family:SOSA;
+    line-height:26px;
+    text-align: center;
+  }
+  input.consentCheck:hover:after{color:#ccc;}
+  input.consentCheck:checked:after{color:#fff;}
+  .checkContentTwo em, .successfulLoginBox em, .phoneNumberError em{
+    display: block;
+    color: #ff6363;
+    font-size:22px;
+    line-height:1.6;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom:20px;
+    text-shadow: 0 0 1px rgba(255,99,99,0.3);
+    transform: skew(-6deg);
+  }
+  div[class^="checkContent"] .ReBtnSize{
+    display: block;
+    width: 180px;
+    height: 60px;
+    color: #fff;
+    font-size: 28px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 6px;
+    position: relative;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    background: -webkit-linear-gradient(270deg, #4688ff 50%, #0057f5 50%, #0057f5 100%);
+    background: -moz-linear-gradient(270deg, #4688ff 50%, #0057f5 50% , #0057f5 100%);
+    background: -ms-linear-gradient(270deg, #4688ff 50%, #0057f5 50%, #0057f5 100%);
+    background: -o-linear-gradient(270deg, #4688ff 50%, #0057f5 50%, #0057f5 100%);
+    background: linear-gradient(180deg, #4688ff 50%, #0057f5 50%, #0057f5 100%);
+    margin:0 auto 25px;
+    border: none;
+  }
+  .submitbtn2{
+    text-shadow:0 0 6px rgba(0,0,0,0.2), 0px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 0 3px 1px rgba(70,136,255,0.8) inset, 0 4px 0 rgba(0,0,0,0.7);
+  }
+  @media screen and (min-width: 1020px){
+    div[class^="checkContent"] .ReBtnSize:hover, div[class^="checkContent"] .ReBtnSize:active{
+      top: 1px;
+      box-shadow: 0 0 8px 4px rgba(0,68,194,0.25) inset, 0 3px rgba(0,0,0,0.7), 0 0 7px rgba(0,0,0,0.2), 0 0 14px rgba(0,0,0,0.1);
+    }
+  }
+  .clickSubmitbtn2{
+    top: 3px !important;
+    box-shadow:0px 0px 3px 1px rgba(0,0,0,0.2) inset, 0px 0px 12px 6px rgba(0,0,0,0.15) inset, 0px 0px 10px 5px rgba(0,0,0,0.15), 0px 0px 3px 1px rgba(0,0,0,0.25) !important;}
+  .eventID {
+    background: #fff;
+    width: 360px;
+    height: 55px;
+    line-height: 51px;
+    text-align: center;
+    border:4px solid #aaa;
+    border-radius:5px;
+    margin:0 auto 20px;
+  }
+  .eventID:before{content:"活動序號：";}
+/*preLogin 事前登錄 end*/
+
+/*遊戲介紹 youtube 影片 start*/
+  .video_lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 99999;
+    display: none;
+  }
+  .lightbox_video_iframe{
+    display: block;
+    width:75%;
+    max-width:1200px;
+    height:0;
+    padding-bottom: 42.1875%;
+    position: relative;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow:0 0 4px 1px rgba(47,107,236,.25),0 0 24px 6px rgba(47,107,236,.25);
+  }
+  .lightbox_video_iframe iframe{
+    width:100%;
+    height:100%;
+    position:absolute;
+  }
+  .lightbox-video-close{
+    width:42px;
+    height:42px;
+    color:#fff;
+    font-family:SOSA;
+    font-size:30px;
+    text-align: center;
+    line-height:42px;
+    position:absolute;
+    right:-42px;
+    top:0;
+    background:#2f6bec;
+    pointer-events: none;
+  }
+/*遊戲介紹 youtube 影片 end*/
+
+/*gameFeatures 人物特色 start*/
+  .gameFeatures-content {
+    background-color: #284c6b;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 -1px 2px rgba(0,0,0,0.35) inset, 0 0 8px rgba(0,0,0,0.15), 0 0 16px rgba(0,0,0,0.15), 0 0 24px rgba(0,0,0,0.15);
+  }
+  .entry-thumbnail {
+    position:relative;
+    overflow:hidden;
+    padding-bottom:30px;
+  }
+  .entry-thumbnail img {
+    width:100%;
+  }
+  .portfolio-holder {
+    margin-left:0;
+    margin-right:0;
+    overflow: hidden;
+  }
+  .box {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+/*gameFeatures 人物特色 start*/
+
+/*footer 頁尾區 start*/
+  .footer-content {
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    padding:0 !important;
+    margin: 0 !important;
+    position: relative;
+    box-shadow: 0 -1px 2px rgba(0,0,0,0.25) inset, 0 0 8px rgba(0,0,0,0.15), 0 0 16px rgba(0,0,0,0.15), 0 0 24px rgba(0,0,0,0.15);
+  }
+  .copyright-text {
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+  .copyright-text p {
+    font-size: 14px;
+    color: #999;
+  }
+  .copyright-text a {color: #fff;}
+  .copyright-text a:hover {color: #C90;}
+  .copyright-text em {
+    font-style: normal;
+    color: #333;
+  }
+  .back-to-top {
+    margin-top: -15px;
+    text-align: center;
+  }
+  .back-to-top a {
+    background-color: #c90b0b;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    line-height: 36px;
+    color: #fff;
+    font-size: 26px;
+    border-radius: 6px;
+  }
+  .social-icons ul {
+    text-align: right;
+    margin-top: 10px;
+  }
+  .social-icons li {
+    list-style: none;
+    display: inline-block;
+    vertical-align:top;
+    margin-left: 6px;
+  }
+  .social-icons a {
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+  }
+  .social-icons a.fb-link {background-color: #395795;}
+  .social-icons a.twiter-link {background-color: #0acd00;}
+  .social-icons img.rating_15 {
+    width: 30px;
+    height: 30px;
+    background-size:30px 30px;
+  }
+/*footer 頁尾區 end*/
+
+/** ===== RESPONSIVE版型區 ===== **/
+@media (max-width:992px) {
+  .navbar-default .navbar-nav>li>a{font-size: 18px;}
+  .copyright-text {margin-top: 20px;}
+  .back-to-top {margin-top: -70px;}
+  .social-icons {margin-top: -20px;}
+  body {overflow-x: hidden;}
+  .turn_btn{
+    margin-left: 0px;
+  }
+  .preLogin-content .heading {
+    background: url(../images/diamond_pad.png) no-repeat center top;
+  }
+}
+@media (max-width:767px) {
+  .container>.navbar-header{
+    margin: 0;
+    height: 70px;
+  }
+  .navbar>.container a.navbar-brand{
+    width: 170px;
+    height: 70px;
+    background-image: url(../images/brain_sport_logo.png);
+    background-size: 170px 70px;
+    margin: 0;
+  }
+  .navbar-default .navbar-toggle {
+    position: relative;
+    z-index: 999;
+    margin-top: 17px;
+    background-color: #e6e6e6;
+    color: #333;
+    box-shadow: 0 0 3px #333;
+    outline: none;
+  }
+  .navbar-default .navbar-toggle:hover {background-color: #fff;}
+  .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>p{padding: 10px 40px;}
+  .navbar-default .navbar-nav>li>p{ font-size: 18px;}
+  .navbar-default .navbar-nav>li>a {background:rgba(0,0,0,0.85);}
+  .navbar-default .navbar-nav>li>a.gameIntroduce{border-radius:0;}
+  .navbar-default .navbar-nav>li>a.linkFB{
+    border-radius:0 0 10px 10px;
+    background-color:rgba(78,105,162,1);
+  }
+  .navbar-default .navbar-nav>li>a:hover {background: rgba(77,77,77,0.95);}
+  .navbar-default .navbar-collapse {
+    margin: 0;
+    border-top:none;
+  }
+  .navbar-header {background-color: transparent;}
+  .copyright-text{ margin-left:0px;}
+  .topPreLoginBTN {
+    top: 66%;
+    left: 36%;
+    width: 33%;
+    height: 22%;
+  }
+  .heading h2{
+    font-size:28px;
+    font-weight: normal;
+    text-shadow:0 1px 0 #666, 
+                0 2px 0 #555, 
+                0 3px 3px rgba(0,0,0,0.5);
+  }
+  .heading h2 span{
+    text-shadow:0 1px 0 hsl(45.6,100%,32.2%), 
+                0 2px 0 hsl(45.6,100%,28.2%), 
+                0 3px 3px rgba(0,0,0,0.5);
+  }
+  .heading h3{font-size:21px;}
+  ul.preLoginRadio li, ul.preLoginRadio p {
+    margin-right:20px;
+  }
+  .preLogin-content form{width: 95%;}
+  .preLogin-content #contact{border-width:3px;}
+  .preLoginInput_label{padding-right:11px;}
+  .preLogin-content .heading{
+    height: 220px;
+    background:url(../images/diamond_phone.png) no-repeat center bottom;
+  }
+  .preLogin-content #contact{padding: 15px;}
+  
+  .checkContentOne p{margin-right: 15px;}
+  .checkContentTwo em, .successfulLoginBox em, .phoneNumberError em{font-size:21px;}
+  .video_lightbox {background-color: rgba(0,0,0,0.85);}
+  .lightbox_video_iframe{
+    width:90%;
+    padding-bottom:50.625%;
+  }
+  .lightbox-video-close{
+    right:0;
+    top:-42px;
+  }
+}
+@media (max-width: 585px){
+  .preLoginInput_data{display: block;}
+  .preLoginInput_data input{
+    display: block;
+    margin:0 auto;
+  }
+}
+@media (max-width: 516px){
+  ul.preLoginRadio p{}
+  .checkContentOne p{
+    display: block;
+  }
+  .checkContentOne p{margin-bottom:8px;}
+  .checkContentOne label{line-height:2.4;}
+  .preLoginRadio label{padding: 0 0 0 25px;}
+  .preLoginRadio label:before{
+    left: -4px;
+    top: -2px;
+  }
+  .preLoginRadio label:after{
+    left: 2px;
+    top: 4px;
+  }
+  ul.preLoginRadio li{position: relative;}
+  .preLoginRadio input[type="radio"]{
+    position: absolute;
+    top: 10px;
+  }
+
+}
