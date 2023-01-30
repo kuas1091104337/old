@@ -1,0 +1,1 @@
+rename *.php *.html

@@ -124,6 +124,9 @@ $_SESSION['n_Usertype'] = 1;
 <input type="hidden" id="email-flag" value="n"/>
 </form>
 <script type="text/javascript">
+document.querySelector(".submitbtn").onclick=function(){
+	document.location.href="http://kuas1091104337.github.io/signup_confirm.html";
+}
 $(document).ready(function(){
 	$('#member-account').blur(function() {
 		re = /^[\d|a-zA-Z]+$/;

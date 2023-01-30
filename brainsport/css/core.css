@@ -1685,11 +1685,6 @@
 	.slide_text{
 		position:absolute;
 		width:20%;
-		height:100%;
-		/*bottom:12-14%;*/
-		bottom:0%;
-		/*left:12%;*/
-		right:8%;
 		color:#fff;
 		-webkit-transition:-webkit-transform 0.5s 0.8s, opacity 0.5s 0.8s;
 		-moz-transition:-moz-transform 0.5s 0.8s, opacity 0.5s 0.8s;
@@ -1709,12 +1704,21 @@
 		/*JQ套過後拿掉附解*/
 		opacity:0;
 	}
-	.slide_text_box{
+	.slide_right{
+		height:100%;
+		bottom:0%;
+		right:8%;
+	}
+	.slide_left{
+		bottom:20%;
+		left:12%;
+	}
+	/*.slide_text_box{
 		width: 384px;
 		height: 320px;
 		position: absolute;
 		bottom:14%;
-	}
+	}*/
 	/*活動-1、2、3開放用*/
 	.slide_text-heading a{
 		color:#fff;
@@ -1795,13 +1799,13 @@
 		border-radius:12px;
 		box-shadow:0 0 3px rgba(0,0,0,0.6), 0 0 6px rgba(0,0,0,0.6), 0 0 9px rgba(0,0,0,0.6);
 	}
-	/*.appStore_7pocker, .appStore_7pocker_us, .appStore_7pocker_jp, .appStore_7pocker_ko, .appStore_7pocker_cn, .appStore_7pocker_tw{margin-bottom:50px;}*/
+	.appStore_mahjong, .appStore_7pocker, .appStore_7pocker_us, .appStore_7pocker_jp, .appStore_7pocker_ko, .appStore_7pocker_cn, .appStore_7pocker_tw{margin-bottom:50px;}
 	.appStore_7pocker_us{background:url(../images/appStore_QRcode_us.png);}
 	.appStore_7pocker_jp{background:url(../images/appStore_QRcode_jp.png);} 
 	.appStore_7pocker_ko{background:url(../images/appStore_QRcode_ko.png);}
 	.appStore_7pocker_cn{background:url(../images/appStore_QRcode_cn.png);}
 	.appStore_7pocker_tw{background:url(../images/appStore_QRcode_tw.png);}
-	.googlePlay_7pocker, .googlePlay_7pocker_us, .googlePlay_7pocker_jp, .googlePlay_7pocker_ko, .googlePlay_7pocker_cn, .googlePlay_7pocker_tw{margin-bottom:50px;}
+	/*.googlePlay_7pocker, .googlePlay_7pocker_us, .googlePlay_7pocker_jp, .googlePlay_7pocker_ko, .googlePlay_7pocker_cn, .googlePlay_7pocker_tw{margin-bottom:50px;}*/
 	.googlePlay_7pocker_us{ background:url(../images/googlePlay_QRcode_us.png);}
 	.googlePlay_7pocker_jp{ background:url(../images/googlePlay_QRcode_jp.png);}
 	.googlePlay_7pocker_ko{ background:url(../images/googlePlay_QRcode_ko.png);}
@@ -5228,10 +5232,8 @@
 		width:100%;
 		height:auto;
 	}
-	
 	.appStore_7pocker, .appStore_7pocker_us, .appStore_7pocker_jp, .appStore_7pocker_ko, .appStore_7pocker_cn, .appStore_7pocker_tw,
 	.appStore_mahjong, .appStore_mahjong_us, .appStore_mahjong_jp, .appStore_mahjong_ko, .appStore_mahjong_cn, .appStore_mahjong_tw{ background:url(../images/phoneAppStore.png);}
-
 	.googlePlay_7pocker, .googlePlay_7pocker_us, .googlePlay_7pocker_jp, .googlePlay_7pocker_ko, .googlePlay_7pocker_cn, .googlePlay_7pocker_tw,
 	.googlePlay_mahjong, .googlePlay_mahjong_us, .googlePlay_mahjong_jp, .googlePlay_mahjong_ko, .googlePlay_mahjong_cn, .googlePlay_mahjong_tw{ background:url(../images/phoneGooglePlay.png);}
 	.slide_app-link{

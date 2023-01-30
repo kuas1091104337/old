@@ -10,7 +10,7 @@ $(document).ready(function () {
     var animating = false;
     var animTime = 300;
     var autoSlideTimeout;
-    var autoSlideDelay = 12000;//banner輪播時間(毫秒) 麻將上線後輪播時間改 12000(毫秒)
+    var autoSlideDelay = 20000;//banner輪播時間(毫秒) 麻將上線後輪播時間改 20000(毫秒)
     var $pagination = $('.slider-pagi');
 
     function createBullets() {
