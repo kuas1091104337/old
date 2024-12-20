@@ -119,6 +119,7 @@ $(function(){
             $('#ncaSearchResult').slideDown();
             document.querySelector('.toSearchResult').scrollIntoView({behavior:'smooth'});
         }else{
+            alert("域名查詢不可為空!")
             $('#ncaSearchResult').slideUp();
         };
     });
